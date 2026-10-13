@@ -1,0 +1,62 @@
+{
+  "verified_utc": "2026-10-13T04:13:19.255997+00:00",
+  "repository": "https://github.com/qinyishcn/ttft-inference-lab",
+  "private": false,
+  "default_branch": "main",
+  "verified_content_commit": "97d6efce19e97ec59a7918a3cfa3077e857aa062",
+  "unauthenticated_http": true,
+  "remote_main_matches_local": true,
+  "tracked_files": 43,
+  "excluded_artifact_and_credential_scan_passed": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 13849,
+      "sha256": "2eafb24f2a002cda0701e92b0fcf66f069bcdf769bbf0ad51d3d15e137cad459",
+      "http_status": 200
+    },
+    {
+      "path": "docs/results-zh.md",
+      "bytes": 12487,
+      "sha256": "2b851bd563fc11c7d858f9837e0e6f81119053f9c81637d316de9e3839fe8d40",
+      "http_status": 200
+    },
+    {
+      "path": "data/artifacts.json",
+      "bytes": 3996,
+      "sha256": "139388c1811841b0fd187937fea0527b77884f325eb168048ee86a28fece65cc",
+      "http_status": 200
+    },
+    {
+      "path": "data/environment.json",
+      "bytes": 1021,
+      "sha256": "c3fa77bb88c2c42a83c73814f906869f37c2636f170b40422a567dcefc4bfe40",
+      "http_status": 200
+    },
+    {
+      "path": "results/requests.jsonl",
+      "bytes": 4416628,
+      "sha256": "66fbe101048b1474095358a07c9f417ad2b635e622d22f8a553222da4c4f8326",
+      "http_status": 200
+    },
+    {
+      "path": "results/summary.csv",
+      "bytes": 10194,
+      "sha256": "3e8081e1dfe0747136e57113e41d498ff0b999c15cd8714c588cbd35c07d69d7",
+      "http_status": 200
+    },
+    {
+      "path": "results/validation.json",
+      "bytes": 356,
+      "sha256": "64374cae6c68b360371b9e2d57f4ea9ae2283f3ef79d0c961d7ddf93e46dd00a",
+      "http_status": 200
+    },
+    {
+      "path": "results/figures/staircase.png",
+      "bytes": 69961,
+      "sha256": "79f829f55598b632ed91ac11ef0adfd1d3d069a21635f11974ed06cefee2d04d",
+      "http_status": 200
+    }
+  ],
+  "note": "A subsequent verification-record-only commit preserves these verified content bytes."
+}
