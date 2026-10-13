@@ -33,7 +33,9 @@ assert metadata['private'] is False and metadata['default_branch']=='main'
 remote=anonymous_get('https://api.github.com/repos/'+REPO+'/commits/main').json()['sha']
 assert remote==head,(remote,head)
 paths=['README.md','docs/results-zh.md','data/artifacts.json','data/environment.json',
-       'results/requests.jsonl','results/summary.csv','results/validation.json','results/figures/staircase.png']
+       'results/requests.jsonl','results/compute_only/summary.csv','results/compute_only/validation.json',
+       'results/compute_only/figures/minicpm_native.png','results/minicpm_native/requests.jsonl',
+       'results/history/provenance.json','data/minicpm-artifacts.json']
 def verify(path):
     expected=subprocess.check_output(['git','show','HEAD:'+path],cwd=ROOT)
     response=anonymous_get(f'https://raw.githubusercontent.com/{REPO}/{head}/{path}')

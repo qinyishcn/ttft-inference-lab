@@ -1,0 +1,42 @@
+{
+  "repo": "openbmb/MiniCPM-o-2_6-gguf",
+  "revision": "565cac3bb01ac51e985fff9f5d7a52322b826c23",
+  "runtime": "llama.cpp b11577 CUDA12.4",
+  "dataset_revision": "48872fa707124474ce4c5172ddc58efb8bc88058",
+  "artifacts": [
+    {
+      "file": "Model-7.6B-Q4_K_M.gguf",
+      "bytes": 4681260960,
+      "sha256": "4f635fc0c0bb88d50ccd9cf1f1e5892b5cb085ff88fe0d8e1148fd9a8a836bc2",
+      "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6-gguf/resolve/565cac3bb01ac51e985fff9f5d7a52322b826c23/Model-7.6B-Q4_K_M.gguf"
+    },
+    {
+      "file": "mmproj-model-f16.gguf",
+      "bytes": 1044425152,
+      "sha256": "efa4f7d96aa0f838f2023fc8d28e519179b16f1106777fa9280b32628191aa3e",
+      "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6-gguf/resolve/565cac3bb01ac51e985fff9f5d7a52322b826c23/mmproj-model-f16.gguf"
+    },
+    {
+      "file": "minicpm-o26-mmproj-q8_0.gguf",
+      "bytes": 720469344,
+      "sha256": "3a8f57840d3354311e753c7cc0484f343271f677cb9ebe3e008b270087082a4a",
+      "derived_from": "mmproj-model-f16.gguf",
+      "requested_precision": "Q8_0",
+      "fallback_tensors": 27,
+      "total_tensors": 455,
+      "command": "llama-quantize mmproj-model-f16.gguf minicpm-o26-mmproj-q8_0.gguf Q8_0 8",
+      "note": "Mixed tensor types; not uniformly 8-bit or 4-bit. Language weights remain original Q4_K_M."
+    },
+    {
+      "file": "minicpm-o26-mmproj-q4_k_m.gguf",
+      "bytes": 639530336,
+      "sha256": "8d375cd427d68cfd1a88bb1f7f2428a90aaa2b642c1dda15633cb00abdceb6fc",
+      "derived_from": "mmproj-model-f16.gguf",
+      "requested_precision": "Q4_K_M",
+      "fallback_tensors": 163,
+      "total_tensors": 455,
+      "command": "llama-quantize mmproj-model-f16.gguf minicpm-o26-mmproj-q4_k_m.gguf Q4_K_M 8",
+      "note": "Mixed tensor types; not uniformly 8-bit or 4-bit. Language weights remain original Q4_K_M."
+    }
+  ]
+}

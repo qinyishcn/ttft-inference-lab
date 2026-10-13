@@ -60,6 +60,8 @@ def stream_request(payload, barrier=None):
                 if item.get('prompt_progress'):
                     result.setdefault('first_progress_ms',elapsed)
                 for choice in item.get('choices',[]):
+                    if choice.get('finish_reason') is not None:
+                        result['finish_reason']=choice['finish_reason']
                     delta=choice.get('delta',{})
                     text=delta.get('content') or ''
                     reasoning=delta.get('reasoning_content') or ''

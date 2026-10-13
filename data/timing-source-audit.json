@@ -1,0 +1,92 @@
+[
+  {
+    "tag": "b11516",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11516/tools/server/server-context.cpp",
+    "sha256": "ed89eee1b5eeee82953e3d422cc640e686f674210609154291ec9a151dc2a06d",
+    "anchors": [
+      {
+        "line": 3501,
+        "text": "slot.stats.update_prompt_start();"
+      },
+      {
+        "line": 3920,
+        "text": "slot.stats.update_prompt_last();"
+      },
+      {
+        "line": 4363,
+        "text": "slot.stats.update_prompt_last();"
+      }
+    ]
+  },
+  {
+    "tag": "b11516",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11516/tools/server/server-common.h",
+    "sha256": "8bef5fa588bb6576dc2fb1ce2575792942d47ae670a799559e08cb44d0685aab",
+    "anchors": [
+      {
+        "line": 411,
+        "text": "void update_prompt_start() {"
+      },
+      {
+        "line": 419,
+        "text": "void update_prompt_last() {"
+      }
+    ]
+  },
+  {
+    "tag": "b11516",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11516/tools/server/server-common.cpp",
+    "sha256": "8ea2b7de77da8e67b5624e4583e27ffae200fd03a30969d64951feff31e6dab6",
+    "anchors": [
+      {
+        "line": 89,
+        "text": "{\"prompt_ms\",              t_prompt_ms()},"
+      }
+    ]
+  },
+  {
+    "tag": "b11577",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11577/tools/server/server-context.cpp",
+    "sha256": "499823edf7cdd59905a1ccc816bcd3abb8cfd5d7f3c5ca939222ea2c21cd971b",
+    "anchors": [
+      {
+        "line": 3514,
+        "text": "slot.stats.update_prompt_start();"
+      },
+      {
+        "line": 3938,
+        "text": "slot.stats.update_prompt_last();"
+      },
+      {
+        "line": 4381,
+        "text": "slot.stats.update_prompt_last();"
+      }
+    ]
+  },
+  {
+    "tag": "b11577",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11577/tools/server/server-common.h",
+    "sha256": "1aebeeb72c7f232fe6588370a3bb5f27b92e265bbb151eb26207fdc87414753d",
+    "anchors": [
+      {
+        "line": 413,
+        "text": "void update_prompt_start() {"
+      },
+      {
+        "line": 421,
+        "text": "void update_prompt_last() {"
+      }
+    ]
+  },
+  {
+    "tag": "b11577",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11577/tools/server/server-common.cpp",
+    "sha256": "5ed470589fe3b86847746e4bb07edcaeeb187a57ac43d235c646739a3bdc8c0a",
+    "anchors": [
+      {
+        "line": 89,
+        "text": "{\"prompt_ms\",              t_prompt_ms()},"
+      }
+    ]
+  }
+]

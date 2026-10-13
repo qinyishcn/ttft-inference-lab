@@ -1,0 +1,274 @@
+{
+  "policy": "Numeric computation observations; no transport or split Testbed timings. Historical warmup is not assumed.",
+  "sources": [
+    {
+      "kind": "MiniCPM native",
+      "url": "https://github.com/qinyishcn/minicpm-o-2_6-streamingbench-eval/blob/7896d6c0540ba411147364a54cf190900ff0e336/results/q4_k_m_single_native/predictions.jsonl",
+      "sha256": "9411840f28047e18ff6c23d64e4c24cf2c14e3acc0fd28f7eec73d2d740ebfcc"
+    },
+    {
+      "kind": "MiniCPM native",
+      "url": "https://github.com/qinyishcn/minicpm-o-2_6-streamingbench-eval/blob/7896d6c0540ba411147364a54cf190900ff0e336/results/q4_k_m_four_native/predictions.jsonl",
+      "sha256": "8eda56b8f7b1c5782f5e7c11b46f75bb3927a8db8c7d06a84a6fbbacabf2c94b"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/gaussian_16.jsonl",
+      "sha256": "9a8aa73109783fbc035c7c734159db72125982445e28cba97a3c2f27dadb2b64"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_005_s0.jsonl",
+      "sha256": "c97a9d5e01b727f27d907e87d0aa35802550b0c711fec7b1ddb45b47cfcaa66c"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_005_s1.jsonl",
+      "sha256": "35b363ee4986157b6079093cc2553ba35dff33815dffb27e6b6b56431ca6992d"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_005_s2.jsonl",
+      "sha256": "541ce8917c33dcdb0f82620df3d8f54c594af70ec0fca530f0873b51195537a3"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_010_s0.jsonl",
+      "sha256": "bc67ea919b51f7a20a445c77a4119354092e65b31a48569e2f341e7c7089f9aa"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_010_s1.jsonl",
+      "sha256": "562e9abdcc953cf34aec3d89c342754b148f8ce30eef1557189cd0a9d85a34dd"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_010_s2.jsonl",
+      "sha256": "173711a3c485c17cdbd20f9851433f5af8cb63bc958abed339bfcf6adfd6519e"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_020_s0.jsonl",
+      "sha256": "252a9b25b5b3b8ebf6c35d219d135578bb94a352eda5566fdfbd51e6470ea20a"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_020_s1.jsonl",
+      "sha256": "4f4b6f9f05259e500da85b9897a829498b84b92f113847cfd18a83a459d74145"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_020_s2.jsonl",
+      "sha256": "11796f1a7e6528c5d91a66fda038aa4776bc75bc10ff2efe7fc6010c8ddbeb15"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_030_s0.jsonl",
+      "sha256": "133be3f96e30b81f4f05ff318ba5ee6196bfe4b6b42b1a78a176ce87ccebcae1"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_030_s1.jsonl",
+      "sha256": "828b8cf229cc9786fe853e072193c78fae9068ab1b4f50379b59294943657150"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_030_s2.jsonl",
+      "sha256": "bf8b189e4d87e81ab9dbde6b19e92ded089ba85421a373ac8895480114a44500"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_040_s0.jsonl",
+      "sha256": "ad110620439eaecf5c2f10cf3ad13ab96892b883cf36b681658d496eed2692ab"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_040_s1.jsonl",
+      "sha256": "b6c0358b8e314242d915e598971425dc388341dfdbad2ce24a6037e3c10c17ba"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_040_s2.jsonl",
+      "sha256": "edc5c954c284837a7b6c0c989ad2d83d8482f46ffdabe3df810626ea32a66f23"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_050_s0.jsonl",
+      "sha256": "d4019304cccc0d150fd231f836a7eec51a4cf26662f2c629e88cf3a8bbd9bf41"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_050_s1.jsonl",
+      "sha256": "05f19820d64beb66065fd6778a9fba36030035aa1dfe5f422de17788b797a545"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_050_s2.jsonl",
+      "sha256": "ce93cd69fbae4c5d4930d0f1effb6918c0337e243a134208e2781c3f6eaeba93"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_060_s0.jsonl",
+      "sha256": "3ff8176c19f87a912dc1fb84beae1c7f45caca3ab92eaacec866623180a98ace"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_060_s1.jsonl",
+      "sha256": "ffed5775fe033873c6179882a2340899ddb327dcb4d5693ae5a67933b04e5b42"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_060_s2.jsonl",
+      "sha256": "64163b3af1d7c7ffb96c3892a9465febc0475ef2f4d59d87e9109eccb15a6b8d"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_070_s0.jsonl",
+      "sha256": "4586a463b3eaefa3e69d214c8d1a8700e0579e795ce1103e7672382a17d6988a"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_070_s1.jsonl",
+      "sha256": "d893d44eb4dd9401a56b256f851d9f927e8ac1c9ce5b8eef5364885e4e70ac19"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_070_s2.jsonl",
+      "sha256": "7a31c7c9e8f4ff498d703e7202163ba0a963721dcc89a65a2a8ca4be7b2f8661"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_080_s0.jsonl",
+      "sha256": "344a5d8f484a59c050926e86324908c1f4754b765b48af5377209f61680a1768"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_080_s1.jsonl",
+      "sha256": "a889b24f14ac17ce7c1dc9a38995f5551de3ce30553dad1b6c8f822c67ca7481"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_080_s2.jsonl",
+      "sha256": "1fa35c965a9ea41f454903ad2e99539849b973234443ca5dd01dccf136c455df"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_090_s0.jsonl",
+      "sha256": "9621bb272722c91c6a88d20cc7f66b327e68dfd5f4b1b42a6e3670e82c9dc0cb"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_090_s1.jsonl",
+      "sha256": "d3036e1072f27c0d1c5981674598982428c6e3293e7c5aa26ceaeeee6545bdef"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_090_s2.jsonl",
+      "sha256": "57055249ecd7291be73c5a3a966ab93ede2b2f35b0c379baab83ae2d62f1319e"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_095_s0.jsonl",
+      "sha256": "27dd0505a22f6c3a01c61526c746a96616bfe20fcf11ceba52d091913687cd9d"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_095_s1.jsonl",
+      "sha256": "8dd4516663cd60ba14cc3ae9917d6b4d724b06b9d8a07ca185a5ed3562903009"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/loss_095_s2.jsonl",
+      "sha256": "363297e33b55c3a890355a9f244574c4cba05001c1ccd466d618d7e8fc74e4bf"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/native_center_1.jsonl",
+      "sha256": "046784409f142788f942164be410b08a79e8032bbb92af7124558984044d237d"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/native_center_16.jsonl",
+      "sha256": "31d827fe4ddf05d7fdc6763be6f0df206734f150b5ac3a1e2333ff378aa678a6"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/native_center_4.jsonl",
+      "sha256": "a36ab7792ec4bcefa7658c39bd2480536154337ad419b570f4cd499cc840ee18"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/native_center_64.jsonl",
+      "sha256": "34c35ce04600a4e5d123a6aa44c7fa9753f7e135d1b706859645e5e5a467bc82"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/repeat_16.jsonl",
+      "sha256": "020e22dc2a8c1ef0487d7262dd15f111fd2ef072a2fbd559d6c5844d8076e2d5"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/reverse_16.jsonl",
+      "sha256": "1ca3e541cb2d0d617ac415ea92e5b344cc3b8507d18529f497526a6b4a156dae"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/shuffle_16.jsonl",
+      "sha256": "2b7b4710c65ab370f13aef70f759df2ff192891ea7528a2cab27a4bff1b60e83"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/text_only.jsonl",
+      "sha256": "5f5c73763b143d6d4788a69debca51d9d25aad019ebf0625dc82e4c50750bd04"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/text_timing_16.jsonl",
+      "sha256": "9d3e226ca2e4e60b12da5fee10e906fde371fadcbd1a0ca80785c3d8734e3f0d"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/uniform_16.jsonl",
+      "sha256": "2a3d1f34830558dd249c2a9a27e5312559bdc05079b94897a9f784506c028f71"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/uniform_4.jsonl",
+      "sha256": "0ed3091ecaf2c2d756ca12da244c35e63232d2c65345d2a703e52478dff5f8ee"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/uniform_64.jsonl",
+      "sha256": "b5f23b5cd9673b1d2ddc36da55e22b6f403897fb389e0e03ea4b0527b08ff768"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/wrong_video_16.jsonl",
+      "sha256": "b7ec0a35178fb6e8de917407293dbd0c18a7d9ded39c160befb49998580a36c9"
+    },
+    {
+      "kind": "LLaVA cached-language answer computation, NOT full TTFT",
+      "url": "https://github.com/qinyishcn/nextqa-vlm-fault-tolerance/blob/dd8841f419f47c903773d5e4df12064b522409ab/results/offline_20261012/predictions/zero_16.jsonl",
+      "sha256": "2b9793bd7d8947a27fcb2b40a025b04aa139361cff5a553a67f0c3fd83820f45"
+    },
+    {
+      "kind": "GRACE codec computation; not LLM TTFT",
+      "url": "https://github.com/qinyishcn/grace-rtp-psnr-testbed/blob/62c3ae031d4d410ea98b0ff06f3df140d82135ee/results/codec_benchmark.json",
+      "sha256": "333e7abc1eec4010965693825f8279292b7f8a48d48adaba0dbf90179f96b125"
+    }
+  ],
+  "excluded_or_missing": [
+    {
+      "model": "Liquid_V1_7B",
+      "reason": "No comparable per-question native compute timing found; RTC session duration is ineligible. Different model from LiquidAI LFM2."
+    },
+    {
+      "model": "LLaVA-Video-7B-Qwen2",
+      "reason": "Saved answer timers reuse visual features and prefix KV. Vision preparation and prefix audit timers include IO/hash/preparation; do not sum into fresh full inference TTFT."
+    },
+    {
+      "model": "DCVC",
+      "reason": "No completed comparable inference timing found in inspected project evidence."
+    }
+  ]
+}

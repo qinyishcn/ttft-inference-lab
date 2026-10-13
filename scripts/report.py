@@ -135,5 +135,6 @@ def main():
     print('report regenerated:',len(summaries),'configurations',flush=True)
 
 if __name__=='__main__':
-    main()
+    from build_compute_report import main as compute_main
+    compute_main()
 

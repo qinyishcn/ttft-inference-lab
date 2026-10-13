@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "issues": [],
+  "formal_configurations": 55,
+  "formal_requests": 2640,
+  "minicpm_formal_requests": 432,
+  "minicpm_pilot_requests": 80,
+  "minicpm_warmup_requests": 224,
+  "metric": "server timings.prompt_ms; first sampled token inclusive",
+  "first_token_and_final_prompt_timers_match": true,
+  "max_cached_tokens": 0
+}
