@@ -19,6 +19,9 @@ for r in rows:
         issues.append('Nonzero or missing actual cache_n: '+str((r['stage'],r['config']['name'],r['sample_index'])))
     if r['usage'].get('completion_tokens')!=32:
         issues.append('Output budget mismatch: '+str((r['stage'],r['config']['name'],r['sample_index'])))
+    expected=r['input'].get('expected_total_tokens')
+    if expected and r['usage'].get('prompt_tokens')!=expected:
+        issues.append('Actual total input token mismatch: '+str((r['stage'],r['config']['name'],r['sample_index'])))
 for (stage,name),rs in groups.items():
     expected=8 if stage=='pilot' else 48
     if len(rs)!=expected or len(set(r['sample_index'] for r in rs))!=expected:
@@ -30,7 +33,7 @@ for (stage,name),rs in groups.items():
     if stage=='pilot' and any(not 64<=r['sample_index']<72 for r in rs):
         issues.append(f'Pilot boundary mismatch {name}')
 stages=Counter(stage for stage,name in groups)
-for stage,n in {'pilot':5,'models':5,'inputs':6,'compute':5,'load':5,'vision':7}.items():
+for stage,n in {'pilot':5,'models':5,'inputs':6,'inputs_exact':6,'compute':5,'load':5,'vision':7}.items():
     if stages[stage]!=n:
         issues.append(f'Missing stage configurations {stage}: {stages[stage]}/{n}')
 if stages['staircase']<7:

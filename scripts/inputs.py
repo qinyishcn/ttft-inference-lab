@@ -43,19 +43,37 @@ def scene(index,frame=0,size=224):
     raw=b.getvalue()
     return {'base64':base64.b64encode(raw).decode(),'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)}
 
-def text_content(sample,index,length,dataset,session):
+def text_content(sample,index,length,dataset,session,stable=False):
     question=sample['question'] if dataset=='squad' else f'What is {index+13} plus {index+7}?'
     context=sample['context'] if dataset=='squad' else 'The quick brown fox walks beside a calm river. '
     # Crop or repeat context by TOKEN IDs, not characters. Question remains intact.
     tokens=session.post('http://127.0.0.1:8097/tokenize',json={'content':context,'add_special':False},timeout=30).json()['tokens']
-    tokens=(tokens*(length//len(tokens)+1))[:length]
+    if stable:
+        # Tokenize repeated TEXT as a whole: BPE can merge across repeated token-array boundaries.
+        expanded=context*(length//len(tokens)+2)
+        tokens=session.post('http://127.0.0.1:8097/tokenize',json={'content':expanded,'add_special':False},timeout=30).json()['tokens'][:length]
+    else:
+        tokens=(tokens*(length//len(tokens)+1))[:length]
     cropped=session.post('http://127.0.0.1:8097/detokenize',json={'tokens':tokens},timeout=30).json()['content']
-    return f'Context:\n{cropped}\nQuestion: {question}\nAnswer briefly:', {'context_tokens_requested':length,'dataset':dataset,'source_id':sample['id'] if dataset=='squad' else f'synthetic-{index}'}
+    return f'Context:\n{cropped}\nQuestion: {question}\nAnswer briefly:', {'context_tokens_requested':length,'dataset':dataset,'source_id':sample['id'] if dataset=='squad' else f'synthetic-{index}','input_construction':'stable-text-repeat-v2' if stable else 'token-array-repeat-v1'}
 
 def messages(sample,index,cfg,session):
     if cfg.get('task','text')=='text':
-        text,meta=text_content(sample,index,cfg.get('length',64),cfg.get('dataset','squad'),session)
-        return [{'role':'user','content':text}],meta
+        target=cfg.get('total_tokens')
+        budget=max(8,target-64) if target else cfg.get('length',64)
+        for _ in range(8):
+            text,meta=text_content(sample,index,budget,cfg.get('dataset','squad'),session,stable=bool(target))
+            msg=[{'role':'user','content':text}]
+            if not target:
+                return msg,meta
+            rendered=session.post('http://127.0.0.1:8097/apply-template',json={'messages':msg},timeout=30).json()['prompt']
+            actual=len(session.post('http://127.0.0.1:8097/tokenize',json={'content':rendered,'add_special':True,'parse_special':True},timeout=30).json()['tokens'])
+            if actual==target:
+                meta.update({'expected_total_tokens':target,'rendered_total_tokens':actual})
+                return msg,meta
+            budget+=target-actual
+            assert budget>0,'Requested total input budget is too short for this question/template'
+        raise ValueError('Could not construct exact rendered token budget')
     frames=cfg.get('frames',1)
     size=cfg.get('resolution',224)
     content=[]

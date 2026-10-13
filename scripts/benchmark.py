@@ -245,7 +245,7 @@ def publish(stage,enabled):
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--publish',action='store_true')
-    p.add_argument('--stage',default='all',choices=['all','pilot','models','inputs','compute','load','vision','staircase'])
+    p.add_argument('--stage',default='all',choices=['all','pilot','models','inputs','inputs_exact','compute','load','vision','staircase'])
     a=p.parse_args()
     samples=squad_samples()
     (ROOT/'results'/'private').mkdir(exist_ok=True)
@@ -297,6 +297,7 @@ def main():
         ])
         stages={
             'inputs':[base(f'squad-{n}',length=n) for n in [64,256,1024,2048]]+[base(f'synthetic-{n}',length=n,dataset='synthetic') for n in [64,1024]],
+            'inputs_exact':[base(f'squad-total-{n}',total_tokens=n,length=None) for n in [128,512,1024,2048]]+[base(f'synthetic-total-{n}',total_tokens=n,length=None,dataset='synthetic') for n in [128,1024]],
             'compute':[base('no-worker',length=512)]+[base(f'gemm-{d}',length=512,duty=d) for d in [0,.25,.5,.75]],
             'load':[base(f'users-{u}',length=512,users=u) for u in [1,2,4,8]]+[base('users-4-slots-1',length=512,users=4,slots=1)],
             'vision':[cfg('text','smol500-q8')]+[cfg(f'image-{s}','smol500-q8',task='image',resolution=s) for s in [224,448,896]]+[cfg(f'video-{f}','smol500-q8',task='video',resolution=224,frames=f) for f in [2,4,8]],

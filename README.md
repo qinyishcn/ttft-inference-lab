@@ -82,6 +82,8 @@ All times below are **milliseconds**, warm requests only. Pilot rows have 8 requ
 ![models TTFT](results/figures/models.png)
 
 ### inputs
+Original context-budget experiment: token-array repeat + text round-trip can merge tokens (especially the synthetic repeated sentence). Names are requested budgets, **not matched final token counts**. The actual counts below are retained. Use `inputs_exact` for strictly matched total input tokens.
+
 
 | Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -132,9 +134,27 @@ All times below are **milliseconds**, warm requests only. Pilot rows have 8 requ
 
 ![vision TTFT](results/figures/vision.png)
 
+### staircase
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| step-0-minimum | 48 / 48 | 26.82 | 24.46–29.11 | 27.11 | 40.21 | 94.19 |
+| step-1-model-lfm350-q8 | 48 / 48 | 29.49 | 26.46–32.34 | 34.29 | 41.59 | 93.27 |
+| step-2-precision-q4 | 48 / 48 | 27.38 | 24.82–30.07 | 27.40 | 40.61 | 93.27 |
+| step-3-context512 | 48 / 48 | 42.59 | 40.05–45.08 | 43.84 | 55.03 | 540.21 |
+| step-4-context2048 | 48 / 48 | 87.57 | 85.03–90.23 | 87.42 | 99.74 | 2072.12 |
+| step-5-larger | 48 / 48 | 167.82 | 165.37–170.26 | 171.99 | 176.13 | 2072.12 |
+| step-6-contention | 48 / 48 | 227.52 | 224.81–230.10 | 231.81 | 238.47 | 2072.12 |
+| step-7-users4 | 48 / 48 | 769.37 | 750.77–789.91 | 807.36 | 881.79 | 2072.12 |
+| step-8-users8 | 48 / 48 | 1301.54 | 1282.92–1320.45 | 1179.41 | 1966.00 | 2072.12 |
+
+![staircase TTFT](results/figures/staircase.png)
+
 ## Observations and limits
 
 Pilot selected **lfm350-f16**. Independent final model comparison minimum: **smol500-q8**, 24.22 ms. Subsequent factor tests use this final comparison minimum as their text baseline. The separate staircase remeasures it. This is the observed minimum among tested candidates, not a global optimum.
+
+Staircase mean reversals: step-1-model-lfm350-q8 → step-2-precision-q4. Retained without filtering.
 
 Input resolution and visual tokens may saturate at the model processor limit. Quantization may increase prefill overhead. GPU GEMM duty is not a hardware-equivalence claim. Concurrent results include server queueing and batching. Visual inputs are controlled synthetic scenes, not a real-world vision benchmark. No quality, FLOP-count, production-throughput or cross-GPU conclusion is established.
 

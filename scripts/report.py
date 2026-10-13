@@ -38,11 +38,14 @@ def main():
         tokens=[r['usage'].get('prompt_tokens',r['timings'].get('prompt_n')) for r in valid]
         tokens=[x for x in tokens if x is not None]
         cached=[r['timings'].get('cache_n',r['usage'].get('prompt_tokens_details',{}).get('cached_tokens',0)) for r in valid]
+        prompt_times=[r['timings']['prompt_ms'] for r in valid if 'prompt_ms' in r['timings']]
+        residual=[r['ttft_ms']-r['timings']['prompt_ms'] for r in valid if 'prompt_ms' in r['timings']]
         summary={'stage':stage,'configuration':name,'model':cfg['model'],'attempted':len(rs),'valid':len(valid),'failed':len(rs)-len(valid),
             'distinct_samples':len(set(r['sample_index'] for r in rs)),'mean_ms':float(np.mean(vals)) if vals else None,
             'median_ms':float(np.median(vals)) if vals else None,'p95_ms':float(np.percentile(vals,95)) if vals else None,
             'std_ms':float(np.std(vals,ddof=1)) if len(vals)>1 else None,'ci95_low_ms':None,'ci95_high_ms':None,
             'mean_input_tokens':float(np.mean(tokens)) if tokens else None,'max_cached_tokens':max(cached) if cached else None,
+            'mean_server_prompt_ms':float(np.mean(prompt_times)) if prompt_times else None,'mean_ttft_minus_prompt_ms':float(np.mean(residual)) if residual else None,
             'ci_method':'wave bootstrap' if cfg.get('users',1)>1 else 'request bootstrap'}
         if vals:
             summary['ci95_low_ms'],summary['ci95_high_ms']=ci(vals,[r['wave_id'] for r in valid] if cfg.get('users',1)>1 else None)
@@ -52,24 +55,27 @@ def main():
         w=csv.DictWriter(out,fieldnames=list(summaries[0]))
         w.writeheader()
         w.writerows(summaries)
-    bases={'models':'lfm350-q4','inputs':'squad-64','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-minimum'}
+    bases={'models':'lfm350-q4','inputs':'squad-64','inputs_exact':'squad-total-128','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-minimum'}
     effects=[]
     for (stage,name),rs in grouped.items():
         if stage not in bases or name==bases[stage]:
             continue
-        br=grouped.get((stage,bases[stage]),[])
+        reference=bases[stage]
+        if stage=='inputs_exact' and name.startswith('synthetic-total-'):
+            reference=name.replace('synthetic','squad',1)
+        br=grouped.get((stage,reference),[])
         byid={r['sample_index']:r for r in br if r['error'] is None}
         deltas=[r['ttft_ms']-byid[r['sample_index']]['ttft_ms'] for r in rs if r['error'] is None and r['sample_index'] in byid]
         if deltas:
             lo,hi=ci(deltas)
-            effects.append({'stage':stage,'configuration':name,'reference':bases[stage],'paired_n':len(deltas),'mean_delta_ms':float(np.mean(deltas)),'ci95_low_ms':lo,'ci95_high_ms':hi})
+            effects.append({'stage':stage,'configuration':name,'reference':reference,'paired_n':len(deltas),'mean_delta_ms':float(np.mean(deltas)),'ci95_low_ms':lo,'ci95_high_ms':hi})
     with (R/'paired-effects.csv').open('w',newline='',encoding='utf-8') as out:
         w=csv.DictWriter(out,fieldnames=['stage','configuration','reference','paired_n','mean_delta_ms','ci95_low_ms','ci95_high_ms'])
         w.writeheader()
         w.writerows(effects)
     figdir=R/'figures'
     figdir.mkdir(exist_ok=True)
-    stages=['pilot','models','inputs','compute','load','vision','staircase']
+    stages=['pilot','models','inputs','inputs_exact','compute','load','vision','staircase']
     content=['\n<!-- RESULTS:START -->','## Measured results','',
         'All times below are **milliseconds**, warm requests only. Pilot rows have 8 requests and are excluded from final conclusions. Final configurations target 48 paired requests in two randomized blocks. CI: seeded bootstrap; concurrent conditions resample whole waves. See [methodology](docs/methodology.md), [raw requests](results/requests.jsonl), [summary CSV](results/summary.csv), and [paired differences](results/paired-effects.csv).','']
     for stage in stages:
@@ -79,6 +85,7 @@ def main():
         levels={
             'models':['lfm350-q4','lfm350-q8','lfm350-f16','lfm1200-q4','smol500-q8'],
             'inputs':['squad-64','squad-256','squad-1024','squad-2048','synthetic-64','synthetic-1024'],
+            'inputs_exact':['squad-total-128','squad-total-512','squad-total-1024','squad-total-2048','synthetic-total-128','synthetic-total-1024'],
             'compute':['no-worker','gemm-0','gemm-0.25','gemm-0.5','gemm-0.75'],
             'load':['users-1','users-2','users-4','users-8','users-4-slots-1'],
             'vision':['text','image-224','image-448','image-896','video-2','video-4','video-8'],
@@ -88,6 +95,8 @@ def main():
         elif stage in levels:
             ss.sort(key=lambda s:levels[stage].index(s['configuration']))
         content+=['### '+stage,'','| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |','|---|---:|---:|---:|---:|---:|---:|']
+        if stage=='inputs':
+            content[-3:-3]=['Original context-budget experiment: token-array repeat + text round-trip can merge tokens (especially the synthetic repeated sentence). Names are requested budgets, **not matched final token counts**. The actual counts below are retained. Use `inputs_exact` for strictly matched total input tokens.','']
         for s in ss:
             fmt=lambda v:f'{v:.2f}' if v is not None else 'NA'
             content.append(f'| {s["configuration"]} | {s["valid"]} / {s["attempted"]} | {fmt(s["mean_ms"])} | {fmt(s["ci95_low_ms"])}–{fmt(s["ci95_high_ms"])} | {fmt(s["median_ms"])} | {fmt(s["p95_ms"])} | {fmt(s["mean_input_tokens"])} |')
