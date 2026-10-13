@@ -26,5 +26,13 @@
     "torch": "2.6.0+cu124"
   },
   "power_settings_modified": false,
-  "user_timezone": "Asia/Shanghai"
+  "user_timezone": "Asia/Shanghai",
+  "engine_version": {
+    "returncode": 0,
+    "output": "version: 0.6.0-dev (build 11577, commit cbe28bb3c)\nbuilt with Clang 20.1.8 for Windows x86_64"
+  },
+  "engine_devices": {
+    "returncode": 0,
+    "output": "Available devices:\n  CUDA0: NVIDIA GeForce RTX 3070 (8191 MiB, 7113 MiB free)"
+  }
 }

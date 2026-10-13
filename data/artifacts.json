@@ -1,0 +1,87 @@
+{
+  "runtime_tag": "b11577",
+  "models": [
+    {
+      "repo": "LiquidAI/LFM2-350M-GGUF",
+      "revision": "8fdc9d526b7ed346b19257551b05816c7912ecc2",
+      "file": "LFM2-350M-Q4_K_M.gguf",
+      "url": "https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/8fdc9d526b7ed346b19257551b05816c7912ecc2/LFM2-350M-Q4_K_M.gguf",
+      "upstream_sha256": "a4d000c7064bd3b2e42c6845836286a899a4e79cf1791da1a6797b58d575957d",
+      "bytes": 229309376,
+      "sha256": "a4d000c7064bd3b2e42c6845836286a899a4e79cf1791da1a6797b58d575957d"
+    },
+    {
+      "repo": "LiquidAI/LFM2-350M-GGUF",
+      "revision": "8fdc9d526b7ed346b19257551b05816c7912ecc2",
+      "file": "LFM2-350M-Q8_0.gguf",
+      "url": "https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/8fdc9d526b7ed346b19257551b05816c7912ecc2/LFM2-350M-Q8_0.gguf",
+      "upstream_sha256": "b7bfeab6495a1ae3ae78811c1297df9f301b35261ff9580d42fb30dc4dc9034b",
+      "bytes": 379214784,
+      "sha256": "b7bfeab6495a1ae3ae78811c1297df9f301b35261ff9580d42fb30dc4dc9034b"
+    },
+    {
+      "repo": "LiquidAI/LFM2-350M-GGUF",
+      "revision": "8fdc9d526b7ed346b19257551b05816c7912ecc2",
+      "file": "LFM2-350M-F16.gguf",
+      "url": "https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/8fdc9d526b7ed346b19257551b05816c7912ecc2/LFM2-350M-F16.gguf",
+      "upstream_sha256": "379ffdcbf08147c0313f6f1ce7ff558a2bc935eda633f4b46c52347032419c42",
+      "bytes": 711482304,
+      "sha256": "379ffdcbf08147c0313f6f1ce7ff558a2bc935eda633f4b46c52347032419c42"
+    },
+    {
+      "repo": "LiquidAI/LFM2-1.2B-GGUF",
+      "revision": "5399e76c648f4eb8c053feb1ab747277dea5bf8b",
+      "file": "LFM2-1.2B-Q4_K_M.gguf",
+      "url": "https://huggingface.co/LiquidAI/LFM2-1.2B-GGUF/resolve/5399e76c648f4eb8c053feb1ab747277dea5bf8b/LFM2-1.2B-Q4_K_M.gguf",
+      "upstream_sha256": "55175400e3f509a9616227afeffd58d87e80b9f628a5d3d54ada884d85221fed",
+      "bytes": 730893248,
+      "sha256": "55175400e3f509a9616227afeffd58d87e80b9f628a5d3d54ada884d85221fed"
+    },
+    {
+      "repo": "ggml-org/SmolVLM2-500M-Video-Instruct-GGUF",
+      "revision": "ccd7aae53bcb1997355c2f094959e72b3642ce17",
+      "file": "SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "url": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/resolve/ccd7aae53bcb1997355c2f094959e72b3642ce17/SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "upstream_sha256": "6f67b8036b2469fcd71728702720c6b51aebd759b78137a8120733b4d66438bc",
+      "bytes": 436808704,
+      "sha256": "6f67b8036b2469fcd71728702720c6b51aebd759b78137a8120733b4d66438bc"
+    },
+    {
+      "repo": "ggml-org/SmolVLM2-500M-Video-Instruct-GGUF",
+      "revision": "ccd7aae53bcb1997355c2f094959e72b3642ce17",
+      "file": "mmproj-SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "url": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/resolve/ccd7aae53bcb1997355c2f094959e72b3642ce17/mmproj-SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "upstream_sha256": "921dc7e259f308e5b027111fa185efcbf33db13f6e35749ddf7f5cdb60ef520b",
+      "bytes": 108785184,
+      "sha256": "921dc7e259f308e5b027111fa185efcbf33db13f6e35749ddf7f5cdb60ef520b"
+    }
+  ],
+  "runtime_artifacts": [
+    {
+      "file": "llama-b11577-bin-win-cuda-12.4-x64.zip",
+      "sha256": "24f5885d2d67b9a61da5f9dcde93d74ae3820b4bb4fcaa738f29f7ab4ba7436c"
+    }
+  ],
+  "cuda_dependencies": {
+    "source": "PyTorch wheel",
+    "torch_version": "2.6.0+cu124",
+    "install_index": "https://download.pytorch.org/whl/cu124",
+    "files": [
+      {
+        "file": "cublas64_12.dll",
+        "bytes": 100188672,
+        "sha256": "6ed2a2b8a1a7d243ee76acc81bbbfaadddb3264e0526a785ef58a8c6420dd05d"
+      },
+      {
+        "file": "cublasLt64_12.dll",
+        "bytes": 472802816,
+        "sha256": "0b58a51fa30b0af7640b80ca2a1c2f3f0b93d62774aa0a34af7ba8c090684d31"
+      },
+      {
+        "file": "cudart64_12.dll",
+        "bytes": 553984,
+        "sha256": "f95273031fc5ea44cdb37e0a696a1b15b9d84a4ee977299a6f6e652ef4d790cf"
+      }
+    ]
+  }
+}

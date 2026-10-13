@@ -52,3 +52,24 @@ Hardware, SSE timing and CUDA inference functional checks passed. Model download
 
 This public repository is updated after each completed measurement stage. Raw per-request records remain available alongside summaries, including negative results and limitations.
 
+
+<!-- RESULTS:START -->
+## Measured results
+
+All times below are **milliseconds**, warm requests only. Pilot rows have 8 requests and are excluded from final conclusions. Final configurations target 48 paired requests in two randomized blocks. CI: seeded bootstrap; concurrent conditions resample whole waves. See [methodology](docs/methodology.md), [raw requests](results/requests.jsonl), [summary CSV](results/summary.csv), and [paired differences](results/paired-effects.csv).
+
+### pilot
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| lfm350-f16 | 8 / 8 | 18.97 | 14.75–24.54 | 15.65 | 31.02 | 91.12 |
+| lfm350-q8 | 8 / 8 | 33.59 | 28.05–37.66 | 35.65 | 40.53 | 91.12 |
+| lfm350-q4 | 8 / 8 | 29.33 | 22.82–35.48 | 31.87 | 40.36 | 91.12 |
+| lfm1200-q4 | 8 / 8 | 29.00 | 22.00–35.99 | 28.39 | 40.36 | 91.12 |
+| smol500-q8 | 8 / 8 | 30.41 | 24.46–35.13 | 31.44 | 39.26 | 92.50 |
+
+![pilot TTFT](results/figures/pilot.png)
+
+Input resolution and visual tokens may saturate at the model processor limit. Quantization may increase prefill overhead. GPU GEMM duty is not a hardware-equivalence claim. Concurrent results include server queueing and batching. Visual inputs are controlled synthetic scenes, not a real-world vision benchmark. No quality, FLOP-count, production-throughput or cross-GPU conclusion is established.
+
+<!-- RESULTS:END -->
