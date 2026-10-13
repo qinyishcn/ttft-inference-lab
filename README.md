@@ -201,4 +201,3 @@ Staircase mean reversals: step-1-model-lfm350-q8 → step-2-precision-q4. Retain
 Input resolution and visual tokens may saturate at the model processor limit. Quantization may increase prefill overhead. GPU GEMM duty is not a hardware-equivalence claim. Concurrent results include server queueing and batching. Visual inputs are controlled synthetic scenes, not a real-world vision benchmark. No quality, FLOP-count, production-throughput or cross-GPU conclusion is established.
 
 <!-- RESULTS:END -->
-

@@ -32,5 +32,3 @@ The pilot uses disjoint inputs to check candidates. The text-factor baseline is 
 ## Publication
 
 The user requested a new public GitHub repository. Publish scripts, selected public text inputs, artifact/source hashes, per-request measurements, hardware details (no machine name/IP/user paths), summaries, and figures. Exclude weights, executables, complete third-party datasets, local server logs and all credentials. No hosted paid inference API is used. Commit/push after each completed stage and verify the repository is public and accessible without authentication.
-
-
