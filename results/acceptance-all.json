@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "formal_configurations": 68,
+  "formal_requests": 3264,
+  "phase_counts": {
+    "warmup": 1312,
+    "pilot": 224,
+    "measured": 3264
+  },
+  "all_current_requests": 4800,
+  "failed_requests": 0,
+  "max_cached_tokens": 0,
+  "per_condition_formal_n": 48,
+  "sources": [
+    {
+      "path": "results/requests.jsonl",
+      "requests": 3024,
+      "sha256": "b210b54f404efb57bbed6d7471602af6f0cf63995d97e571e19e36431e6a52b2"
+    },
+    {
+      "path": "results/minicpm_native/requests.jsonl",
+      "requests": 736,
+      "sha256": "6004c7e33d84a14bfc71b4d8cb66b88a0b773bf314c92305f908ab2d81c93e9b"
+    },
+    {
+      "path": "results/vlm_extension/requests.jsonl",
+      "requests": 720,
+      "sha256": "26461819f1e34eb9df77f71e78b56eb3a9525bf5ec97a71ca0f67c7ee143bdd9"
+    },
+    {
+      "path": "results/embodied_erqa/requests.jsonl",
+      "requests": 320,
+      "sha256": "5ddd44d3c1cbb849ffdeeb2b544e5837da90fc924b31ec450d7cc625da1f6709"
+    }
+  ],
+  "validation_files": [
+    "results/validation.json",
+    "results/compute_only/validation.json",
+    "results/vlm_extension/validation.json",
+    "results/embodied_erqa/validation.json"
+  ],
+  "historical_records_excluded_from_current_denominator": {
+    "native_minicpm": 250,
+    "cached_llava_answer": 23760,
+    "grace_codec": "20 repeats per operation, aggregate only"
+  },
+  "metric": "runtime model first-token computation; not HTTP or robot action-loop latency"
+}

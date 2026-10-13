@@ -1,24 +1,24 @@
 {
-  "verified_utc": "2026-10-13T04:13:19.255997+00:00",
+  "verified_utc": "2026-10-13T07:21:08.553306+00:00",
   "repository": "https://github.com/qinyishcn/ttft-inference-lab",
   "private": false,
   "default_branch": "main",
-  "verified_content_commit": "97d6efce19e97ec59a7918a3cfa3077e857aa062",
+  "verified_content_commit": "002da559b0017a8d7629db4c1fa697dcc78ce462",
   "unauthenticated_http": true,
   "remote_main_matches_local": true,
-  "tracked_files": 43,
+  "tracked_files": 91,
   "excluded_artifact_and_credential_scan_passed": true,
   "files": [
     {
       "path": "README.md",
-      "bytes": 13849,
-      "sha256": "2eafb24f2a002cda0701e92b0fcf66f069bcdf769bbf0ad51d3d15e137cad459",
+      "bytes": 3829,
+      "sha256": "f03ff4d481dc6511c9a78ee17b7a9234d5dbe52e172d67ce66cf241cba3561c1",
       "http_status": 200
     },
     {
       "path": "docs/results-zh.md",
-      "bytes": 12487,
-      "sha256": "2b851bd563fc11c7d858f9837e0e6f81119053f9c81637d316de9e3839fe8d40",
+      "bytes": 17473,
+      "sha256": "6b320f23abba951538cf5c99dedfad182900e1c8e29457d124cd3e5bc6d140c2",
       "http_status": 200
     },
     {
@@ -40,21 +40,39 @@
       "http_status": 200
     },
     {
-      "path": "results/summary.csv",
-      "bytes": 10194,
-      "sha256": "3e8081e1dfe0747136e57113e41d498ff0b999c15cd8714c588cbd35c07d69d7",
+      "path": "results/compute_only/summary.csv",
+      "bytes": 10884,
+      "sha256": "e611c5d6f2f2c865aaba87859e71a370ee84014ff73970cdbd16a759c43a03a9",
       "http_status": 200
     },
     {
-      "path": "results/validation.json",
-      "bytes": 356,
-      "sha256": "64374cae6c68b360371b9e2d57f4ea9ae2283f3ef79d0c961d7ddf93e46dd00a",
+      "path": "results/compute_only/validation.json",
+      "bytes": 344,
+      "sha256": "d07007c29333c5bbe434a7eecade3792cc0bcd4383c5a4b2ccd17db00c565520",
       "http_status": 200
     },
     {
-      "path": "results/figures/staircase.png",
-      "bytes": 69961,
-      "sha256": "79f829f55598b632ed91ac11ef0adfd1d3d069a21635f11974ed06cefee2d04d",
+      "path": "results/compute_only/figures/minicpm_native.png",
+      "bytes": 73011,
+      "sha256": "ed589f3074dd860068489d77f6fadbee9c2526faa01a7c6590d9f2cd13fe3a04",
+      "http_status": 200
+    },
+    {
+      "path": "results/minicpm_native/requests.jsonl",
+      "bytes": 1286313,
+      "sha256": "becefe373ee4fb4f00e4fb104679e7a44516879fedd55ea64bc70f4388f9df10",
+      "http_status": 200
+    },
+    {
+      "path": "results/history/provenance.json",
+      "bytes": 18056,
+      "sha256": "e080bcd11937beba1c64e50b5f17c8af4b9fe1c40704ac7320591d788c37f944",
+      "http_status": 200
+    },
+    {
+      "path": "data/minicpm-artifacts.json",
+      "bytes": 1860,
+      "sha256": "d0b6613ac9aca3d5c5b245678e8416c4a52c3e23cf4c640e13165ebe9042dcb9",
       "http_status": 200
     }
   ],

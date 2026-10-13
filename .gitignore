@@ -6,3 +6,4 @@ __pycache__/
 results/private/
 data/squad-dev-v1.1.json
 docs/server-upstream.md
+data/erqa-cache/

@@ -28,11 +28,13 @@ def main():
     p.add_argument('--pilot',action='store_true')
     p.add_argument('--threads',type=int,default=4)
     p.add_argument('--prompt-style',choices=['standard','compact'],default='standard')
-    p.add_argument('--dataset',choices=['streamingbench','synthetic'],default='streamingbench')
+    p.add_argument('--dataset',choices=['streamingbench','synthetic','erqa'],default='streamingbench')
     p.add_argument('--block',type=int,default=0)
     p.add_argument('--strict-prompt',action='store_true')
+    p.add_argument('--model-label',default='MiniCPM-o-2.6')
+    p.add_argument('--output-group',default='minicpm_native')
     a=p.parse_args()
-    output=ROOT/'results'/'minicpm_native'
+    output=ROOT/'results'/a.output_group
     output.mkdir(exist_ok=True)
     private=ROOT/'results'/'private'
     binary=next((ROOT/'runtime'/'cuda').rglob('llama-server.exe'))
@@ -41,9 +43,14 @@ def main():
          '-t',str(a.threads),'-tb',str(a.threads),'-fa','on','--fit','off',
          '--cache-ram','0','--no-cache-idle-slots','--host','127.0.0.1','--port','8097','--no-webui','--perf','-lv','4']
     logpath=private/f'minicpm-{a.tag}.log'
-    source=a.assets/'results'/'q4_k_m_four_native'/'predictions.jsonl'
-    data=[json.loads(x) for x in source.read_text(encoding='utf-8').splitlines()]
-    random.Random(SEED).shuffle(data)
+    if a.dataset=='erqa':
+        source=ROOT/'data'/'erqa-selected.json'
+        selected=json.loads(source.read_text(encoding='utf-8'))
+        data={offset+i:r for phase,offset in [('measured',0),('pilot',64),('warmup',112)] for i,r in enumerate(selected[phase])}
+    else:
+        source=a.assets/'results'/'q4_k_m_four_native'/'predictions.jsonl'
+        data=[json.loads(x) for x in source.read_text(encoding='utf-8').splitlines()]
+        random.Random(SEED).shuffle(data)
     ids=list(range(64,64+a.n)) if a.pilot else list(range(a.block*a.n,(a.block+1)*a.n))
     ids=list(range(112,120))+ids
     log=logpath.open('w')
@@ -68,7 +75,7 @@ def main():
             'runtime':'b11577 CUDA12.4','slots':1,'context':4096,'batch':a.batch,'ubatch':a.ubatch,
             'threads':a.threads,'gpu_evidence':evidence,'source_predictions_sha256':hashlib.sha256(source.read_bytes()).hexdigest()},indent=2))
         for resolution in a.resolutions:
-            config={'name':f'{a.tag}-{resolution}-f{a.frames}-b{a.batch}-ub{a.ubatch}-{a.prompt_style}-{a.dataset}','model':'MiniCPM-o-2.6',
+            config={'name':f'{a.tag}-{resolution}-f{a.frames}-b{a.batch}-ub{a.ubatch}-{a.prompt_style}-{a.dataset}','model':a.model_label,
                     'quantization':a.tag,'resolution_area_budget':resolution,'frames':a.frames,'batch':a.batch,
                     'ubatch':a.ubatch,'max_tokens':a.max_tokens,'prefix_cache':False,'unsplit':True,'prompt_style':a.prompt_style,
                     'threads':a.threads,'projector_file':a.projector.name,'dataset':a.dataset}
@@ -76,10 +83,10 @@ def main():
             prepared=[]
             for i in ids:
                 row=data[i]
-                folder=a.assets/'data'/'native_frames'/row['question_id'].replace(' ','_')
+                folder=ROOT/'data'/'erqa-cache' if a.dataset=='erqa' else a.assets/'data'/'native_frames'/row['question_id'].replace(' ','_')
                 content=[]
                 meta=[]
-                for frame in row['frames'][-a.frames:]:
+                for frame in (row['images'] if a.dataset=='erqa' else row['frames'][-a.frames:]):
                     if a.dataset=='synthetic':
                         rng=random.Random(SEED+i)
                         colors=['red','blue','green','yellow']
@@ -101,8 +108,8 @@ def main():
                     raw=b.getvalue()
                     meta.append({'width':width,'height':height,'sha256':hashlib.sha256(raw).hexdigest()})
                     content.append({'type':'image_url','image_url':{'url':'data:image/jpeg;base64,'+base64.b64encode(raw).decode()}})
-                question='You are an advanced video question-answering AI assistant. Analyze the provided frames and answer the multiple-choice question. Respond with only the letter (A, B, C, or D).\n\nQuestion: '+row['question']+'\n\nOptions:\n'+'\n'.join(row['options'])+'\n\nThe best option is:'
-                if a.prompt_style=='compact':
+                question=row['question'] if a.dataset=='erqa' else 'You are an advanced video question-answering AI assistant. Analyze the provided frames and answer the multiple-choice question. Respond with only the letter (A, B, C, or D).\n\nQuestion: '+row['question']+'\n\nOptions:\n'+'\n'.join(row['options'])+'\n\nThe best option is:'
+                if a.prompt_style=='compact' and a.dataset!='erqa':
                     question=row['question']+'\n'+'\n'.join(row['options'])+'\nAnswer with one letter:'
                 if a.dataset=='synthetic':
                     question='Color? A red B blue C green D yellow. Letter:'
@@ -115,7 +122,7 @@ def main():
                     'cache_prompt':False,'timings_per_token':True}
                 prepared.append((i,row,payload,meta))
             vals=[]
-            with Telemetry('minicpm_native',config['name']):
+            with Telemetry(a.output_group,config['name']):
                 for pos,(i,row,payload,meta) in enumerate(prepared):
                     r=stream_request(payload)
                     t=r.get('first_text_timings') or r.get('timings',{})
@@ -125,7 +132,7 @@ def main():
                     record={'config':config,'phase':'warmup' if pos<8 else ('pilot' if a.pilot else 'measured'),'block':a.block,
                         'sample_index':i,'question_id':row['question_id'],'images':meta,'compute_first_token_ms':compute,
                         'compute_full_answer_ms':total,'expected_answer':row['answer'],'prompt_text':payload['messages'][0]['content'][-1]['text'],
-                        'seed':SEED,**r}
+                        'question_type':row.get('question_type'),'seed':SEED,**r}
                     with (output/'requests.jsonl').open('a',encoding='utf-8') as f:
                         f.write(json.dumps(record,ensure_ascii=False)+'\n')
                     if pos>=8 and not r['error']:

@@ -178,7 +178,7 @@ def main():
     first,last=lookup['staircase',stairs[0]],lookup['staircase',stairs[-1]]
     doc=f'''# 大模型推理首 token 纯计算时延实测报告
 
-日期：2026-10-13（上海时间）。本版主表统一采用模型运行时内部计算计时，移除通信与 Testbed 分段相加口径。新增 **9 个完整 MiniCPM-o 2.6 配置 × 48 条 = 432 条**正式样本；原小模型实验 **46 × 48 = 2208 条**。合计 **55 个配置、2640 条正式请求**，另保留预热与预试验。历史结果单列，不冒充本次受控实验。[验收记录](../results/compute_only/validation.json)。
+日期：2026-10-13（上海时间）。主表统一采用模型运行时内部计算计时，移除通信与 Testbed 分段相加口径。主体阶段为 **9 个完整 MiniCPM-o 2.6 配置 × 48 条 = 432 条**，加原小模型 **46 × 48 = 2208 条**，小计 **55 个配置、2640 条正式请求**。[主体验收](../results/compute_only/validation.json)。后续Qwen/MiniCPM-V另9档、ERQA另4档见补测章节；全项目累计68档、3264条正式样本，另保留预热与预试验。历史结果单列，不计入本轮受控样本数。
 
 MiniCPM 的 140 ms 目标指 **首 token 计算 TTFT**。完整视觉+语言模型的一帧合成颜色问答在明确单字母指令下为 **{lookup['minicpm_native',mnames[8]]['mean_ms']:.2f} ms**，严格答对 **{lookup['minicpm_native',mnames[8]]['answer_correct']}/48**；更短但指令服从较差的原提示词为 {lookup['minicpm_native',mnames[6]]['mean_ms']:.2f} ms，不能只按速度推荐。真实 StreamingBench 单帧、短提示词、混合 Q8 视觉组件约 **{lookup['minicpm_native',mnames[3]]['mean_ms']:.2f} ms**。两者输入、任务不同，不能互换。所有 MiniCPM 请求都重新执行视觉编码与语言模型，没有拆为两段部署或复用视觉特征。
 
@@ -229,7 +229,7 @@ RTX 3070 8 GB，i5-13600K，约 32 GiB RAM，Windows 11；本次 b11577 CUDA 12.
 
 中文完整报告：**[大模型推理首 token 纯计算时延实测报告](docs/results-zh.md)**。
 
-RTX 3070 8 GB；原小模型46配置×48条，加完整MiniCPM-o 2.6的9配置×48条，共55配置、2640条正式请求。每档另做预热、固定种子、关闭并检查前缀缓存。主指标统一为模型内部 `timings.prompt_ms`，涵盖视觉编码到首次token采样；排除HTTP、权重加载及进入槽位之前的排队。这是模型执行墙钟，非CUDA内核时间总和。
+RTX 3070 8 GB；主体阶段为原小模型46档与完整MiniCPM-o 2.6的9档；追加Qwen/MiniCPM-V9档、ERQA4档，全项目68配置×48条=3264条正式请求。每档另做预热、固定种子、关闭并检查前缀缓存。主指标统一为模型内部 `timings.prompt_ms`，涵盖视觉编码到首次token采样；排除HTTP、权重加载及进入槽位之前的排队。这是模型执行墙钟，非CUDA内核时间总和。
 
 ## MiniCPM 完整模型
 
@@ -257,6 +257,12 @@ python scripts/run_minicpm_sweep.py --assets <local-native-assets-directory>
 只发布脚本、公开来源文本及数值证据，不发布模型权重、运行时二进制、完整视频或本地私人日志。SQuAD来源见[data说明](data/README.md)；硬件和原模型来源见[environment](data/environment.json)与[artifacts](data/artifacts.json)。原有GPU功率上限154W未修改。多个用户共享一份权重；GEMM活动占空比仅为资源竞争代理，不能等同另一张显卡。
 '''
     (ROOT/'README.md').write_text(readme,encoding='utf-8')
+    if (R/'vlm_extension'/'requests.jsonl').exists():
+        from report_vlm_extension import main as extension_report
+        extension_report()
+    elif (R/'embodied_erqa'/'requests.jsonl').exists():
+        from report_erqa import main as erqa_report
+        erqa_report()
     print(json.dumps(validation,indent=2))
     print('MiniCPM:',[(MINI_TAGS[i],round(lookup['minicpm_native',n]['mean_ms'],3),lookup['minicpm_native',n]['answer_correct']) for i,n in enumerate(mnames)])
 

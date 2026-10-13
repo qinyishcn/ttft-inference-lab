@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "status": "complete",
+  "issues": [],
+  "formal_configurations": 9,
+  "formal_requests": 432,
+  "phase_counts": {
+    "warmup": 216,
+    "pilot": 72,
+    "measured": 432
+  },
+  "payloads_paired_across_models": true,
+  "metric": "server prompt_ms; native fresh vision plus language first-token computation",
+  "max_cached_tokens": 0
+}

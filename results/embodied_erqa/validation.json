@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "status": "complete",
+  "issues": [],
+  "formal_configurations": 4,
+  "formal_requests": 192,
+  "phase_counts": {
+    "warmup": 96,
+    "pilot": 32,
+    "measured": 192
+  },
+  "target": "140 ms model first sampled token; latency and correctness both retained",
+  "scope": "Offline embodied reasoning QA, not closed-loop robot action generation or success",
+  "max_cached_tokens": 0
+}

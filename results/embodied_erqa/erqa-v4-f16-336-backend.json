@@ -1,0 +1,22 @@
+{
+  "model_file": "ggml-model-Q4_K_M.gguf",
+  "projector_file": "mmproj-model-f16.gguf",
+  "runtime": "b11577 CUDA12.4",
+  "slots": 1,
+  "context": 4096,
+  "batch": 2048,
+  "ubatch": 512,
+  "threads": 4,
+  "gpu_evidence": [
+    "0.00.139.898 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 3070 (8191 MiB, 7113 MiB free)",
+    "0.00.219.022 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 3070) (0000:01:00.0) - 7113 MiB free",
+    "0.00.385.884 I load_tensors: offloaded 33/33 layers to GPU",
+    "0.00.385.889 I load_tensors:        CUDA0 model buffer size =  1985.93 MiB",
+    "0.00.987.784 I llama_kv_cache:      CUDA0 KV buffer size =   128.00 MiB",
+    "0.00.998.156 I sched_reserve:      CUDA0 compute buffer size =    84.01 MiB",
+    "0.01.032.937 I clip_ctx: CLIP using CUDA0 backend",
+    "0.01.033.027 I load_hparams: model size:         914.34 MiB",
+    "0.01.610.670 I reserve_compute_meta:      CUDA0 compute buffer size =    41.81 MiB"
+  ],
+  "source_predictions_sha256": "81349cb027046b1536e631a83aff7f524c178554a748eb389b196418b99dba63"
+}
