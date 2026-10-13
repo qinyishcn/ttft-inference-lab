@@ -4,7 +4,7 @@ RTX 3070 (8 GiB), Windows, single-machine controlled experiment. Work in progres
 
 ## Experimental contract
 
-- At least **40 measured requests per configuration**, plus separate warm-up. Model loading and cold-start requests are excluded from steady-state TTFT and retained separately.
+- At least **48 measured requests per configuration**, plus separate warm-up. Model loading and cold-start requests are excluded from steady-state TTFT and retained separately.
 - Primary metric: monotonic wall-clock elapsed time from immediately before local HTTP request submission to the first **nonempty generated text** SSE delta. Headers, role-only deltas and keepalives do not count. First generated token and first visible text may differ; both are recorded where available.
 - Same engine, greedy decoding, fixed seed, disabled prompt/KV prefix reuse, fixed output budget, paired sample IDs, fixed CPU threads and fixed context budget. Preserve failed/missing requests in the denominator.
 - Separate one-factor comparisons for model, quantization, input length/dataset, modality/resolution/video frames, GPU contention, and concurrent users. One loaded model serves multiple users; weights need not be replicated.
@@ -47,3 +47,4 @@ python scripts/prepare.py
 4. Cumulative staircase and final validation pending.
 
 This public repository is updated after each completed measurement stage. Raw per-request records remain available alongside summaries, including negative results and limitations.
+

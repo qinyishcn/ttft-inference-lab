@@ -1,0 +1,35 @@
+# Measurement methodology and evidence boundaries
+
+## Timing
+
+Primary TTFT is local HTTP submission to receipt of the first nonempty generated text delta, measured with `perf_counter_ns`. SSE is consumed with `chunk_size=1` to avoid the 512-byte buffering delay in `requests.iter_lines` defaults. A role delta, header, SSE ping or empty text is not a first token. `first_delta_ms` also includes reasoning text if any; it is not an exact GPU token timestamp. Inputs/media are prepared before timing. Network is local loopback. This measures warm-server request latency, including JSON serialization, transport, media encoding, language prefill, scheduling, queueing, and first text emission. Video decoding and frame sampling are outside this boundary.
+
+Server `prompt_ms`, `prompt_n`, `cache_n` and generation timings are retained separately. Vision encoding may occur before reported language prefill. Client TTFT minus reported language prefill is **not pure queue time**. No exact queue/service decomposition is claimed; concurrency measures the observed client experience including queueing. First generated IDs may have no visible text, so first nonempty text can be later than the first internally sampled token.
+
+## Controls and sample count
+
+Each final configuration has 48 requests in two independently randomized configuration-order blocks of 24. These are the same 48 paired SQuAD source IDs or scene IDs across configurations. Eight warm-up requests before each configuration/block use disjoint IDs 112–119. Pilot requests use IDs 64–71, disjoint from final IDs 0–47. Cold load-to-ready times and all warm-up requests are preserved but excluded from final steady-state summaries. Pilot results cannot substitute for a 48-request final configuration. Model weights are fully on GPU; automatic CPU offload must be checked in runtime logs.
+
+Greedy temperature 0, fixed seed 20261013, 32 generated-token budget with EOS ignored, four CPU threads, 2048-token logical batches, 512-token microbatches, flash attention on, eight-thousand-token context capacity per slot, and four slots except the explicitly labeled one-slot queue stress case. The fixed output budget matters for concurrent queueing even though TTFT ends at the first text delta. EOS suppression is a latency control, not a quality setting recommendation.
+
+Disable prompt reuse per request (`cache_prompt=false`), server RAM prefix cache (`--cache-ram 0`), idle-slot caching, and chunk reuse. Verify actual `cache_n` rather than assuming flags worked. GPU warm-up does not imply token-prefix reuse. Compare input-token counts and note tokenizer differences between model families. Question lengths differ across SQuAD samples, but their IDs/order are paired. Length levels specify **context tokens** before the fixed question/template, not an assumed total input-token count.
+
+## Inputs and factors
+
+- Text datasets: SQuAD 1.1 development samples, chosen with a fixed seed; a synthetic arithmetic/repeated-sentence control. Contexts are cropped or repeated using the active model tokenizer to 64/256/1024/2048 tokens. This measures input-length effects and controlled content differences, not original SQuAD answer accuracy. At matched context length, question length/content still differs, so dataset effects include this residual difference. Source hashes and selected question/context/answer records retain provenance.
+- Models: LFM2 350M and 1.2B are same-family size comparisons; SmolVLM2 500M adds a different architecture, tokenizer, chat template and training. Model-family differences cannot be attributed solely to parameter count. GGUF Q4_K_M is mixed tensor quantization, not uniformly 4-bit weights. F16 versus Q8_0 versus Q4_K_M is measured on the same 350M model. Lower bit width is not assumed to lower prefill latency.
+- Modalities: SmolVLM2 is held constant for text, image, and ordered multi-frame video QA. Forty-eight deterministic scenes vary shapes, positions and count. Video frames are sampled at 2 fps from the reproducible motion rule and submitted as ordered timestamped images, not a native compressed-video API. The modality comparison includes the natural prompt difference. Frame-count comparisons use the same question. This is visual latency coverage, not validation on a real video benchmark or streaming video.
+- Resolutions: 224, 448 and 896 square pixels before the model processor. A model may resize, pad, cap or tile inputs; higher source resolution is not assumed to imply more visual tokens. Report actual server input-token counts, hashes and bytes.
+- Compute availability: independent CUDA FP16 GEMM worker with requested duty 0/25/50/75%, fixed 2048-square matrices and 40-ms control periods. Duty is **active process wall time**, not a guaranteed fraction of SMs, utilization, FLOPs, or another GPU model. An idle resident worker isolates process/memory overhead; a no-worker control is also retained. Kernel scheduling, GPU clocks/power, memory bandwidth and Windows display activity all contribute. No hardware power or clock setting is changed.
+- Users: synchronized waves of 1/2/4/8 HTTP clients sharing one model and server. Each wave waits for all 32-token completions before the next wave. This is a closed-wave concurrency test, not Poisson arrivals, sustained production throughput, or an arrival-rate stability test. Four server slots are fixed for primary comparisons. The one-slot condition explicitly changes the server scheduling capacity. No artificial client sleep is added to TTFT.
+
+## Statistics and interpretation
+
+Report valid/attempted counts, failures, mean, standard deviation, median, p95, bootstrap 95% CI and token counts. Keep errors and missing first text in raw records; do not replace them with zero or silently resample. Concurrent requests within a wave are correlated: the mean CI resamples whole waves, while sequential conditions resample requests. With few high-concurrency waves this CI is exploratory. Paired delta CIs use paired IDs and are descriptive; block counts are too small to estimate long-run machine-to-machine variation.
+
+The baseline is the minimum mean **pilot** text candidate, confirmed by independent final measurements; report when the final minimum differs. The cumulative staircase changes one factor at a time after that choice. It is a separate experiment from one-factor controls and must retain reversals. Observed sorting is descriptive, never causal proof. A single GPU, single desktop, single engine/version and latency-only study cannot establish general hardware scaling or model quality.
+
+## Publication
+
+The user requested a new public GitHub repository. Publish scripts, selected public text inputs, artifact/source hashes, per-request measurements, hardware details (no machine name/IP/user paths), summaries, and figures. Exclude weights, executables, complete third-party datasets, local server logs and all credentials. No hosted paid inference API is used. Commit/push after each completed stage and verify the repository is public and accessible without authentication.
+
