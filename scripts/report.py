@@ -55,7 +55,7 @@ def main():
         w=csv.DictWriter(out,fieldnames=list(summaries[0]))
         w.writeheader()
         w.writerows(summaries)
-    bases={'models':'lfm350-q4','inputs':'squad-64','inputs_exact':'squad-total-128','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-minimum'}
+    bases={'models':'lfm350-q4','quant_long':'lfm350-q4','inputs':'squad-64','inputs_exact':'squad-total-128','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-minimum'}
     effects=[]
     for (stage,name),rs in grouped.items():
         if stage not in bases or name==bases[stage]:
@@ -75,7 +75,7 @@ def main():
         w.writerows(effects)
     figdir=R/'figures'
     figdir.mkdir(exist_ok=True)
-    stages=['pilot','models','inputs','inputs_exact','compute','load','vision','staircase']
+    stages=['pilot','models','quant_long','inputs','inputs_exact','compute','load','vision','staircase']
     content=['\n<!-- RESULTS:START -->','## Measured results','',
         'All times below are **milliseconds**, warm requests only. Pilot rows have 8 requests and are excluded from final conclusions. Final configurations target 48 paired requests in two randomized blocks. CI: seeded bootstrap; concurrent conditions resample whole waves. See [methodology](docs/methodology.md), [raw requests](results/requests.jsonl), [summary CSV](results/summary.csv), and [paired differences](results/paired-effects.csv).','']
     for stage in stages:
@@ -84,6 +84,7 @@ def main():
             continue
         levels={
             'models':['lfm350-q4','lfm350-q8','lfm350-f16','lfm1200-q4','smol500-q8'],
+            'quant_long':['lfm350-q4','lfm350-q8','lfm350-f16'],
             'inputs':['squad-64','squad-256','squad-1024','squad-2048','synthetic-64','synthetic-1024'],
             'inputs_exact':['squad-total-128','squad-total-512','squad-total-1024','squad-total-2048','synthetic-total-128','synthetic-total-1024'],
             'compute':['no-worker','gemm-0','gemm-0.25','gemm-0.5','gemm-0.75'],

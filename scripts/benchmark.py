@@ -245,7 +245,7 @@ def publish(stage,enabled):
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--publish',action='store_true')
-    p.add_argument('--stage',default='all',choices=['all','pilot','models','inputs','inputs_exact','compute','load','vision','staircase'])
+    p.add_argument('--stage',default='all',choices=['all','pilot','models','quant_long','inputs','inputs_exact','compute','load','vision','staircase'])
     a=p.parse_args()
     samples=squad_samples()
     (ROOT/'results'/'private').mkdir(exist_ok=True)
@@ -296,6 +296,7 @@ def main():
             cfg(f'step-{len(staircase)+5}-users8','lfm1200-q4',length=2048,duty=.5,users=8),
         ])
         stages={
+            'quant_long':[cfg(m,m,length=2048) for m in ['lfm350-q4','lfm350-q8','lfm350-f16']],
             'inputs':[base(f'squad-{n}',length=n) for n in [64,256,1024,2048]]+[base(f'synthetic-{n}',length=n,dataset='synthetic') for n in [64,1024]],
             'inputs_exact':[base(f'squad-total-{n}',total_tokens=n,length=None) for n in [128,512,1024,2048]]+[base(f'synthetic-total-{n}',total_tokens=n,length=None,dataset='synthetic') for n in [128,1024]],
             'compute':[base('no-worker',length=512)]+[base(f'gemm-{d}',length=512,duty=d) for d in [0,.25,.5,.75]],

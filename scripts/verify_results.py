@@ -33,7 +33,7 @@ for (stage,name),rs in groups.items():
     if stage=='pilot' and any(not 64<=r['sample_index']<72 for r in rs):
         issues.append(f'Pilot boundary mismatch {name}')
 stages=Counter(stage for stage,name in groups)
-for stage,n in {'pilot':5,'models':5,'inputs':6,'inputs_exact':6,'compute':5,'load':5,'vision':7}.items():
+for stage,n in {'pilot':5,'models':5,'quant_long':3,'inputs':6,'inputs_exact':6,'compute':5,'load':5,'vision':7}.items():
     if stages[stage]!=n:
         issues.append(f'Missing stage configurations {stage}: {stages[stage]}/{n}')
 if stages['staircase']<7:

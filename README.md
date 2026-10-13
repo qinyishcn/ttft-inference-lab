@@ -81,6 +81,16 @@ All times below are **milliseconds**, warm requests only. Pilot rows have 8 requ
 
 ![models TTFT](results/figures/models.png)
 
+### quant_long
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| lfm350-q4 | 48 / 48 | 84.51 | 81.73–87.24 | 86.25 | 98.31 | 2072.12 |
+| lfm350-q8 | 48 / 48 | 85.39 | 82.84–88.03 | 84.59 | 96.89 | 2072.12 |
+| lfm350-f16 | 48 / 48 | 84.40 | 82.10–86.60 | 84.67 | 98.25 | 2072.12 |
+
+![quant_long TTFT](results/figures/quant_long.png)
+
 ### inputs
 Original context-budget experiment: token-array repeat + text round-trip can merge tokens (especially the synthetic repeated sentence). Names are requested budgets, **not matched final token counts**. The actual counts below are retained. Use `inputs_exact` for strictly matched total input tokens.
 
