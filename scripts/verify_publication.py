@@ -18,7 +18,7 @@ for path in tracked:
         continue
     body=(ROOT/path).read_text(encoding='utf-8-sig',errors='replace')
     assert not re.search(r'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{30,}|hf_[A-Za-z0-9]{25,}|sk-proj-[A-Za-z0-9_-]{25,}',body),'Credential-shaped content in '+path
-    assert r'C:\Users\qinyi' not in body and r'C:\\Users\\qinyi' not in body,'Absolute user path in '+path
+    assert not re.search(r'[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s]',body),'Absolute user path in '+path
 
 def anonymous_get(url):
     session=requests.Session()
