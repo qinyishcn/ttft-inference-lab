@@ -52,7 +52,6 @@ Hardware, SSE timing and CUDA inference functional checks passed. Model download
 
 This public repository is updated after each completed measurement stage. Raw per-request records remain available alongside summaries, including negative results and limitations.
 
-
 <!-- RESULTS:START -->
 ## Measured results
 
@@ -69,6 +68,22 @@ All times below are **milliseconds**, warm requests only. Pilot rows have 8 requ
 | smol500-q8 | 8 / 8 | 30.41 | 24.46–35.13 | 31.44 | 39.26 | 92.50 |
 
 ![pilot TTFT](results/figures/pilot.png)
+
+### models
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| lfm350-q4 | 48 / 48 | 27.50 | 24.71–30.25 | 27.37 | 40.79 | 93.27 |
+| lfm350-q8 | 48 / 48 | 26.32 | 23.31–29.20 | 30.77 | 38.87 | 93.27 |
+| lfm350-f16 | 48 / 48 | 26.54 | 23.63–29.30 | 27.28 | 39.65 | 93.27 |
+| lfm1200-q4 | 48 / 48 | 32.98 | 31.15–34.91 | 34.99 | 39.50 | 93.27 |
+| smol500-q8 | 48 / 48 | 24.22 | 21.69–26.84 | 25.43 | 38.21 | 94.19 |
+
+![models TTFT](results/figures/models.png)
+
+## Observations and limits
+
+Pilot selected **lfm350-f16**. Independent final model comparison minimum: **smol500-q8**, 24.22 ms. Subsequent factor tests use this final comparison minimum as their text baseline. The separate staircase remeasures it. This is the observed minimum among tested candidates, not a global optimum.
 
 Input resolution and visual tokens may saturate at the model processor limit. Quantization may increase prefill overhead. GPU GEMM duty is not a hardware-equivalence claim. Concurrent results include server queueing and batching. Visual inputs are controlled synthetic scenes, not a real-world vision benchmark. No quality, FLOP-count, production-throughput or cross-GPU conclusion is established.
 
