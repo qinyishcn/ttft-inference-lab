@@ -81,6 +81,19 @@ All times below are **milliseconds**, warm requests only. Pilot rows have 8 requ
 
 ![models TTFT](results/figures/models.png)
 
+### inputs
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| squad-64 | 48 / 48 | 27.22 | 24.51–29.74 | 28.20 | 41.46 | 94.19 |
+| squad-256 | 48 / 48 | 33.16 | 29.96–36.10 | 35.94 | 46.08 | 286.19 |
+| squad-1024 | 48 / 48 | 66.93 | 64.73–68.98 | 69.88 | 75.91 | 1054.19 |
+| squad-2048 | 48 / 48 | 114.54 | 112.11–117.06 | 115.41 | 126.44 | 2078.19 |
+| synthetic-64 | 48 / 48 | 25.43 | 23.05–28.01 | 26.20 | 39.61 | 86.94 |
+| synthetic-1024 | 48 / 48 | 54.52 | 52.21–56.86 | 53.97 | 69.78 | 958.94 |
+
+![inputs TTFT](results/figures/inputs.png)
+
 ## Observations and limits
 
 Pilot selected **lfm350-f16**. Independent final model comparison minimum: **smol500-q8**, 24.22 ms. Subsequent factor tests use this final comparison minimum as their text baseline. The separate staircase remeasures it. This is the observed minimum among tested candidates, not a global optimum.
