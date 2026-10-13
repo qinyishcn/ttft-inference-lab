@@ -1,24 +1,24 @@
 {
-  "verified_utc": "2026-10-13T07:21:08.553306+00:00",
+  "verified_utc": "2026-10-13T10:15:52.136271+00:00",
   "repository": "https://github.com/qinyishcn/ttft-inference-lab",
   "private": false,
   "default_branch": "main",
-  "verified_content_commit": "002da559b0017a8d7629db4c1fa697dcc78ce462",
+  "verified_content_commit": "f3238f85046fb1c648f62890f578f9dba03a9778",
   "unauthenticated_http": true,
   "remote_main_matches_local": true,
-  "tracked_files": 91,
+  "tracked_files": 127,
   "excluded_artifact_and_credential_scan_passed": true,
   "files": [
     {
       "path": "README.md",
-      "bytes": 3829,
-      "sha256": "f03ff4d481dc6511c9a78ee17b7a9234d5dbe52e172d67ce66cf241cba3561c1",
+      "bytes": 6855,
+      "sha256": "60379f1ec94dc412e98cb2adbb3be03a49e2b0b4e2841974705da194862d4a14",
       "http_status": 200
     },
     {
       "path": "docs/results-zh.md",
-      "bytes": 17473,
-      "sha256": "6b320f23abba951538cf5c99dedfad182900e1c8e29457d124cd3e5bc6d140c2",
+      "bytes": 20538,
+      "sha256": "08ce3f89bd575cab8584413b871c3d97a2c73c962533fee7c76dbb31a67e400e",
       "http_status": 200
     },
     {
@@ -73,6 +73,54 @@
       "path": "data/minicpm-artifacts.json",
       "bytes": 1860,
       "sha256": "d0b6613ac9aca3d5c5b245678e8416c4a52c3e23cf4c640e13165ebe9042dcb9",
+      "http_status": 200
+    },
+    {
+      "path": "docs/vlm-extension-zh.md",
+      "bytes": 3405,
+      "sha256": "2285a835f9e294583d3f300f610caaea651cb252f1e57ef98eb8c3e0aaf03830",
+      "http_status": 200
+    },
+    {
+      "path": "results/vlm_extension/summary.csv",
+      "bytes": 2466,
+      "sha256": "6c29d820749d32d92fb40c02fffadc2d51a1353449b79a289dd9af04bdf63313",
+      "http_status": 200
+    },
+    {
+      "path": "results/vlm_extension/validation.json",
+      "bytes": 355,
+      "sha256": "de9b2ce52e87484e772088696cd738b5adb0ce0fe69f8631a06bc51c5884d357",
+      "http_status": 200
+    },
+    {
+      "path": "results/vlm_extension/requests.jsonl",
+      "bytes": 1473818,
+      "sha256": "b14dc79d873b31797650b001bda5f2b930d0b86bd732e5225f861c7a8e31c066",
+      "http_status": 200
+    },
+    {
+      "path": "docs/embodied-erqa-zh.md",
+      "bytes": 4652,
+      "sha256": "b4e94d2e8ee7488da0d776a22ba2379c6aa3c3cdb827520bf63a0d36592528e6",
+      "http_status": 200
+    },
+    {
+      "path": "results/embodied_erqa/summary.csv",
+      "bytes": 1332,
+      "sha256": "7635499e06e1cd666a313fec7927afd50318a1eedaba54159214890a6c43ca2b",
+      "http_status": 200
+    },
+    {
+      "path": "results/embodied_erqa/validation.json",
+      "bytes": 405,
+      "sha256": "1f4082da0ba92580955e6c713a7ac44178bb33cbdc3fa817cf72a577494d1ce3",
+      "http_status": 200
+    },
+    {
+      "path": "results/embodied_erqa/requests.jsonl",
+      "bytes": 626529,
+      "sha256": "32f12de33096a3e586f1f5d63585e2ce79dbe1df5150e18ae474535a1924df74",
       "http_status": 200
     }
   ],
