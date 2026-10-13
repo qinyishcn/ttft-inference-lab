@@ -12,6 +12,7 @@ p=argparse.ArgumentParser()
 p.add_argument('--server',type=Path)
 p.add_argument('--model',choices=list(MODELS),default='lfm350-q4')
 p.add_argument('--vision',action='store_true')
+p.add_argument('--exact',action='store_true')
 a=p.parse_args()
 binary=a.server or next((ROOT/'runtime'/'cuda').rglob('llama-server.exe'))
 folder=ROOT/'results'/'private'
@@ -35,12 +36,16 @@ with (folder/'smoke.log').open('w') as log:
         if a.vision:
             assert a.model.startswith('smol')
             configs+=[{'task':'image','resolution':s} for s in [224,448,896]]+[{'task':'video','resolution':224,'frames':8}]
+        if a.exact:
+            configs=[{'task':'text','dataset':d,'total_tokens':n} for d in ['squad','synthetic'] for n in [128,512,1024,2048]]
         for cfg in configs:
             payload,meta=payload_for(cfg,squad_samples()[0],0,requests.Session())
             row=stream_request(payload)
             assert row['error'] is None,row
             assert row['usage']['completion_tokens']==32,row
             assert row['timings']['cache_n']==0,row
+            if a.exact:
+                assert row['usage']['prompt_tokens']==cfg['total_tokens'],(meta,row)
             print(json.dumps({'smoke_only':True,'configuration':cfg,'ttft_ms':row['ttft_ms'],'usage':row['usage'],'timings':row['timings'],'first_text_timings':row['first_text_timings']}),flush=True)
     finally:
         proc.terminate()

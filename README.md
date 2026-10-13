@@ -96,6 +96,19 @@ Original context-budget experiment: token-array repeat + text round-trip can mer
 
 ![inputs TTFT](results/figures/inputs.png)
 
+### inputs_exact
+
+| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |
+|---|---:|---:|---:|---:|---:|---:|
+| squad-total-128 | 48 / 48 | 27.12 | 24.37–29.88 | 28.73 | 42.56 | 128.00 |
+| squad-total-512 | 48 / 48 | 36.64 | 34.15–39.12 | 40.17 | 46.68 | 512.00 |
+| squad-total-1024 | 48 / 48 | 60.36 | 57.39–63.17 | 65.26 | 72.23 | 1024.00 |
+| squad-total-2048 | 48 / 48 | 105.83 | 103.02–108.54 | 110.95 | 117.73 | 2048.00 |
+| synthetic-total-128 | 48 / 48 | 26.90 | 24.71–29.19 | 27.45 | 39.39 | 128.00 |
+| synthetic-total-1024 | 48 / 48 | 57.13 | 54.50–59.64 | 56.16 | 70.12 | 1024.00 |
+
+![inputs_exact TTFT](results/figures/inputs_exact.png)
+
 ### compute
 
 | Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |

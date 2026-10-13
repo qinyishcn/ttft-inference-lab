@@ -50,7 +50,7 @@ def text_content(sample,index,length,dataset,session,stable=False):
     tokens=session.post('http://127.0.0.1:8097/tokenize',json={'content':context,'add_special':False},timeout=30).json()['tokens']
     if stable:
         # Tokenize repeated TEXT as a whole: BPE can merge across repeated token-array boundaries.
-        expanded=context*(length//len(tokens)+2)
+        expanded=context*(2*length//len(tokens)+2)
         tokens=session.post('http://127.0.0.1:8097/tokenize',json={'content':expanded,'add_special':False},timeout=30).json()['tokens'][:length]
     else:
         tokens=(tokens*(length//len(tokens)+1))[:length]
