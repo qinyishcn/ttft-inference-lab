@@ -239,6 +239,11 @@ def publish(stage,enabled):
     if enabled:
         # Explicit allowlist excludes model weights, binaries, private logs and third-party full datasets.
         subprocess.run(['git','add','README.md','.gitignore','requirements.txt','scripts','docs/methodology.md','data/artifacts.json','data/squad-selected.json','data/environment.json','results/requests.jsonl','results/startup.jsonl','results/telemetry.jsonl','results/summary.csv','results/summary.json','results/paired-effects.csv','results/figures','results/competitors.jsonl'],check=True,cwd=ROOT)
+        changed=subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT)
+        if changed.returncode==0:
+            print('No publication changes for completed stage',stage,flush=True)
+            return
+        assert changed.returncode==1,'Could not inspect staged changes'
         subprocess.run(['git','commit','-m',f'Publish {stage} TTFT measurements and reproducible report'],check=True,cwd=ROOT)
         subprocess.run(['git','push','origin','main'],check=True,cwd=ROOT)
 

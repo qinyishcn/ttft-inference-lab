@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "issues": [],
+  "per_stage_configurations": {
+    "pilot": 5,
+    "models": 5,
+    "inputs": 6,
+    "compute": 5,
+    "load": 5,
+    "vision": 7,
+    "staircase": 9,
+    "inputs_exact": 6,
+    "quant_long": 3
+  },
+  "measured_requests": 2248,
+  "all_requests_including_warmup": 3024,
+  "failed_requests": 0,
+  "max_cached_tokens": 0
+}

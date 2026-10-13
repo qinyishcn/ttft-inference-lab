@@ -1,0 +1,9 @@
+from,to,paired_n,mean_delta_ms,ci95_low_ms,ci95_high_ms,ci_method
+step-0-minimum,step-1-model-lfm350-q8,48,2.671947916666666,-0.6823535937500004,6.1290060937499975,paired request bootstrap; concurrency correlation not modeled
+step-1-model-lfm350-q8,step-2-precision-q4,48,-2.110360416666666,-6.082069791666666,1.8914442708333294,paired request bootstrap; concurrency correlation not modeled
+step-2-precision-q4,step-3-context512,48,15.205943750000001,11.518847604166666,18.924844635416665,paired request bootstrap; concurrency correlation not modeled
+step-3-context512,step-4-context2048,48,44.98215416666667,41.535060989583336,48.501988541666655,paired request bootstrap; concurrency correlation not modeled
+step-4-context2048,step-5-larger,48,80.25095,76.25090708333333,83.94147666666666,paired request bootstrap; concurrency correlation not modeled
+step-5-larger,step-6-contention,48,59.69529791666667,55.79749177083333,63.870030885416675,paired request bootstrap; concurrency correlation not modeled
+step-6-contention,step-7-users4,48,541.8527291666667,501.81156614583335,577.7051733333334,paired request bootstrap; concurrency correlation not modeled
+step-7-users4,step-8-users8,48,532.174425,380.0406341145833,691.4825640624999,paired request bootstrap; concurrency correlation not modeled

@@ -2,6 +2,7 @@
 from collections import Counter,defaultdict
 import json
 from pathlib import Path
+import re
 
 ROOT=Path(__file__).resolve().parents[1]
 rows=[json.loads(x) for x in (ROOT/'results'/'requests.jsonl').read_text(encoding='utf-8').splitlines()]
@@ -41,6 +42,13 @@ if stages['staircase']<7:
 startups=[json.loads(x) for x in (ROOT/'results'/'startup.jsonl').read_text().splitlines()]
 if not startups or any('--device' not in s['command'] or 'CUDA0' not in s['command'] for s in startups):
     issues.append('Explicit CUDA device evidence missing')
+for s in startups:
+    evidence='\n'.join(s.get('backend_evidence',[]))
+    offloaded=re.findall(r'offloaded (\d+)/(\d+) layers to GPU',evidence)
+    if not offloaded or not any(int(a)==int(b) and int(a)>0 for a,b in offloaded):
+        issues.append('Actual full GPU layer offload not verified: '+s['model'])
+    if s['model'].startswith('smol') and 'CLIP using CUDA0 backend' not in evidence:
+        issues.append('Actual vision GPU backend missing: '+s['model'])
 data={'passed':not issues,'issues':issues,'per_stage_configurations':dict(stages),'measured_requests':sum(len(rs) for rs in groups.values()),'all_requests_including_warmup':len(rows),'failed_requests':sum(bool(r['error']) for r in rows),'max_cached_tokens':max((r['timings'].get('cache_n',-1) for r in rows),default=-1)}
 (ROOT/'results'/'validation.json').write_text(json.dumps(data,indent=2),encoding='utf-8')
 print(json.dumps(data,indent=2))

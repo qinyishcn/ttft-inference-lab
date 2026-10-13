@@ -1,6 +1,21 @@
 # Small-model TTFT inference lab
 
-RTX 3070 (8 GiB), Windows, single-machine controlled experiment. Work in progress; no measured result is claimed until its per-request evidence is committed.
+Completed on 2026-10-13: RTX 3070 (8 GiB), Windows, llama.cpp CUDA. **46 final configurations × 48 valid requests = 2,208 final measurements**, plus 40 pilot requests and 776 warm-ups; **3,024 requests total, zero failures, zero reused prefix tokens**. [Acceptance audit](results/validation.json).
+
+**[中文完整报告与结论](docs/results-zh.md)** · [Raw measurements](results/requests.jsonl) · [Environment and hardware](data/environment.json)
+
+The lowest observed final candidate mean was **SmolVLM2-500M Q8: 24.22 ms**. Illustrative controlled comparisons:
+
+| Factor | Change | Mean TTFT (ms) |
+|---|---|---:|
+| Same-family model size | LFM2 350M Q4 → 1.2B Q4, short input | 27.50 → 32.98 |
+| Actual total input length | 128 → 2048 tokens, same model | 27.12 → 105.83 |
+| GPU contention | resident idle worker → 75% GEMM duty | 45.55 → 73.16 |
+| Concurrent users | 1 → 8, fixed four server slots | 46.05 → 222.86 |
+| Image resolution | 224 → 896, same visual model | 89.80 → 203.46 |
+| Video frames | 2 → 8 at 224 pixels | 162.27 → 583.91 |
+
+GPU contention is not another physical GPU. Visual QA uses reproducible synthetic scenes and ordered video frames. At matched total text tokens, dataset-content differences were inconclusive; quantization showed no stable TTFT advantage. The independent cumulative staircase rose from **26.82 to 1301.54 ms overall**, with a retained **2.11 ms decrease** at the Q8 → Q4 precision step. It is **not strictly monotonic**.
 
 ## Experimental contract
 
@@ -13,11 +28,11 @@ RTX 3070 (8 GiB), Windows, single-machine controlled experiment. Work in progres
 - GPU competition is a resource-contention proxy, **not another physical GPU or a guaranteed percentage of GPU compute**. Keep existing GPU power/clock settings unchanged. Log telemetry.
 - Server prompt-processing timings are distinct from client TTFT. Any remainder includes queueing, preprocessing, scheduling, transport and streaming; it is not a direct measurement of queue time.
 
-## Hardware and candidates
+## Hardware and tested models
 
 Detected GPU: NVIDIA GeForce RTX 3070, 8192 MiB; NVIDIA driver 610.60. Existing power ceiling: 154 W (driver-reported default 220 W). RAM: approximately 32 GiB. This is an interactive Windows desktop, so residual OS/display contention is a limitation.
 
-Candidates, all below 7B:
+Tested models, all below 7B:
 
 | Model | Role | Weights |
 |---|---|---|
@@ -31,7 +46,7 @@ Liquid models are open-weight under the [LFM Open License](https://huggingface.c
 
 Text: seeded selection from the public [SQuAD 1.1 development set](https://rajpurkar.github.io/SQuAD-explorer/). Packed/cropped context variants are explicitly labeled and not treated as original SQuAD accuracy evaluation. Synthetic controls isolate token length. Visual controls use reproducible original shape scenes and ordered video frames; they are not a representative real-world vision benchmark. Input manifests and hashes are published; model weights, runtime binaries and full third-party datasets are excluded.
 
-Pinned runtime: [llama.cpp b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577), CUDA 12.4 Windows build. See [server API documentation](https://github.com/ggml-org/llama.cpp/blob/b11577/tools/server/README.md). Revisions and SHA-256 hashes will be in `data/artifacts.json` after downloads complete.
+Pinned runtime: [llama.cpp b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577), CUDA 12.4 Windows build. See [server API documentation](https://github.com/ggml-org/llama.cpp/blob/b11577/tools/server/README.md). Revisions and verified model SHA-256 hashes are in [data/artifacts.json](data/artifacts.json).
 
 When PyTorch 2.6.0+cu124 is already installed, preparation reuses its CUDA 12.4 DLLs and hashes each dependency. Otherwise it downloads the matching llama.cpp CUDA dependency archive. The CUDA GEMM competition experiment requires a CUDA-enabled PyTorch installation (this machine uses 2.6.0+cu124).
 
@@ -41,14 +56,18 @@ python scripts/prepare.py
 python scripts/capture_environment.py
 python scripts/test_measurement.py
 python scripts/calibrate_compute.py
-python scripts/benchmark.py --stage all --publish
-# Or measure one stage: --stage models|inputs|compute|load|vision|staircase
+python scripts/benchmark.py --stage all
+# Authorized repository maintainers may add --publish for incremental README updates.
+# Or measure one stage: --stage models|quant_long|inputs|inputs_exact|compute|load|vision|staircase
+python scripts/verify_results.py
+python scripts/summarize_telemetry.py
 python scripts/report.py
+python scripts/write_chinese_report.py
 ```
 
-## Progress
+## Completion
 
-Hardware, SSE timing and CUDA inference functional checks passed. Model downloads and digest checks are in progress. Measurement stage completion is shown in the generated tables below once available.
+All eight final measurement stages and the disjoint pilot are complete. SSE regression, CUDA/model/vision functional checks, upstream model digests, actual full GPU offload, sample denominators, exact-stage token counts, output budgets, timing boundaries and cache state passed. GPU processes exited and the original power limit remains unchanged.
 
 This public repository is updated after each completed measurement stage. Raw per-request records remain available alongside summaries, including negative results and limitations.
 
@@ -182,3 +201,4 @@ Staircase mean reversals: step-1-model-lfm350-q8 → step-2-precision-q4. Retain
 Input resolution and visual tokens may saturate at the model processor limit. Quantization may increase prefill overhead. GPU GEMM duty is not a hardware-equivalence claim. Concurrent results include server queueing and batching. Visual inputs are controlled synthetic scenes, not a real-world vision benchmark. No quality, FLOP-count, production-throughput or cross-GPU conclusion is established.
 
 <!-- RESULTS:END -->
+

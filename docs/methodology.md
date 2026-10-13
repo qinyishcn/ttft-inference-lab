@@ -8,7 +8,7 @@ Server `prompt_ms`, `prompt_n`, `cache_n` and generation timings are retained se
 
 ## Controls and sample count
 
-Each final configuration has 48 requests in two independently randomized configuration-order blocks of 24. These are the same 48 paired SQuAD source IDs or scene IDs across configurations. Eight warm-up requests before each configuration/block use disjoint IDs 112–119. Pilot requests use IDs 64–71, disjoint from final IDs 0–47. Cold load-to-ready times and all warm-up requests are preserved but excluded from final steady-state summaries. Pilot results cannot substitute for a 48-request final configuration. Model weights are fully on GPU; automatic CPU offload must be checked in runtime logs.
+Each final configuration has 48 requests in two independently randomized configuration-order blocks of 24. These are the same 48 paired SQuAD source IDs or scene IDs across configurations. Eight warm-up requests before each configuration/block use disjoint IDs 112–119. Pilot requests use IDs 64–71, disjoint from final IDs 0–47. Cold load-to-ready times and all warm-up requests are preserved but excluded from final steady-state summaries. Pilot results cannot substitute for a 48-request final configuration. All model layers are GPU-offloaded; startup evidence records actual CUDA layer counts, vision backend, and CUDA/host buffers.
 
 Greedy temperature 0, fixed seed 20261013, 32 generated-token budget with EOS ignored, four CPU threads, 2048-token logical batches, 512-token microbatches, flash attention on, eight-thousand-token context capacity per slot, and four slots except the explicitly labeled one-slot queue stress case. The fixed output budget matters for concurrent queueing even though TTFT ends at the first text delta. EOS suppression is a latency control, not a quality setting recommendation.
 
@@ -32,4 +32,5 @@ The pilot uses disjoint inputs to check candidates. The text-factor baseline is 
 ## Publication
 
 The user requested a new public GitHub repository. Publish scripts, selected public text inputs, artifact/source hashes, per-request measurements, hardware details (no machine name/IP/user paths), summaries, and figures. Exclude weights, executables, complete third-party datasets, local server logs and all credentials. No hosted paid inference API is used. Commit/push after each completed stage and verify the repository is public and accessible without authentication.
+
 
