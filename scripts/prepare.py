@@ -1,9 +1,12 @@
 """Download pinned, public upstream artifacts; never publish weights or binaries."""
 import concurrent.futures as cf
 import hashlib
+import importlib.metadata
+import importlib.util
 import json
 from pathlib import Path
 import requests
+import shutil
 import time
 import zipfile
 
@@ -45,11 +48,12 @@ def download(url, path):
                     assert len(r.content) == end-start+1
                     part.write_bytes(r.content)
                     return part
-                except Exception:
+                except Exception as exc:
+                    print('retry',path.name,start,type(exc).__name__,str(exc)[:100],flush=True)
                     if attempt == 3:
                         raise
                     time.sleep(2 ** attempt)
-        with cf.ThreadPoolExecutor(max_workers=12) as pool:
+        with cf.ThreadPoolExecutor(max_workers=32) as pool:
             ordered = list(pool.map(get_part, range(0, size, chunk)))
         with path.with_suffix(path.suffix+'.partial').open('wb') as out:
             for part in ordered:
@@ -67,7 +71,14 @@ def download(url, path):
 def main():
     manifest = {'runtime_tag':'b11577', 'models':[]}
     jobs=[]
-    for name in ['llama-b11577-bin-win-cuda-12.4-x64.zip','cudart-llama-bin-win-cuda-12.4-x64.zip']:
+    spec=importlib.util.find_spec('torch')
+    torchlib=Path(spec.submodule_search_locations[0])/'lib' if spec else None
+    dlls=['cublas64_12.dll','cublasLt64_12.dll','cudart64_12.dll']
+    use_torch=bool(torchlib and all((torchlib/n).exists() for n in dlls) and '+cu124' in importlib.metadata.version('torch'))
+    archives=['llama-b11577-bin-win-cuda-12.4-x64.zip']
+    if not use_torch:
+        archives.append('cudart-llama-bin-win-cuda-12.4-x64.zip')
+    for name in archives:
         jobs.append((f'https://github.com/ggml-org/llama.cpp/releases/download/b11577/{name}',ROOT/'runtime'/name))
     for repo, revision, files in SOURCES:
         response=requests.get('https://huggingface.co/api/models/'+repo+'/revision/'+revision+'?blobs=true', timeout=60)
@@ -88,12 +99,21 @@ def main():
         item['sha256']=hashlib.file_digest(p.open('rb'),'sha256').hexdigest()
         assert item['sha256']==item['upstream_sha256'],item['file']
     runtime=[]
-    for p in (ROOT/'runtime').glob('*.zip'):
+    for name in archives:
+        p=ROOT/'runtime'/name
         runtime.append({'file':p.name,'sha256':hashlib.file_digest(p.open('rb'),'sha256').hexdigest()})
         with zipfile.ZipFile(p) as z:
             assert z.testzip() is None
             z.extractall(ROOT/'runtime'/'cuda')
     manifest['runtime_artifacts']=runtime
+    if use_torch:
+        dependencies=[]
+        for name in dlls:
+            source=torchlib/name
+            destination=ROOT/'runtime'/'cuda'/name
+            shutil.copy2(source,destination)
+            dependencies.append({'file':name,'bytes':source.stat().st_size,'sha256':hashlib.file_digest(source.open('rb'),'sha256').hexdigest()})
+        manifest['cuda_dependencies']={'source':'PyTorch wheel','torch_version':importlib.metadata.version('torch'),'install_index':'https://download.pytorch.org/whl/cu124','files':dependencies}
     (ROOT/'data'/'artifacts.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
     dataset=ROOT/'data'/'squad-dev-v1.1.json'
     if not dataset.exists():

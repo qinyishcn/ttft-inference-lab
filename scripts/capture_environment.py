@@ -17,5 +17,10 @@ for name in ['requests','numpy','pillow','matplotlib','torch']:
     except importlib.metadata.PackageNotFoundError:
         packages[name]=None
 data={'os':platform.system(),'os_release':platform.release(),'os_version':platform.version(),'python':sys.version.split()[0],'gpu':dict(zip(query.split(','),gpu)),'cpu':cpu,'ram_bytes':ram,'packages':packages,'power_settings_modified':False,'user_timezone':'Asia/Shanghai'}
+binary=list((ROOT/'runtime'/'cuda').rglob('llama-server.exe'))
+if binary:
+    for flag,key in [('--version','engine_version'),('--list-devices','engine_devices')]:
+        result=subprocess.run([str(binary[0]),flag],text=True,capture_output=True,timeout=30)
+        data[key]={'returncode':result.returncode,'output':(result.stdout+result.stderr).replace(str(ROOT),'.').strip()}
 (ROOT/'data'/'environment.json').write_text(json.dumps(data,indent=2),encoding='utf-8')
 print(json.dumps(data,indent=2))

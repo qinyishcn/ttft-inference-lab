@@ -21,6 +21,13 @@ MODELS={
  'lfm1200-q4':'LFM2-1.2B-Q4_K_M.gguf',
  'smol500-q8':'SmolVLM2-500M-Video-Instruct-Q8_0.gguf',
 }
+MODEL_META={
+ 'lfm350-q4':{'family':'LFM2','nominal_parameters':354483968,'weight_quantization':'Q4_K_M'},
+ 'lfm350-q8':{'family':'LFM2','nominal_parameters':354483968,'weight_quantization':'Q8_0'},
+ 'lfm350-f16':{'family':'LFM2','nominal_parameters':354483968,'weight_quantization':'F16'},
+ 'lfm1200-q4':{'family':'LFM2','nominal_parameters':1170340608,'weight_quantization':'Q4_K_M'},
+ 'smol500-q8':{'family':'SmolVLM2','nominal_parameters':500000000,'weight_quantization':'Q8_0'},
+}
 
 def stamp():
     return dt.datetime.now(dt.timezone.utc).isoformat()
@@ -87,10 +94,10 @@ class Server:
         candidates=list((ROOT/'runtime'/'cuda').rglob('llama-server.exe'))
         assert len(candidates)==1,candidates
         cmd=[str(candidates[0]),'-m',str(ROOT/'models'/MODELS[model]),
-            '--host','127.0.0.1','--port','8097','-ngl','99','-c',str(8192*slots),
+            '--host','127.0.0.1','--port','8097','--device','CUDA0','-ngl','99','-c',str(8192*slots),
             '-np',str(slots),'-t','4','-tb','4','-b','2048','-ub','512','-fa','on',
             '--cache-ram','0','--no-cache-idle-slots','--cache-reuse','0',
-            '--seed',str(SEED),'--no-webui','--log-timestamps','--perf']
+            '--seed',str(SEED),'--no-webui','--log-timestamps','--perf','-lv','4']
         if model.startswith('smol'):
             cmd+=['--mmproj',str(ROOT/'models'/'mmproj-SmolVLM2-500M-Video-Instruct-Q8_0.gguf')]
         logpath=ROOT/'results'/'private'/f'server-{model}-slots{slots}.log'
@@ -110,8 +117,9 @@ class Server:
         else:
             raise TimeoutError('server load timeout')
         self.key=key
+        evidence=[line.replace(str(ROOT),'.') for line in logpath.read_text(errors='replace').splitlines() if any(x in line.lower() for x in ['offload','cuda','n_ctx','model size','model params'])]
         with (ROOT/'results'/'startup.jsonl').open('a',encoding='utf-8') as out:
-            out.write(json.dumps({'utc':stamp(),'model':model,'slots':slots,'load_to_ready_s':time.perf_counter()-load_start,'command':[str(Path(x).relative_to(ROOT)) if str(x).startswith(str(ROOT)) else x for x in cmd]})+'\n')
+            out.write(json.dumps({'utc':stamp(),'model':model,'slots':slots,'load_to_ready_s':time.perf_counter()-load_start,'backend_evidence':evidence[-60:],'command':[str(Path(x).relative_to(ROOT)) if str(x).startswith(str(ROOT)) else x for x in cmd]})+'\n')
     def stop(self):
         if self.proc and self.proc.poll() is None:
             self.proc.terminate()
@@ -224,7 +232,7 @@ def measure_config(server,stage,cfg,samples,n=48,block=0):
     return records
 
 def cfg(name,model,**kwargs):
-    return {'name':name,'model':model,'task':'text','length':64,'dataset':'squad','users':1,'slots':4,**kwargs}
+    return {'name':name,'model':model,**MODEL_META[model],'task':'text','length':64,'dataset':'squad','users':1,'slots':4,**kwargs}
 
 def publish(stage,enabled):
     subprocess.run([sys.executable,str(ROOT/'scripts'/'report.py')],check=True,cwd=ROOT)
@@ -263,17 +271,36 @@ def main():
         pilot={m:[r['ttft_ms'] for r in rows if r['stage']=='pilot' and r['phase']=='measured' and r['config']['model']==m and not r['error']] for m in MODELS}
         means={m:sum(v)/len(v) for m,v in pilot.items() if v}
         best=min(means,key=means.get)
-        base=lambda name,**kw:cfg(name,best,**kw)
         print('PILOT selected',best,means,flush=True)
+        if a.stage in ['all','models']:
+            run_stage('models',[cfg(m,m) for m in MODELS])
+        rows=[json.loads(x) for x in (ROOT/'results'/'requests.jsonl').read_text(encoding='utf-8').splitlines()]
+        confirmed={m:[r['ttft_ms'] for r in rows if r['stage']=='models' and r['phase']=='measured' and r['config']['model']==m and not r['error']] for m in MODELS}
+        confirmed_means={m:sum(v)/len(v) for m,v in confirmed.items() if len(v)>=48}
+        if confirmed_means:
+            best=min(confirmed_means,key=confirmed_means.get)
+        base=lambda name,**kw:cfg(name,best,**kw)
+        print('Final model comparison baseline',best,confirmed_means,flush=True)
+        staircase=[base('step-0-minimum')]
+        # Keep precision constant when changing model size; precision gets its own step.
+        if best=='smol500-q8':
+            staircase.append(cfg('step-1-model-lfm350-q8','lfm350-q8'))
+        if best!='lfm350-q4':
+            staircase.append(cfg(f'step-{len(staircase)}-precision-q4','lfm350-q4'))
+        staircase.extend([
+            cfg(f'step-{len(staircase)}-context512','lfm350-q4',length=512),
+            cfg(f'step-{len(staircase)+1}-context2048','lfm350-q4',length=2048),
+            cfg(f'step-{len(staircase)+2}-larger','lfm1200-q4',length=2048),
+            cfg(f'step-{len(staircase)+3}-contention','lfm1200-q4',length=2048,duty=.5),
+            cfg(f'step-{len(staircase)+4}-users4','lfm1200-q4',length=2048,duty=.5,users=4),
+            cfg(f'step-{len(staircase)+5}-users8','lfm1200-q4',length=2048,duty=.5,users=8),
+        ])
         stages={
-            'models':[cfg(m,m) for m in MODELS],
             'inputs':[base(f'squad-{n}',length=n) for n in [64,256,1024,2048]]+[base(f'synthetic-{n}',length=n,dataset='synthetic') for n in [64,1024]],
             'compute':[base('no-worker',length=512)]+[base(f'gemm-{d}',length=512,duty=d) for d in [0,.25,.5,.75]],
             'load':[base(f'users-{u}',length=512,users=u) for u in [1,2,4,8]]+[base('users-4-slots-1',length=512,users=4,slots=1)],
             'vision':[cfg('text','smol500-q8')]+[cfg(f'image-{s}','smol500-q8',task='image',resolution=s) for s in [224,448,896]]+[cfg(f'video-{f}','smol500-q8',task='video',resolution=224,frames=f) for f in [2,4,8]],
-            'staircase':[base('step-0-short'),base('step-1-context512',length=512),base('step-2-context2048',length=2048),
-                cfg('step-3-larger','lfm1200-q4',length=2048),cfg('step-4-contention','lfm1200-q4',length=2048,duty=.5),
-                cfg('step-5-users4','lfm1200-q4',length=2048,duty=.5,users=4),cfg('step-6-users8','lfm1200-q4',length=2048,duty=.5,users=8)],
+            'staircase':staircase,
         }
         for stage,configs in stages.items():
             if a.stage in ['all',stage]:

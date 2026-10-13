@@ -5,6 +5,7 @@ import io
 import json
 import random
 from pathlib import Path
+from urllib.parse import quote
 from PIL import Image,ImageDraw
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -17,7 +18,7 @@ def squad_samples():
     for article in data['data']:
         for paragraph in article['paragraphs']:
             for qa in paragraph['qas']:
-                rows.append({'id':qa['id'],'question':qa['question'],'context':paragraph['context'],'answers':qa['answers']})
+                rows.append({'id':qa['id'],'question':qa['question'],'context':paragraph['context'],'answers':qa['answers'],'source_title':article['title'],'source_url':'https://en.wikipedia.org/wiki/'+quote(article['title'],safe='()_')})
     random.Random(SEED).shuffle(rows)
     chosen=rows[:128]
     (ROOT/'data'/'squad-selected.json').write_text(json.dumps({'source':'SQuAD 1.1 dev','source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'seed':SEED,'samples':chosen},indent=2),encoding='utf-8')

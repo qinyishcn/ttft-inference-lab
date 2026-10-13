@@ -52,7 +52,7 @@ def main():
         w=csv.DictWriter(out,fieldnames=list(summaries[0]))
         w.writeheader()
         w.writerows(summaries)
-    bases={'models':'lfm350-q4','inputs':'squad-64','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-short'}
+    bases={'models':'lfm350-q4','inputs':'squad-64','compute':'gemm-0','load':'users-1','vision':'text','staircase':'step-0-minimum'}
     effects=[]
     for (stage,name),rs in grouped.items():
         if stage not in bases or name==bases[stage]:
@@ -76,10 +76,17 @@ def main():
         ss=[s for s in summaries if s['stage']==stage]
         if not ss:
             continue
+        levels={
+            'models':['lfm350-q4','lfm350-q8','lfm350-f16','lfm1200-q4','smol500-q8'],
+            'inputs':['squad-64','squad-256','squad-1024','squad-2048','synthetic-64','synthetic-1024'],
+            'compute':['no-worker','gemm-0','gemm-0.25','gemm-0.5','gemm-0.75'],
+            'load':['users-1','users-2','users-4','users-8','users-4-slots-1'],
+            'vision':['text','image-224','image-448','image-896','video-2','video-4','video-8'],
+        }
         if stage=='staircase':
             ss.sort(key=lambda s:s['configuration'])
-        elif stage!='pilot':
-            ss.sort(key=lambda s:s['mean_ms'] if s['mean_ms'] is not None else float('inf'))
+        elif stage in levels:
+            ss.sort(key=lambda s:levels[stage].index(s['configuration']))
         content+=['### '+stage,'','| Configuration | Valid / attempted | Mean | 95% CI | Median | p95 | Input tokens (mean) |','|---|---:|---:|---:|---:|---:|---:|']
         for s in ss:
             fmt=lambda v:f'{v:.2f}' if v is not None else 'NA'
@@ -104,7 +111,7 @@ def main():
         winner=min(final,key=lambda s:s['mean_ms'])
         pilot=[s for s in summaries if s['stage']=='pilot' and s['valid']]
         selection=min(pilot,key=lambda s:s['mean_ms']) if pilot else winner
-        content+=['## Observations and limits','',f'Pilot selected **{selection["configuration"]}**. Independent final model comparison minimum: **{winner["configuration"]}**, {winner["mean_ms"]:.2f} ms. This is the observed minimum among tested candidates, not a global optimum.','']
+        content+=['## Observations and limits','',f'Pilot selected **{selection["configuration"]}**. Independent final model comparison minimum: **{winner["configuration"]}**, {winner["mean_ms"]:.2f} ms. Subsequent factor tests use this final comparison minimum as their text baseline. The separate staircase remeasures it. This is the observed minimum among tested candidates, not a global optimum.','']
     stairs=sorted([s for s in summaries if s['stage']=='staircase'],key=lambda s:s['configuration'])
     if len(stairs)>1:
         reversals=[f'{a["configuration"]} → {b["configuration"]}' for a,b in zip(stairs,stairs[1:]) if a['mean_ms'] is not None and b['mean_ms'] is not None and b['mean_ms']<a['mean_ms']]

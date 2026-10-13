@@ -1,0 +1,2599 @@
+{
+  "source": "SQuAD 1.1 dev",
+  "source_sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+  "seed": 20261013,
+  "samples": [
+    {
+      "id": "57293d6d1d046914007791b8",
+      "question": "How many lead authors does an IPCC report chapter have?",
+      "context": "Each chapter has a number of authors who are responsible for writing and editing the material. A chapter typically has two \"coordinating lead authors\", ten to fifteen \"lead authors\", and a somewhat larger number of \"contributing authors\". The coordinating lead authors are responsible for assembling the contributions of the other authors, ensuring that they meet stylistic and formatting requirements, and reporting to the Working Group chairs. Lead authors are responsible for writing sections of chapters. Contributing authors prepare text, graphs or data for inclusion by the lead authors.",
+      "answers": [
+        {
+          "answer_start": 152,
+          "text": "ten to fifteen"
+        },
+        {
+          "answer_start": 152,
+          "text": "ten to fifteen"
+        },
+        {
+          "answer_start": 152,
+          "text": "ten to fifteen"
+        }
+      ]
+    },
+    {
+      "id": "57270ab9708984140094d8f8",
+      "question": "What two environmental conditions are controlled in the museum?",
+      "context": "Conservation is responsible for the long-term preservation of the collections, and covers all the collections held by the V&A and the V&A Museum of Childhood. The conservators specialise in particular areas of conservation. Areas covered by conservator's work include \"preventive\" conservation this includes: performing surveys, assessments and providing advice on the handling of items, correct packaging, mounting and handling procedures during movement and display to reduce risk of damaging objects. Activities include controlling the museum environment (for example, temperature and light) and preventing pests (primarily insects) from damaging artefacts. The other major category is \"interventive\" conservation, this includes: cleaning and reintegration to strengthen fragile objects, reveal original surface decoration, and restore shape. Interventive treatment makes an object more stable, but also more attractive and comprehensible to the viewer. It is usually undertaken on items that are to go on public display.",
+      "answers": [
+        {
+          "answer_start": 572,
+          "text": "temperature and light"
+        },
+        {
+          "answer_start": 572,
+          "text": "temperature and light"
+        },
+        {
+          "answer_start": 572,
+          "text": "temperature and light"
+        }
+      ]
+    },
+    {
+      "id": "5725b76389a1e219009abd4e",
+      "question": "Why did oil start getting priced in terms of gold?",
+      "context": "On August 15, 1971, the United States unilaterally pulled out of the Bretton Woods Accord. The US abandoned the Gold Exchange Standard whereby the value of the dollar had been pegged to the price of gold and all other currencies were pegged to the dollar, whose value was left to \"float\" (rise and fall according to market demand). Shortly thereafter, Britain followed, floating the pound sterling. The other industrialized nations followed suit with their respective currencies. Anticipating that currency values would fluctuate unpredictably for a time, the industrialized nations increased their reserves (by expanding their money supplies) in amounts far greater than before. The result was a depreciation of the dollar and other industrialized nations' currencies. Because oil was priced in dollars, oil producers' real income decreased. In September 1971, OPEC issued a joint communiqu\u00e9 stating that, from then on, they would price oil in terms of a fixed amount of gold.",
+      "answers": [
+        {
+          "answer_start": 778,
+          "text": "oil was priced in dollars, oil producers' real income decreased"
+        },
+        {
+          "answer_start": 770,
+          "text": "Because oil was priced in dollars, oil producers' real income decreased."
+        },
+        {
+          "answer_start": 770,
+          "text": "Because oil was priced in dollars, oil producers' real income decreased"
+        },
+        {
+          "answer_start": 770,
+          "text": "Because oil was priced in dollars, oil producers' real income decreased"
+        },
+        {
+          "answer_start": 770,
+          "text": "Because oil was priced in dollars, oil producers' real income decreased"
+        }
+      ]
+    },
+    {
+      "id": "5726934f5951b619008f7721",
+      "question": "What cruise line has included Newcastle as a departure port since 2007?",
+      "context": "From Newcastle International Ferry Terminal, at North Shields, Danish DFDS Seaways run a service to IJmuiden (near Amsterdam). The DFDS ferry service to Gothenburg, Sweden, ceased at the end of October 2006 \u2013 the company cited high fuel prices and new competition from low-cost air services as the cause \u2013 and their service to Bergen and Stavanger, Norway was terminated late 2008. Since summer 2007, Thomson cruise lines have included Newcastle as a departure port on its Norwegian and Fjords cruise.",
+      "answers": [
+        {
+          "answer_start": 401,
+          "text": "Thomson"
+        },
+        {
+          "answer_start": 401,
+          "text": "Thomson"
+        },
+        {
+          "answer_start": 401,
+          "text": "Thomson cruise lines"
+        }
+      ]
+    },
+    {
+      "id": "5730c8a1f6cb411900e2449f",
+      "question": "Why was the 36 acres leased?",
+      "context": "Decisions in-between the four-year meetings are made by the Mission Council (usually consisting of church bishops). One of the most high profile decisions in recent years by one of the councils was a decision by the Mission Council of the South Central Jurisdiction which in March 2007 approved a 99-year lease of 36 acres (150,000 m2) at Southern Methodist University for the George W. Bush Presidential Library. The decision generated controversy in light of Bush's support of the Iraq War which the church bishops have criticized. A debate over whether the decision should or could be submitted for approval by the Southern Jurisdictional Conference at its July 2008 meeting in Dallas, Texas, remains unresolved.",
+      "answers": [
+        {
+          "answer_start": 369,
+          "text": "for the George W. Bush Presidential Library"
+        },
+        {
+          "answer_start": 373,
+          "text": "the George W. Bush Presidential Library"
+        },
+        {
+          "answer_start": 373,
+          "text": "the George W. Bush Presidential Library"
+        }
+      ]
+    },
+    {
+      "id": "570d391fb3d812140066d579",
+      "question": "What is the lowest recorded temperature in Victoria?",
+      "context": "The Victorian Alps in the northeast are the coldest part of Victoria. The Alps are part of the Great Dividing Range mountain system extending east-west through the centre of Victoria. Average temperatures are less than 9 \u00b0C (48 \u00b0F) in winter and below 0 \u00b0C (32 \u00b0F) in the highest parts of the ranges. The state's lowest minimum temperature of \u221211.7 \u00b0C (10.9 \u00b0F) was recorded at Omeo on 13 June 1965, and again at Falls Creek on 3 July 1970. Temperature extremes for the state are listed in the table below:",
+      "answers": [
+        {
+          "answer_start": 343,
+          "text": "\u221211.7 \u00b0C"
+        },
+        {
+          "answer_start": 343,
+          "text": "\u221211.7 \u00b0C"
+        },
+        {
+          "answer_start": 343,
+          "text": "\u221211.7 \u00b0C (10.9 \u00b0F)"
+        }
+      ]
+    },
+    {
+      "id": "57266c015951b619008f723a",
+      "question": "Previous to isotopic dating sections of rocks had to be dated using fossils and stratigraphic correlation relative to what? ",
+      "context": "At the beginning of the 20th century, important advancement in geological science was facilitated by the ability to obtain accurate absolute dates to geologic events using radioactive isotopes and other methods. This changed the understanding of geologic time. Previously, geologists could only use fossils and stratigraphic correlation to date sections of rock relative to one another. With isotopic dates it became possible to assign absolute ages to rock units, and these absolute dates could be applied to fossil sequences in which there was datable material, converting the old relative ages into new absolute ages.",
+      "answers": [
+        {
+          "answer_start": 371,
+          "text": "to one another"
+        },
+        {
+          "answer_start": 374,
+          "text": "one another"
+        },
+        {
+          "answer_start": 374,
+          "text": "one another"
+        }
+      ]
+    },
+    {
+      "id": "572fc5a1947a6a140053cc8a",
+      "question": "What can often be predicted beforehand?",
+      "context": "The outcome of most votes can be predicted beforehand since political parties normally instruct members which way to vote. Parties entrust some MSPs, known as whips, with the task of ensuring that party members vote according to the party line. MSPs do not tend to vote against such instructions, since those who do are unlikely to reach higher political ranks in their parties. Errant members can be deselected as official party candidates during future elections, and, in serious cases, may be expelled from their parties outright. Thus, as with many Parliaments, the independence of Members of the Scottish Parliament tends to be low, and backbench rebellions by members who are discontent with their party's policies are rare. In some circumstances, however, parties announce \"free votes\", which allows Members to vote as they please. This is typically done on moral issues.",
+      "answers": [
+        {
+          "answer_start": 20,
+          "text": "votes"
+        },
+        {
+          "answer_start": 4,
+          "text": "outcome of most votes"
+        },
+        {
+          "answer_start": 4,
+          "text": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "56e0cdb9231d4119001ac3ca",
+      "question": "Who gave Tesla money to go to Prague?",
+      "context": "In January 1880, two of Tesla's uncles put together enough money to help him leave Gospi\u0107 for Prague where he was to study. Unfortunately, he arrived too late to enroll at Charles-Ferdinand University; he never studied Greek, a required subject; and he was illiterate in Czech, another required subject. Tesla did, however, attend lectures at the university, although, as an auditor, he did not receive grades for the courses.",
+      "answers": [
+        {
+          "answer_start": 17,
+          "text": "two of Tesla's uncles"
+        },
+        {
+          "answer_start": 24,
+          "text": "Tesla's uncles"
+        },
+        {
+          "answer_start": 17,
+          "text": "two of Tesla's uncles"
+        }
+      ]
+    },
+    {
+      "id": "5730eb5b497a881900248a40",
+      "question": "At the time of its formation, how many congregations did the UMC have?",
+      "context": "Like many other mainline Protestant denominations in the United States, the United Methodist Church has experienced significant membership losses in recent decades. At the time of its formation, the UMC had about 11 million members in nearly 42,000 congregations. In 1975, membership dropped below 10 million for the first time. In 2005, there were about 8 million members in over 34,000 congregations. Membership is concentrated primarily in the Midwest and in the South. Texas has the largest number of members, with about 1 million. The states with the highest membership rates are Oklahoma, Iowa, Mississippi, West Virginia, and North Carolina.",
+      "answers": [
+        {
+          "answer_start": 242,
+          "text": "42,000"
+        },
+        {
+          "answer_start": 242,
+          "text": "42,000 congregations"
+        },
+        {
+          "answer_start": 242,
+          "text": "42,000"
+        }
+      ]
+    },
+    {
+      "id": "572fdb17b2c2fd140056851e",
+      "question": "When was the British Nationality Act passed?",
+      "context": "As in the House of Commons, a number of qualifications apply to being an MSP. Such qualifications were introduced under the House of Commons Disqualification Act 1975 and the British Nationality Act 1981. Specifically, members must be over the age of 18 and must be a citizen of the United Kingdom, the Republic of Ireland, one of the countries in the Commonwealth of Nations, a citizen of a British overseas territory, or a European Union citizen resident in the UK. Members of the police and the armed forces are disqualified from sitting in the Scottish Parliament as elected MSPs, and similarly, civil servants and members of foreign legislatures are disqualified. An individual may not sit in the Scottish Parliament if he or she is judged to be insane under the terms of the Mental Health (Care and Treatment) (Scotland) Act 2003.",
+      "answers": [
+        {
+          "answer_start": 199,
+          "text": "1981"
+        },
+        {
+          "answer_start": 199,
+          "text": "1981"
+        },
+        {
+          "answer_start": 199,
+          "text": "1981"
+        }
+      ]
+    },
+    {
+      "id": "56de16ca4396321400ee25c7",
+      "question": "When was the Battle of Hastings?",
+      "context": "In 1066, Duke William II of Normandy conquered England killing King Harold II at the Battle of Hastings. The invading Normans and their descendants replaced the Anglo-Saxons as the ruling class of England. The nobility of England were part of a single Normans culture and many had lands on both sides of the channel. Early Norman kings of England, as Dukes of Normandy, owed homage to the King of France for their land on the continent. They considered England to be their most important holding (it brought with it the title of King\u2014an important status symbol).",
+      "answers": [
+        {
+          "answer_start": 3,
+          "text": "1066"
+        },
+        {
+          "answer_start": 0,
+          "text": "In 1066"
+        },
+        {
+          "answer_start": 3,
+          "text": "1066"
+        }
+      ]
+    },
+    {
+      "id": "57297103af94a219006aa423",
+      "question": "How many photosynthetic carotenoids are there?",
+      "context": "In addition to chlorophylls, another group of yellow\u2013orange pigments called carotenoids are also found in the photosystems. There are about thirty photosynthetic carotenoids. They help transfer and dissipate excess energy, and their bright colors sometimes override the chlorophyll green, like during the fall, when the leaves of some land plants change color. \u03b2-carotene is a bright red-orange carotenoid found in nearly all chloroplasts, like chlorophyll a. Xanthophylls, especially the orange-red zeaxanthin, are also common. Many other forms of carotenoids exist that are only found in certain groups of chloroplasts.",
+      "answers": [
+        {
+          "answer_start": 134,
+          "text": "about thirty"
+        },
+        {
+          "answer_start": 134,
+          "text": "about thirty"
+        },
+        {
+          "answer_start": 140,
+          "text": "thirty"
+        }
+      ]
+    },
+    {
+      "id": "5726c3b3708984140094d0d0",
+      "question": "Which town's massacre did Genghis Khan order in retribution for the treatment of his envoys?",
+      "context": "The Shah's army was split by diverse internecine feuds and by the Shah's decision to divide his army into small groups concentrated in various cities. This fragmentation was decisive in Khwarezmia's defeats, as it allowed the Mongols, although exhausted from the long journey, to immediately set about defeating small fractions of the Khwarzemi forces instead of facing a unified defense. The Mongol army quickly seized the town of Otrar, relying on superior strategy and tactics. Genghis Khan ordered the wholesale massacre of many of the civilians, enslaved the rest of the population and executed Inalchuq by pouring molten silver into his ears and eyes, as retribution for his actions. Near the end of the battle the Shah fled rather than surrender. Genghis Khan ordered Subutai and Jebe to hunt him down, giving them 20,000 men and two years to do this. The Shah died under mysterious circumstances on a small island within his empire.",
+      "answers": [
+        {
+          "answer_start": 432,
+          "text": "Otrar"
+        },
+        {
+          "answer_start": 432,
+          "text": "Otrar"
+        },
+        {
+          "answer_start": 432,
+          "text": "Otrar"
+        }
+      ]
+    },
+    {
+      "id": "571ce7f25efbb31900334e40",
+      "question": "What part of the Earth is composed of mostly of silicates of iron and magnesium?",
+      "context": "Oxygen is present in the atmosphere in trace quantities in the form of carbon dioxide (CO\n2). The Earth's crustal rock is composed in large part of oxides of silicon (silica SiO\n2, as found in granite and quartz), aluminium (aluminium oxide Al\n2O\n3, in bauxite and corundum), iron (iron(III) oxide Fe\n2O\n3, in hematite and rust), and calcium carbonate (in limestone). The rest of the Earth's crust is also made of oxygen compounds, in particular various complex silicates (in silicate minerals). The Earth's mantle, of much larger mass than the crust, is largely composed of silicates of magnesium and iron.",
+      "answers": [
+        {
+          "answer_start": 500,
+          "text": "Earth's mantle"
+        },
+        {
+          "answer_start": 496,
+          "text": "The Earth's mantle"
+        },
+        {
+          "answer_start": 508,
+          "text": "mantle"
+        },
+        {
+          "answer_start": 496,
+          "text": "The Earth's mantle"
+        },
+        {
+          "answer_start": 508,
+          "text": "mantle"
+        }
+      ]
+    },
+    {
+      "id": "56f8a4e99e9bad19000a0253",
+      "question": "What is Luther's opinion of what the law covers??",
+      "context": "In his theses and disputations against the antinomians, Luther reviews and reaffirms, on the one hand, what has been called the \"second use of the law,\" that is, the law as the Holy Spirit's tool to work sorrow over sin in man's heart, thus preparing him for Christ's fulfillment of the law offered in the gospel. Luther states that everything that is used to work sorrow over sin is called the law, even if it is Christ's life, Christ's death for sin, or God's goodness experienced in creation. Simply refusing to preach the Ten Commandments among Christians \u2013 thereby, as it were, removing the three letters l-a-w from the church \u2013 does not eliminate the accusing law. Claiming that the law \u2013 in any form \u2013 should not be preached to Christians anymore would be tantamount to asserting that Christians are no longer sinners in themselves and that the church consists only of essentially holy people.",
+      "answers": [
+        {
+          "answer_start": 333,
+          "text": "everything"
+        },
+        {
+          "answer_start": 333,
+          "text": "everything"
+        },
+        {
+          "answer_start": 333,
+          "text": "everything that is used to work sorrow over sin is called the law,"
+        }
+      ]
+    },
+    {
+      "id": "56f82989aef2371900625e6d",
+      "question": "What did Luther call his stay a Wartburg Castle?",
+      "context": "Luther's disappearance during his return trip back to Wittenberg was planned. Frederick III had him intercepted on his way home in the forest near Wittenberg by masked horsemen who were made to appear as armed highwaymen. They escorted Luther to the security of the Wartburg Castle at Eisenach. During his stay at Wartburg, which he referred to as \"my Patmos\", Luther translated the New Testament from Greek into German and poured out doctrinal and polemical writings. These included a renewed attack on Archbishop Albrecht of Mainz, whom he shamed into halting the sale of indulgences in his episcopates, and a \"Refutation of the Argument of Latomus,\" in which he expounded the principle of justification to Jacobus Latomus, an orthodox theologian from Louvain.",
+      "answers": [
+        {
+          "answer_start": 349,
+          "text": "my Patmos"
+        },
+        {
+          "answer_start": 349,
+          "text": "my Patmos"
+        },
+        {
+          "answer_start": 349,
+          "text": "my Patmos"
+        }
+      ]
+    },
+    {
+      "id": "56bec9133aeaaa14008c9445",
+      "question": "Who tackled Mike Tolbert and caused a fumble?",
+      "context": "On Carolina's next possession fullback Mike Tolbert lost a fumble while being tackled by safety Darian Stewart, which linebacker Danny Trevathan recovered on the Broncos 40-yard line. However, the Panthers soon took the ball back when defensive end Kony Ealy tipped a Manning pass to himself and then intercepted it, returning the ball 19 yards to the Panthers 39-yard line with 1:55 left on the clock. The Panthers could not gain any yards with their possession and had to punt. After a Denver punt, Carolina drove to the Broncos 45-yard line. But with 11 seconds left, Newton was sacked by DeMarcus Ware as time expired in the half.",
+      "answers": [
+        {
+          "answer_start": 96,
+          "text": "Darian Stewart"
+        },
+        {
+          "answer_start": 96,
+          "text": "Darian Stewart"
+        },
+        {
+          "answer_start": 103,
+          "text": "Stewart"
+        }
+      ]
+    },
+    {
+      "id": "572a0bafaf94a219006aa766",
+      "question": "An adobe that provides less utility to one person than another is an example of reduced what?",
+      "context": "Following the utilitarian principle of seeking the greatest good for the greatest number \u2013 economic inequality is problematic. A house that provides less utility to a millionaire as a summer home than it would to a homeless family of five, is an example of reduced \"distributive efficiency\" within society, that decreases marginal utility of wealth and thus the sum total of personal utility. An additional dollar spent by a poor person will go to things providing a great deal of utility to that person, such as basic necessities like food, water, and healthcare; while, an additional dollar spent by a much richer person will very likely go to luxury items providing relatively less utility to that person. Thus, the marginal utility of wealth per person (\"the additional dollar\") decreases as a person becomes richer. From this standpoint, for any given amount of wealth in society, a society with more equality will have higher aggregate utility. Some studies have found evidence for this theory, noting that in societies where inequality is lower, population-wide satisfaction and happiness tend to be higher.",
+      "answers": [
+        {
+          "answer_start": 266,
+          "text": "distributive efficiency"
+        },
+        {
+          "answer_start": 266,
+          "text": "distributive efficiency"
+        },
+        {
+          "answer_start": 265,
+          "text": "\"distributive efficiency\""
+        }
+      ]
+    },
+    {
+      "id": "572fdbb004bcaa1900d76ddb",
+      "question": "By how much did Labour lead Lain Gray retain East Lothian?",
+      "context": "The election produced a majority SNP government, making this the first time in the Scottish Parliament where a party has commanded a parliamentary majority. The SNP took 16 seats from Labour, with many of their key figures not returned to parliament, although Labour leader Iain Gray retained East Lothian by 151 votes. The SNP took a further eight seats from the Liberal Democrats and one seat from the Conservatives. The SNP overall majority meant that there was sufficient support in the Scottish Parliament to hold a referendum on Scottish independence.",
+      "answers": [
+        {
+          "answer_start": 309,
+          "text": "151 votes"
+        },
+        {
+          "answer_start": 309,
+          "text": "151 votes"
+        },
+        {
+          "answer_start": 309,
+          "text": "151 votes"
+        }
+      ]
+    },
+    {
+      "id": "572820512ca10214002d9e72",
+      "question": "What is the land area of Jacksonville?",
+      "context": "According to the United States Census Bureau, the city has a total area of 874.3 square miles (2,264 km2), making Jacksonville the largest city in land area in the contiguous United States; of this, 86.66% (757.7 sq mi or 1,962 km2) is land and ; 13.34% (116.7 sq mi or 302 km2) is water. Jacksonville surrounds the town of Baldwin. Nassau County lies to the north, Baker County lies to the west, and Clay and St. Johns County lie to the south; the Atlantic Ocean lies to the east, along with the Jacksonville Beaches. The St. Johns River divides the city. The Trout River, a major tributary of the St. Johns River, is located entirely within Jacksonville.",
+      "answers": [
+        {
+          "answer_start": 75,
+          "text": "874.3 square miles"
+        },
+        {
+          "answer_start": 75,
+          "text": "874.3 square miles"
+        },
+        {
+          "answer_start": 75,
+          "text": "874.3 square miles"
+        }
+      ]
+    },
+    {
+      "id": "57092322efce8f15003a7db0",
+      "question": "What company was formed by the merger of Sky Television and British Satellite Broadcasting?",
+      "context": "Formed in November 1990 by the equal merger of Sky Television and British Satellite Broadcasting, BSkyB became the UK's largest digital subscription television company. Following BSkyB's 2014 acquisition of Sky Italia and a majority 90.04% interest in Sky Deutschland in November 2014, its holding company British Sky Broadcasting Group plc changed its name to Sky plc. The United Kingdom operations also changed the company name from British Sky Broadcasting Limited to Sky UK Limited, still trading as Sky.",
+      "answers": [
+        {
+          "answer_start": 98,
+          "text": "BSkyB"
+        },
+        {
+          "answer_start": 98,
+          "text": "BSkyB"
+        },
+        {
+          "answer_start": 98,
+          "text": "BSkyB"
+        }
+      ]
+    },
+    {
+      "id": "572883a33acd2414000dfa7c",
+      "question": "What types of work did the Han do in Central Asia?",
+      "context": "At the same time the Mongols imported Central Asian Muslims to serve as administrators in China, the Mongols also sent Han Chinese and Khitans from China to serve as administrators over the Muslim population in Bukhara in Central Asia, using foreigners to curtail the power of the local peoples of both lands. Han Chinese were moved to Central Asian areas like Besh Baliq, Almaliq, and Samarqand by the Mongols where they worked as artisans and farmers. Alans were recruited into the Mongol forces with one unit called \"Right Alan Guard\" which was combined with \"recently surrendered\" soldiers, Mongols, and Chinese soldiers stationed in the area of the former Kingdom of Qocho and in Besh Balikh the Mongols established a Chinese military colony led by Chinese general Qi Kongzhi (Ch'i Kung-chih). After the Mongol conquest of Central Asia by Genghis Khan, foreigners were chosen as administrators and co-management with Chinese and Qara-Khitays (Khitans) of gardens and fields in Samarqand was put upon the Muslims as a requirement since Muslims were not allowed to manage without them. The Mongol appointed Governor of Samarqand was a Qara-Khitay (Khitan), held the title Taishi, familiar with Chinese culture his name was Ahai",
+      "answers": [
+        {
+          "answer_start": 432,
+          "text": "artisans and farmers"
+        },
+        {
+          "answer_start": 432,
+          "text": "artisans and farmers"
+        },
+        {
+          "answer_start": 432,
+          "text": "artisans and farmers"
+        }
+      ]
+    },
+    {
+      "id": "5726bb645951b619008f7c3d",
+      "question": "When did Genghis Khan capture the Jin dynasty capital?",
+      "context": "In 1211, after the conquest of Western Xia, Genghis Khan planned again to conquer the Jin dynasty. The commander of the Jin dynasty army made a tactical mistake in not attacking the Mongols at the first opportunity. Instead, the Jin commander sent a messenger, Ming-Tan, to the Mongol side, who defected and told the Mongols that the Jin army was waiting on the other side of the pass. At this engagement fought at Badger Pass the Mongols massacred hundreds of thousands of Jin troops. In 1215 Genghis besieged, captured, and sacked the Jin capital of Zhongdu (modern-day Beijing). This forced the Emperor Xuanzong to move his capital south to Kaifeng, abandoning the northern half of his kingdom to the Mongols. Between 1232 and 1233, Kaifeng fell to the Mongols under the reign of Genghis' third son, \u00d6gedei Khan. The Jin dynasty collapsed in 1234, after the siege of Caizhou.",
+      "answers": [
+        {
+          "answer_start": 489,
+          "text": "1215"
+        },
+        {
+          "answer_start": 489,
+          "text": "1215"
+        },
+        {
+          "answer_start": 489,
+          "text": "1215"
+        }
+      ]
+    },
+    {
+      "id": "572a1fe16aef0514001552d3",
+      "question": "How do socialists think the means of production should be owned?",
+      "context": "Socialists attribute the vast disparities in wealth to the private ownership of the means of production by a class of owners, creating a situation where a small portion of the population lives off unearned property income by virtue of ownership titles in capital equipment, financial assets and corporate stock. By contrast, the vast majority of the population is dependent on income in the form of a wage or salary. In order to rectify this situation, socialists argue that the means of production should be socially owned so that income differentials would be reflective of individual contributions to the social product.",
+      "answers": [
+        {
+          "answer_start": 509,
+          "text": "socially"
+        },
+        {
+          "answer_start": 509,
+          "text": "socially"
+        },
+        {
+          "answer_start": 509,
+          "text": "socially"
+        }
+      ]
+    },
+    {
+      "id": "5727504b5951b619008f881d",
+      "question": "When did the FCC begin imposing fin-syn rules?",
+      "context": "When the FCC imposed its fin-syn rules in 1970, ABC proactively created two companies: Worldvision Enterprises as a syndication distributor, and ABC Circle Films as a production company. However, between the publication and implementation of these regulations, the separation of the network's catalog was made in 1973. The broadcast rights to pre-1973 productions were transferred to Worldvision, which became independent in the same year. The company has been sold several times since Paramount Television acquired it in 1999, and has most recently been absorbed into CBS Television Distribution, a unit of CBS Corporation. Nonetheless, Worldvision sold portions of its catalog, including the Ruby-Spears and Hanna-Barbera libraries, to Turner Broadcasting System in 1990. With Disney's 1996 purchase of ABC, ABC Circle Films was absorbed into Touchstone Television, a Disney subsidiary which in turn was renamed ABC Studios in 2007.",
+      "answers": [
+        {
+          "answer_start": 42,
+          "text": "1970"
+        },
+        {
+          "answer_start": 42,
+          "text": "1970"
+        },
+        {
+          "answer_start": 42,
+          "text": "1970"
+        }
+      ]
+    },
+    {
+      "id": "5730ab63396df91900096264",
+      "question": "Germany referred to which area more so than an actual country?",
+      "context": "From their original homelands in Scandinavia and northern Europe, Germanic tribes expanded throughout northern and western Europe in the middle period of classical antiquity; southern Europe in late antiquity, conquering Celtic and other peoples; and by 800 CE, forming the Holy Roman Empire, the first German Empire. However, there was no real systemic continuity from the Western Roman Empire to its German successor which was famously described as \"not holy, not Roman, and not an empire\", as a great number of small states and principalities existed in the loosely autonomous confederation. Although by 1000 CE, the Germanic conquest of central, western, and southern Europe (west of and including Italy) was complete, excluding only Muslim Iberia. There was, however, little cultural integration or national identity, and \"Germany\" remained largely a conceptual term referring to an amorphous area of central Europe.",
+      "answers": [
+        {
+          "answer_start": 906,
+          "text": "central Europe"
+        },
+        {
+          "answer_start": 888,
+          "text": "amorphous area of central Europe"
+        },
+        {
+          "answer_start": 885,
+          "text": "an amorphous area of central Europe"
+        },
+        {
+          "answer_start": 906,
+          "text": "central Europe"
+        },
+        {
+          "answer_start": 888,
+          "text": "amorphous area of central Europe."
+        }
+      ]
+    },
+    {
+      "id": "5710e9f8a58dae1900cd6b31",
+      "question": "Who was the leader who established the colony at Florida?",
+      "context": "In 1564 a group of Norman Huguenots under the leadership of Jean Ribault established the small colony of Fort Caroline on the banks of the St. Johns River in what is today Jacksonville, Florida. The effort was the first at any permanent European settlement in the present-day continental United States, but survived only a short time. A September 1565 French naval attack against the new Spanish colony at St. Augustine failed when its ships were hit by a hurricane on their way to the Spanish encampment at Fort Matanzas. Hundreds of French soldiers were stranded and surrendered to the numerically inferior Spanish forces led by Pedro Menendez. Menendez proceeded to massacre the defenseless Huguenots, after which he wiped out the Fort Caroline garrison.",
+      "answers": [
+        {
+          "answer_start": 60,
+          "text": "Jean Ribault"
+        },
+        {
+          "answer_start": 60,
+          "text": "Jean Ribault"
+        },
+        {
+          "answer_start": 60,
+          "text": "Jean Ribault"
+        }
+      ]
+    },
+    {
+      "id": "57269cc3dd62a815002e8b13",
+      "question": "How many paid holiday days does the Working Time directive require workers to have each year?",
+      "context": "While the Treaties and Regulations will have direct effect (if clear, unconditional and immediate), Directives do not generally give citizens (as opposed to the member state) standing to sue other citizens. In theory, this is because TFEU article 288 says Directives are addressed to the member states and usually \"leave to the national authorities the choice of form and methods\" to implement. In part this reflects that directives often create minimum standards, leaving member states to apply higher standards. For example, the Working Time Directive requires that every worker has at least 4 weeks paid holidays each year, but most member states require more than 28 days in national law. However, on the current position adopted by the Court of Justice, citizens have standing to make claims based on national laws that implement Directives, but not from Directives themselves. Directives do not have so called \"horizontal\" direct effect (i.e. between non-state parties). This view was instantly controversial, and in the early 1990s three Advocate Generals persuasively argued that Directives should create rights and duties for all citizens. The Court of Justice refused, but there are five large exceptions.",
+      "answers": [
+        {
+          "answer_start": 594,
+          "text": "4 weeks"
+        },
+        {
+          "answer_start": 594,
+          "text": "4 weeks paid holidays each year"
+        },
+        {
+          "answer_start": 594,
+          "text": "4 weeks paid"
+        }
+      ]
+    },
+    {
+      "id": "5737821cc3c5551400e51f19",
+      "question": "Who formed the universal theory of gravitation?",
+      "context": "The development of fundamental theories for forces proceeded along the lines of unification of disparate ideas. For example, Isaac Newton unified the force responsible for objects falling at the surface of the Earth with the force responsible for the orbits of celestial mechanics in his universal theory of gravitation. Michael Faraday and James Clerk Maxwell demonstrated that electric and magnetic forces were unified through one consistent theory of electromagnetism. In the 20th century, the development of quantum mechanics led to a modern understanding that the first three fundamental forces (all except gravity) are manifestations of matter (fermions) interacting by exchanging virtual particles called gauge bosons. This standard model of particle physics posits a similarity between the forces and led scientists to predict the unification of the weak and electromagnetic forces in electroweak theory subsequently confirmed by observation. The complete formulation of the standard model predicts an as yet unobserved Higgs mechanism, but observations such as neutrino oscillations indicate that the standard model is incomplete. A Grand Unified Theory allowing for the combination of the electroweak interaction with the strong force is held out as a possibility with candidate theories such as supersymmetry proposed to accommodate some of the outstanding unsolved problems in physics. Physicists are still attempting to develop self-consistent unification models that would combine all four fundamental interactions into a theory of everything. Einstein tried and failed at this endeavor, but currently the most popular approach to answering this question is string theory.:212\u2013219",
+      "answers": [
+        {
+          "answer_start": 125,
+          "text": "Isaac Newton"
+        },
+        {
+          "answer_start": 125,
+          "text": "Isaac Newton"
+        },
+        {
+          "answer_start": 125,
+          "text": "Isaac Newton"
+        },
+        {
+          "answer_start": 125,
+          "text": "Isaac Newton"
+        }
+      ]
+    },
+    {
+      "id": "570d28bdb3d812140066d4a6",
+      "question": "What party rules in Melbourne's inner regions?",
+      "context": "The centre-left Australian Labor Party (ALP), the centre-right Liberal Party of Australia, the rural-based National Party of Australia, and the environmentalist Australian Greens are Victoria's main political parties. Traditionally, Labor is strongest in Melbourne's working class western and northern suburbs, and the regional cities of Ballarat, Bendigo and Geelong. The Liberals' main support lies in Melbourne's more affluent eastern and outer suburbs, and some rural and regional centres. The Nationals are strongest in Victoria's North Western and Eastern rural regional areas. The Greens, who won their first lower house seats in 2014, are strongest in inner Melbourne.",
+      "answers": [
+        {
+          "answer_start": 584,
+          "text": "The Greens"
+        },
+        {
+          "answer_start": 161,
+          "text": "Australian Greens"
+        },
+        {
+          "answer_start": 588,
+          "text": "Greens"
+        }
+      ]
+    },
+    {
+      "id": "571c83f3dd7acb1400e4c0d8",
+      "question": "How is dioxygen most simply described?",
+      "context": "In this dioxygen, the two oxygen atoms are chemically bonded to each other. The bond can be variously described based on level of theory, but is reasonably and simply described as a covalent double bond that results from the filling of molecular orbitals formed from the atomic orbitals of the individual oxygen atoms, the filling of which results in a bond order of two. More specifically, the double bond is the result of sequential, low-to-high energy, or Aufbau, filling of orbitals, and the resulting cancellation of contributions from the 2s electrons, after sequential filling of the low \u03c3 and \u03c3* orbitals; \u03c3 overlap of the two atomic 2p orbitals that lie along the O-O molecular axis and \u03c0 overlap of two pairs of atomic 2p orbitals perpendicular to the O-O molecular axis, and then cancellation of contributions from the remaining two of the six 2p electrons after their partial filling of the lowest \u03c0 and \u03c0* orbitals.",
+      "answers": [
+        {
+          "answer_start": 182,
+          "text": "covalent double bond"
+        },
+        {
+          "answer_start": 180,
+          "text": "a covalent double bond"
+        },
+        {
+          "answer_start": 180,
+          "text": "a covalent double bond that results from the filling of molecular orbitals formed from the atomic orbitals of the individual oxygen atoms"
+        },
+        {
+          "answer_start": 180,
+          "text": "a covalent double bond"
+        },
+        {
+          "answer_start": 180,
+          "text": "a covalent double bond that results from the filling of molecular orbitals formed from the atomic orbitals of the individual oxygen atoms"
+        }
+      ]
+    },
+    {
+      "id": "56e0ecd37aa994140058e7d7",
+      "question": "In what year was the World's Columbian Exposition?",
+      "context": "In 1893, George Westinghouse won the bid to light the 1893 World's Columbian Exposition in Chicago with alternating current, beating out a General Electric bid by one million dollars. This World's Fair devoted a building to electrical exhibits. It was a key event in the history of AC power, as Westinghouse demonstrated the safety, reliability, and efficiency of a fully integrated alternating current system to the American public. At the Columbian Exposition, under a banner announcing the \"Tesla Polyphase System\", Tesla demonstrated a series of electrical effects previously performed throughout America and Europe,:76 included using high-voltage, high-frequency alternating current to light a wireless gas-discharge lamp.:79 An observer noted:",
+      "answers": [
+        {
+          "answer_start": 3,
+          "text": "1893"
+        },
+        {
+          "answer_start": 54,
+          "text": "1893"
+        },
+        {
+          "answer_start": 3,
+          "text": "1893"
+        }
+      ]
+    },
+    {
+      "id": "572913626aef051400154a31",
+      "question": "When was a vote help to ratify the change to the constitution?",
+      "context": "A constitutional change was considered that would eliminate the position of Prime Minister and simultaneously reduce the powers of the President. A referendum to vote on the proposed constitution was held on 4 August 2010, and the new constitution passed by a wide margin. Among other things, the new constitution delegates more power to local governments and gives Kenyans a bill of rights. It was promulgated on 27 August 2010 at a euphoric ceremony in Nairobi's Uhuru Park, accompanied by a 21-gun salute. The event was attended by various African leaders and praised by the international community. As of that day, the new constitution heralding the Second Republic came into force.",
+      "answers": [
+        {
+          "answer_start": 210,
+          "text": "August 2010"
+        },
+        {
+          "answer_start": 208,
+          "text": "4 August 2010"
+        },
+        {
+          "answer_start": 208,
+          "text": "4 August 2010"
+        }
+      ]
+    },
+    {
+      "id": "57293e983f37b3190047818d",
+      "question": "Which journal was the joint statement published in?",
+      "context": "In 2001, 16 national science academies issued a joint statement on climate change. The joint statement was made by the Australian Academy of Science, the Royal Flemish Academy of Belgium for Science and the Arts, the Brazilian Academy of Sciences, the Royal Society of Canada, the Caribbean Academy of Sciences, the Chinese Academy of Sciences, the French Academy of Sciences, the German Academy of Natural Scientists Leopoldina, the Indian National Science Academy, the Indonesian Academy of Sciences, the Royal Irish Academy, Accademia Nazionale dei Lincei (Italy), the Academy of Sciences Malaysia, the Academy Council of the Royal Society of New Zealand, the Royal Swedish Academy of Sciences, and the Royal Society (UK). The statement, also published as an editorial in the journal Science, stated \"we support the [TAR's] conclusion that it is at least 90% certain that temperatures will continue to rise, with average global surface temperature projected to increase by between 1.4 and 5.8 \u00b0C above 1990 levels by 2100\". The TAR has also been endorsed by the Canadian Foundation for Climate and Atmospheric Sciences, Canadian Meteorological and Oceanographic Society, and European Geosciences Union (refer to \"Endorsements of the IPCC\").",
+      "answers": [
+        {
+          "answer_start": 787,
+          "text": "Science"
+        },
+        {
+          "answer_start": 787,
+          "text": "Science"
+        },
+        {
+          "answer_start": 787,
+          "text": "Science"
+        }
+      ]
+    },
+    {
+      "id": "5725cda338643c19005acd3f",
+      "question": "Who was rewarded with building the CSM?",
+      "context": "North American Aviation won the contract to build the CSM, and also the second stage of the Saturn V launch vehicle for NASA. Because the CSM design was started early before the selection of lunar orbit rendezvous, the service propulsion engine was sized to lift the CSM off of the Moon, and thus was oversized to about twice the thrust required for translunar flight. Also, there was no provision for docking with the Lunar Module. A 1964 program definition study concluded that the initial design should be continued as Block I which would be used for early testing, while Block II, the actual lunar spacecraft, would incorporate the docking equipment and take advantage of the lessons learned in Block I development.",
+      "answers": [
+        {
+          "answer_start": 0,
+          "text": "North American Aviation"
+        },
+        {
+          "answer_start": 0,
+          "text": "North American Aviation"
+        },
+        {
+          "answer_start": 0,
+          "text": "North American Aviation"
+        },
+        {
+          "answer_start": 0,
+          "text": "North American Aviation"
+        },
+        {
+          "answer_start": 0,
+          "text": "North American Aviation"
+        }
+      ]
+    },
+    {
+      "id": "573382d24776f41900660c37",
+      "question": "What is the city centre of Warsaw called in Polish?",
+      "context": "Warsaw, especially its city centre (\u015ar\u00f3dmie\u015bcie), is home not only to many national institutions and government agencies, but also to many domestic and international companies. In 2006, 304,016 companies were registered in the city. Warsaw's ever-growing business community has been noticed globally, regionally, and nationally. MasterCard Emerging Market Index has noted Warsaw's economic strength and commercial center. Moreover, Warsaw was ranked as the 7th greatest emerging market. Foreign investors' financial participation in the city's development was estimated in 2002 at over 650 million euro. Warsaw produces 12% of Poland's national income, which in 2008 was 305.1% of the Polish average, per capita (or 160% of the European Union average). The GDP per capita in Warsaw amounted to PLN 94 000 in 2008 (c. EUR 23 800, USD 33 000). Total nominal GDP of the city in 2010 amounted to 191.766 billion PLN, 111696 PLN per capita, which was 301,1 % of Polish average. Warsaw leads the region of East-Central Europe in foreign investment and in 2006, GDP growth met expectations with a level of 6.1%. It also has one of the fastest growing economies, with GDP growth at 6.5 percent in 2007 and 6.1 percent in the first quarter of 2008.",
+      "answers": [
+        {
+          "answer_start": 36,
+          "text": "\u015ar\u00f3dmie\u015bcie"
+        },
+        {
+          "answer_start": 36,
+          "text": "\u015ar\u00f3dmie\u015bcie"
+        },
+        {
+          "answer_start": 36,
+          "text": "\u015ar\u00f3dmie\u015bcie"
+        }
+      ]
+    },
+    {
+      "id": "56f88025aef2371900626121",
+      "question": "How many hymns did Luther write for the first choral hymnal?",
+      "context": "Luther's hymns were included in early Lutheran hymnals and spread the ideas of the Reformation. He supplied four of eight songs of the First Lutheran hymnal Achtliederbuch, 18 of 26 songs of the Erfurt Enchiridion, and 24 of the 32 songs in the first choral hymnal with settings by Johann Walter, Eyn geystlich Gesangk Buchleyn, all published in 1524.",
+      "answers": [
+        {
+          "answer_start": 219,
+          "text": "24"
+        },
+        {
+          "answer_start": 219,
+          "text": "24"
+        },
+        {
+          "answer_start": 219,
+          "text": "24"
+        }
+      ]
+    },
+    {
+      "id": "56f8989f9e9bad19000a01a7",
+      "question": "Since Luther believed that the Turks were sent by God, what was their purpose?",
+      "context": "At the time of the Marburg Colloquy, Suleiman the Magnificent was besieging Vienna with a vast Ottoman army. Luther had argued against resisting the Turks in his 1518 Explanation of the Ninety-five Theses, provoking accusations of defeatism. He saw the Turks as a scourge sent to punish Christians by God, as agents of the Biblical apocalypse that would destroy the antichrist, whom Luther believed to be the papacy, and the Roman Church. He consistently rejected the idea of a Holy War, \"as though our people were an army of Christians against the Turks, who were enemies of Christ. This is absolutely contrary to Christ's doctrine and name\". On the other hand, in keeping with his doctrine of the two kingdoms, Luther did support non-religious war against the Turks. In 1526, he argued in Whether Soldiers can be in a State of Grace that national defence is reason for a just war. By 1529, in On War against the Turk, he was actively urging Emperor Charles V and the German people to fight a secular war against the Turks. He made clear, however, that the spiritual war against an alien faith was separate, to be waged through prayer and repentance. Around the time of the Siege of Vienna, Luther wrote a prayer for national deliverance from the Turks, asking God to \"give to our emperor perpetual victory over our enemies\".",
+      "answers": [
+        {
+          "answer_start": 354,
+          "text": "destroy the antichrist"
+        },
+        {
+          "answer_start": 354,
+          "text": "destroy the antichrist"
+        },
+        {
+          "answer_start": 280,
+          "text": "punish"
+        }
+      ]
+    },
+    {
+      "id": "57296d571d04691400779416",
+      "question": "Any number larger than 1 can be represented as a product of what?",
+      "context": "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. A natural number greater than 1 that is not a prime number is called a composite number. For example, 5 is prime because 1 and 5 are its only positive integer factors, whereas 6 is composite because it has the divisors 2 and 3 in addition to 1 and 6. The fundamental theorem of arithmetic establishes the central role of primes in number theory: any integer greater than 1 can be expressed as a product of primes that is unique up to ordering. The uniqueness in this theorem requires excluding 1 as a prime because one can include arbitrarily many instances of 1 in any factorization, e.g., 3, 1 \u00b7 3, 1 \u00b7 1 \u00b7 3, etc. are all valid factorizations of 3.",
+      "answers": [
+        {
+          "answer_start": 511,
+          "text": "a product of primes"
+        },
+        {
+          "answer_start": 513,
+          "text": "product of primes that is unique up to ordering"
+        },
+        {
+          "answer_start": 524,
+          "text": "primes"
+        },
+        {
+          "answer_start": 524,
+          "text": "primes"
+        },
+        {
+          "answer_start": 524,
+          "text": "primes that is unique up to ordering"
+        }
+      ]
+    },
+    {
+      "id": "57268f05dd62a815002e8991",
+      "question": "What type of fossils were found in China?",
+      "context": "The early Cambrian sessile frond-like fossil Stromatoveris, from China's Chengjiang lagerst\u00e4tte and dated to about 515 million years ago, is very similar to Vendobionta of the preceding Ediacaran period. De-Gan Shu, Simon Conway Morris et al. found on its branches what they considered rows of cilia, used for filter feeding. They suggested that Stromatoveris was an evolutionary \"aunt\" of ctenophores, and that ctenophores originated from sessile animals whose descendants became swimmers and changed the cilia from a feeding mechanism to a propulsion system.",
+      "answers": [
+        {
+          "answer_start": 10,
+          "text": "Cambrian sessile frond-like fossil Stromatoveris"
+        },
+        {
+          "answer_start": 45,
+          "text": "Stromatoveris"
+        },
+        {
+          "answer_start": 19,
+          "text": "sessile frond-like"
+        }
+      ]
+    },
+    {
+      "id": "56f82549a6d7ea1400e17417",
+      "question": "Who considers Luther's speech a world classic?",
+      "context": "At the end of this speech, Luther raised his arm \"in the traditional salute of a knight winning a bout.\" Michael Mullett considers this speech as a \"world classic of epoch-making oratory.\"",
+      "answers": [
+        {
+          "answer_start": 105,
+          "text": "Michael Mullett"
+        },
+        {
+          "answer_start": 105,
+          "text": "Michael Mullett"
+        },
+        {
+          "answer_start": 105,
+          "text": "Michael Mullett"
+        }
+      ]
+    },
+    {
+      "id": "56bf6f743aeaaa14008c9631",
+      "question": "Which late night comedy host show played immediately after Super Bowl 50 ended?",
+      "context": "As opposed to broadcasts of primetime series, CBS broadcast special episodes of its late night talk shows as its lead-out programs for Super Bowl 50, beginning with a special episode of The Late Show with Stephen Colbert following the game. Following a break for late local programming, CBS also aired a special episode of The Late Late Show with James Corden.",
+      "answers": [
+        {
+          "answer_start": 186,
+          "text": "The Late Show with Stephen Colbert"
+        },
+        {
+          "answer_start": 186,
+          "text": "The Late Show with Stephen Colbert"
+        },
+        {
+          "answer_start": 213,
+          "text": "Colbert"
+        }
+      ]
+    },
+    {
+      "id": "56f8ac579e9bad19000a02bd",
+      "question": "What did this affair cause to Luther's reputation?",
+      "context": "From December 1539, Luther became implicated in the bigamy of Philip I, Landgrave of Hesse, who wanted to marry one of his wife's ladies-in-waiting. Philip solicited the approval of Luther, Melanchthon, and Bucer, citing as a precedent the polygamy of the patriarchs. The theologians were not prepared to make a general ruling, and they reluctantly advised the landgrave that if he was determined, he should marry secretly and keep quiet about the matter. As a result, on 4 March 1540, Philip married a second wife, Margarethe von der Saale, with Melanchthon and Bucer among the witnesses. However, Philip was unable to keep the marriage secret, and he threatened to make Luther's advice public. Luther told him to \"tell a good, strong lie\" and deny the marriage completely, which Philip did during the subsequent public controversy. In the view of Luther's biographer Martin Brecht, \"giving confessional advice for Philip of Hesse was one of the worst mistakes Luther made, and, next to the landgrave himself, who was directly responsible for it, history chiefly holds Luther accountable\". Brecht argues that Luther's mistake was not that he gave private pastoral advice, but that he miscalculated the political implications. The affair caused lasting damage to Luther's reputation.",
+      "answers": [
+        {
+          "answer_start": 1245,
+          "text": "lasting damage"
+        },
+        {
+          "answer_start": 1245,
+          "text": "lasting damage"
+        },
+        {
+          "answer_start": 1238,
+          "text": "caused lasting damage"
+        }
+      ]
+    },
+    {
+      "id": "57261f9f271a42140099d4ab",
+      "question": "Scholars stated that there was already an existing settlement between 2 parties prior to which date?",
+      "context": "In the United States, scholars argue that there already existed a negotiated settlement based on equality between both parties prior to 1973. The possibility that the Middle East could become another superpower confrontation with the USSR was of more concern to the US than oil. Further, interest groups and government agencies more worried about energy were no match for Kissinger's dominance. In the US production, distribution and price disruptions \"have been held responsible for recessions, periods of excessive inflation, reduced productivity, and lower economic growth.\"",
+      "answers": [
+        {
+          "answer_start": 136,
+          "text": "1973"
+        },
+        {
+          "answer_start": 136,
+          "text": "1973"
+        },
+        {
+          "answer_start": 136,
+          "text": "1973"
+        },
+        {
+          "answer_start": 136,
+          "text": "1973"
+        }
+      ]
+    },
+    {
+      "id": "572a019f3f37b31900478645",
+      "question": "In a type III secretion system, proteins are transported to the host cell in order to do what?",
+      "context": "The success of any pathogen depends on its ability to elude host immune responses. Therefore, pathogens evolved several methods that allow them to successfully infect a host, while evading detection or destruction by the immune system. Bacteria often overcome physical barriers by secreting enzymes that digest the barrier, for example, by using a type II secretion system. Alternatively, using a type III secretion system, they may insert a hollow tube into the host cell, providing a direct route for proteins to move from the pathogen to the host. These proteins are often used to shut down host defenses.",
+      "answers": [
+        {
+          "answer_start": 584,
+          "text": "shut down host defenses"
+        },
+        {
+          "answer_start": 584,
+          "text": "shut down host defenses"
+        },
+        {
+          "answer_start": 584,
+          "text": "shut down host defenses."
+        }
+      ]
+    },
+    {
+      "id": "572683075951b619008f7514",
+      "question": "How do platyctenids reproduce?",
+      "context": "Almost all species are hermaphrodites, in other words they function as both males and females at the same time \u2013 except that in two species of the genus Ocryopsis individuals remain of the same single sex all their lives. The gonads are located in the parts of the internal canal network under the comb rows, and eggs and sperm are released via pores in the epidermis. Fertilization is external in most species, but platyctenids use internal fertilization and keep the eggs in brood chambers until they hatch. Self-fertilization has occasionally been seen in species of the genus Mnemiopsis, and it is thought that most of the hermaphroditic species are self-fertile.",
+      "answers": [
+        {
+          "answer_start": 433,
+          "text": "internal fertilization and keep the eggs in brood chambers until they hatch."
+        },
+        {
+          "answer_start": 433,
+          "text": "internal fertilization"
+        },
+        {
+          "answer_start": 433,
+          "text": "internal fertilization"
+        }
+      ]
+    },
+    {
+      "id": "56de4a474396321400ee2786",
+      "question": "Where are Jersey and Guernsey",
+      "context": "The customary law of Normandy was developed between the 10th and 13th centuries and survives today through the legal systems of Jersey and Guernsey in the Channel Islands. Norman customary law was transcribed in two customaries in Latin by two judges for use by them and their colleagues: These are the Tr\u00e8s ancien coutumier (Very ancient customary), authored between 1200 and 1245; and the Grand coutumier de Normandie (Great customary of Normandy, originally Summa de legibus Normanniae in curia la\u00efcali), authored between 1235 and 1245.",
+      "answers": [
+        {
+          "answer_start": 155,
+          "text": "Channel Islands"
+        },
+        {
+          "answer_start": 151,
+          "text": "the Channel Islands"
+        },
+        {
+          "answer_start": 151,
+          "text": "the Channel Islands"
+        }
+      ]
+    },
+    {
+      "id": "5726c002708984140094d074",
+      "question": "In Gebhard v Consiglio...Milano, the requirements to be registered in Milan before being able to practice law would be allowed under what conditions?",
+      "context": "As well as creating rights for \"workers\" who generally lack bargaining power in the market, the Treaty on the Functioning of the European Union also protects the \"freedom of establishment\" in article 49, and \"freedom to provide services\" in article 56. In Gebhard v Consiglio dell\u2019Ordine degli Avvocati e Procuratori di Milano the Court of Justice held that to be \"established\" means to participate in economic life \"on a stable and continuous basis\", while providing \"services\" meant pursuing activity more \"on a temporary basis\". This meant that a lawyer from Stuttgart, who had set up chambers in Milan and was censured by the Milan Bar Council for not having registered, was entitled to bring a claim under for establishment freedom, rather than service freedom. However, the requirements to be registered in Milan before being able to practice would be allowed if they were non-discriminatory, \"justified by imperative requirements in the general interest\" and proportionately applied. All people or entities that engage in economic activity, particularly the self-employed, or \"undertakings\" such as companies or firms, have a right to set up an enterprise without unjustified restrictions. The Court of Justice has held that both a member state government and a private party can hinder freedom of establishment, so article 49 has both \"vertical\" and \"horizontal\" direct effect. In Reyners v Belgium the Court of Justice held that a refusal to admit a lawyer to the Belgian bar because he lacked Belgian nationality was unjustified. TFEU article 49 says states are exempt from infringing others' freedom of establishment when they exercise \"official authority\", but this did an advocate's work (as opposed to a court's) was not official. By contrast in Commission v Italy the Court of Justice held that a requirement for lawyers in Italy to comply with maximum tariffs unless there was an agreement with a client was not a restriction. The Grand Chamber of the Court of Justice held the Commission had not proven that this had any object or effect of limiting practitioners from entering the market. Therefore, there was no prima facie infringement freedom of establishment that needed to be justified.",
+      "answers": [
+        {
+          "answer_start": 866,
+          "text": "if they were non-discriminatory"
+        },
+        {
+          "answer_start": 866,
+          "text": "if they were non-discriminatory, \"justified by imperative requirements in the general interest\" and proportionately applied"
+        },
+        {
+          "answer_start": 387,
+          "text": "participate in economic life \"on a stable and continuous basis\""
+        }
+      ]
+    },
+    {
+      "id": "56d7261e0d65d214001983e2",
+      "question": "Where was the ball recovered?",
+      "context": "There would be no more scoring in the third quarter, but early in the fourth, the Broncos drove to the Panthers 41-yard line. On the next play, Ealy knocked the ball out of Manning's hand as he was winding up for a pass, and then recovered it for Carolina on the 50-yard line. A 16-yard reception by Devin Funchess and a 12-yard run by Stewart then set up Gano's 39-yard field goal, cutting the Panthers deficit to one score at 16\u201310. The next three drives of the game would end in punts.",
+      "answers": [
+        {
+          "answer_start": 263,
+          "text": "50-yard line."
+        },
+        {
+          "answer_start": 256,
+          "text": "on the 50-yard line"
+        },
+        {
+          "answer_start": 263,
+          "text": "50"
+        }
+      ]
+    },
+    {
+      "id": "5729edd56aef051400155113",
+      "question": "In what year did the first European travel the entire length of the Amazon River?",
+      "context": "The first European to travel the length of the Amazon River was Francisco de Orellana in 1542. The BBC's Unnatural Histories presents evidence that Orellana, rather than exaggerating his claims as previously thought, was correct in his observations that a complex civilization was flourishing along the Amazon in the 1540s. It is believed that the civilization was later devastated by the spread of diseases from Europe, such as smallpox. Since the 1970s, numerous geoglyphs have been discovered on deforested land dating between AD 0\u20131250, furthering claims about Pre-Columbian civilizations. Ondemar Dias is accredited with first discovering the geoglyphs in 1977 and Alceu Ranzi with furthering their discovery after flying over Acre. The BBC's Unnatural Histories presented evidence that the Amazon rainforest, rather than being a pristine wilderness, has been shaped by man for at least 11,000 years through practices such as forest gardening and terra preta.",
+      "answers": [
+        {
+          "answer_start": 89,
+          "text": "1542"
+        },
+        {
+          "answer_start": 89,
+          "text": "1542"
+        },
+        {
+          "answer_start": 89,
+          "text": "1542"
+        }
+      ]
+    },
+    {
+      "id": "5727515af1498d1400e8f63d",
+      "question": "What innovation in Mongolian language is credited to Genghis Khan?",
+      "context": "Genghis Khan is regarded as one of the prominent leaders in Mongolia's history. He is responsible for the emergence of the Mongols as a political and ethnic identity because there was no unified identity between the tribes that had cultural similarity. He reinforced many Mongol traditions and provided stability and unity during a time of almost endemic warfare between tribes. He is also given credit for the introduction of the traditional Mongolian script and the creation of the Ikh Zasag (Great Administration), the first written Mongolian law. \"Ikh Zasag law adopted during Genghis Khan\u2019s time in Mongolia had points to punish illegal matters related to corruption and bribery very heavily,\" Mongolian President Tsakhiagiin Elbegdorj noted. President Elbegdorj sees Genghis Khan as a leader from whom to learn for anti-corruption efforts as Genghis Khan sought equal protection under the law for all citizens regardless of status or wealth. \"Chinggis (Genghis Khan)...was a man who deeply realized that the justice begins and consolidates with the equality of law, and not with the distinctions between people. He was a man who knew that the good laws and rules lived longer than fancy palaces,\" Elbegdorj said in his speech on the 850th anniversary of Chinggis Khaan's birth. In summary, Mongolians see him as the fundamental figure in the founding of the Mongol Empire and therefore the basis for Mongolia as a country.",
+      "answers": [
+        {
+          "answer_start": 431,
+          "text": "traditional Mongolian script"
+        },
+        {
+          "answer_start": 431,
+          "text": "traditional Mongolian script"
+        },
+        {
+          "answer_start": 431,
+          "text": "traditional Mongolian script"
+        }
+      ]
+    },
+    {
+      "id": "571cc6f85efbb31900334de6",
+      "question": "What substance is used to make high quality liquid O2?",
+      "context": "Oxygen condenses at 90.20 K (\u2212182.95 \u00b0C, \u2212297.31 \u00b0F), and freezes at 54.36 K (\u2212218.79 \u00b0C, \u2212361.82 \u00b0F). Both liquid and solid O\n2 are clear substances with a light sky-blue color caused by absorption in the red (in contrast with the blue color of the sky, which is due to Rayleigh scattering of blue light). High-purity liquid O\n2 is usually obtained by the fractional distillation of liquefied air. Liquid oxygen may also be produced by condensation out of air, using liquid nitrogen as a coolant. It is a highly reactive substance and must be segregated from combustible materials.",
+      "answers": [
+        {
+          "answer_start": 384,
+          "text": "liquefied air"
+        },
+        {
+          "answer_start": 384,
+          "text": "liquefied air"
+        },
+        {
+          "answer_start": 384,
+          "text": "liquefied air"
+        },
+        {
+          "answer_start": 394,
+          "text": "air"
+        },
+        {
+          "answer_start": 384,
+          "text": "liquefied air"
+        }
+      ]
+    },
+    {
+      "id": "57376828c3c5551400e51eba",
+      "question": "What physical quantities do not have direction?",
+      "context": "Forces act in a particular direction and have sizes dependent upon how strong the push or pull is. Because of these characteristics, forces are classified as \"vector quantities\". This means that forces follow a different set of mathematical rules than physical quantities that do not have direction (denoted scalar quantities). For example, when determining what happens when two forces act on the same object, it is necessary to know both the magnitude and the direction of both forces to calculate the result. If both of these pieces of information are not known for each force, the situation is ambiguous. For example, if you know that two people are pulling on the same rope with known magnitudes of force but you do not know which direction either person is pulling, it is impossible to determine what the acceleration of the rope will be. The two people could be pulling against each other as in tug of war or the two people could be pulling in the same direction. In this simple one-dimensional example, without knowing the direction of the forces it is impossible to decide whether the net force is the result of adding the two force magnitudes or subtracting one from the other. Associating forces with vectors avoids such problems.",
+      "answers": [
+        {
+          "answer_start": 300,
+          "text": "denoted scalar quantities"
+        },
+        {
+          "answer_start": 308,
+          "text": "scalar quantities"
+        },
+        {
+          "answer_start": 300,
+          "text": "denoted scalar quantities"
+        },
+        {
+          "answer_start": 308,
+          "text": "scalar quantities"
+        },
+        {
+          "answer_start": 308,
+          "text": "scalar quantities"
+        }
+      ]
+    },
+    {
+      "id": "56e0ee12231d4119001ac459",
+      "question": "Who was the head of the company?",
+      "context": "In 1893 Richard Dean Adams, who headed up the Niagara Falls Cataract Construction Company sought Tesla's opinion on what system would be best to transmit power generated at the falls. Over several years there had been a series of proposals and open competitions on how best to utilize power generated by the falls with many systems being proposed by several US and European companies including two-phase and three-phase AC, high-voltage DC, and even compressed air. Adams pumped Tesla for information about the current state of all the competing systems. Tesla advised Adams that a two-phased system would be the most reliable and that there was a Westinghouse system to light incandescent bulbs using two-phase alternating current. Based on Tesla's advice and Westinghouse's demonstration that they could build a complete AC system at the Columbian Exposition, a contract for building a two-phase AC generating system at the Niagara Falls was awarded to Westinghouse Electric. A further contract to build the AC distribution system was awarded to General Electric.",
+      "answers": [
+        {
+          "answer_start": 8,
+          "text": "Richard Dean Adams"
+        },
+        {
+          "answer_start": 8,
+          "text": "Richard Dean Adams"
+        }
+      ]
+    },
+    {
+      "id": "57286f373acd2414000df9de",
+      "question": "What government department did Buyantu shut down?",
+      "context": "The fourth Yuan emperor, Buyantu Khan (Ayurbarwada), was a competent emperor. He was the first Yuan emperor to actively support and adopt mainstream Chinese culture after the reign of Kublai, to the discontent of some Mongol elite. He had been mentored by Li Meng, a Confucian academic. He made many reforms, including the liquidation of the Department of State Affairs (Chinese: \u5c1a\u66f8\u7701), which resulted in the execution of five of the highest-ranking officials. Starting in 1313 the traditional imperial examinations were reintroduced for prospective officials, testing their knowledge on significant historical works. Also, he codified much of the law, as well as publishing or translating a number of Chinese books and works.",
+      "answers": [
+        {
+          "answer_start": 338,
+          "text": "the Department of State Affairs"
+        },
+        {
+          "answer_start": 342,
+          "text": "Department of State Affairs"
+        },
+        {
+          "answer_start": 338,
+          "text": "the Department of State Affairs"
+        }
+      ]
+    },
+    {
+      "id": "5710f2e2a58dae1900cd6b73",
+      "question": "Under which leader did the Huguenots fight in this conflict?",
+      "context": "Following the French Crown's revocation of the Edict of Nantes, many Huguenots settled in Ireland in the late 17th and early 18th centuries, encouraged by an act of parliament for Protestants' settling in Ireland. Huguenot regiments fought for William of Orange in the Williamite war in Ireland, for which they were rewarded with land grants and titles, many settling in Dublin. Significant Huguenot settlements were in Dublin, Cork, Portarlington, Lisburn, Waterford and Youghal. Smaller settlements, which included Killeshandra in County Cavan, contributed to the expansion of flax cultivation and the growth of the Irish linen industry.",
+      "answers": [
+        {
+          "answer_start": 244,
+          "text": "William of Orange"
+        },
+        {
+          "answer_start": 244,
+          "text": "William of Orange"
+        },
+        {
+          "answer_start": 244,
+          "text": "William of Orange"
+        }
+      ]
+    },
+    {
+      "id": "5728fa576aef051400154923",
+      "question": "How old was Turkana Boy?",
+      "context": "Fossils found in Kenya suggest that primates roamed the area more than 20 million years ago. Recent findings near Lake Turkana indicate that hominids such as Homo habilis (1.8 and 2.5 million years ago) and Homo erectus (1.8 million to 350,000 years ago) are possible direct ancestors of modern Homo sapiens, and lived in Kenya in the Pleistocene epoch. During excavations at Lake Turkana in 1984, paleoanthropologist Richard Leakey assisted by Kamoya Kimeu discovered the Turkana Boy, a 1.6-million-year-old fossil belonging to Homo erectus. Previous research on early hominids is particularly identified with Mary Leakey and Louis Leakey, who were responsible for the preliminary archaeological research at Olorgesailie and Hyrax Hill. Later work at the former site was undertaken by Glynn Isaac.",
+      "answers": [
+        {
+          "answer_start": 489,
+          "text": ".6-million-year-old"
+        },
+        {
+          "answer_start": 488,
+          "text": "1.6-million-year-old"
+        },
+        {
+          "answer_start": 488,
+          "text": "1.6-million-year-old"
+        }
+      ]
+    },
+    {
+      "id": "5726ed12708984140094d646",
+      "question": "When did the FCC approve UPT's purchase of ABC?",
+      "context": "In 1952, when the release of the FCC's Sixth Report and Order announced the end of its freeze on new station license applications, among the issues the Commission was slated to address was whether to approve the UPT-ABC merger. One FCC Commissioner saw the possibility of ABC, funded by UPT, becoming a viable and competitive third television network. On February 9, 1953, the FCC approved UPT's purchase of ABC in exchange for $25 million in shares. The merged company, renamed American Broadcasting-Paramount Theatres, Inc. and headquartered in the Paramount Building at 1501 Broadway in Manhattan, owned six AM and several FM radio stations, five television stations and 644 cinemas in 300 U.S. cities. To comply with FCC ownership restrictions in effect at the time that barred common ownership of two television stations in the same market, UPT sold its Chicago television station, WBKB-TV, to CBS (which subsequently changed the station's call letters to WBBM-TV) for $6 million, while it kept ABC's existing Chicago station, WENR-TV. The merged company acquired the WBKB call letters for channel 7, which would eventually become WLS-TV. Goldenson began to sell some of the older theaters to help finance the new television network.",
+      "answers": [
+        {
+          "answer_start": 355,
+          "text": "February 9, 1953"
+        },
+        {
+          "answer_start": 355,
+          "text": "February 9, 1953"
+        },
+        {
+          "answer_start": 355,
+          "text": "February 9, 1953"
+        }
+      ]
+    },
+    {
+      "id": "5728349dff5b5019007d9f01",
+      "question": "The Amazon rainforest makes up what amount of Earth's rainforests?",
+      "context": "The Amazon rainforest (Portuguese: Floresta Amaz\u00f4nica or Amaz\u00f4nia; Spanish: Selva Amaz\u00f3nica, Amazon\u00eda or usually Amazonia; French: For\u00eat amazonienne; Dutch: Amazoneregenwoud), also known in English as Amazonia or the Amazon Jungle, is a moist broadleaf forest that covers most of the Amazon basin of South America. This basin encompasses 7,000,000 square kilometres (2,700,000 sq mi), of which 5,500,000 square kilometres (2,100,000 sq mi) are covered by the rainforest. This region includes territory belonging to nine nations. The majority of the forest is contained within Brazil, with 60% of the rainforest, followed by Peru with 13%, Colombia with 10%, and with minor amounts in Venezuela, Ecuador, Bolivia, Guyana, Suriname and French Guiana. States or departments in four nations contain \"Amazonas\" in their names. The Amazon represents over half of the planet's remaining rainforests, and comprises the largest and most biodiverse tract of tropical rainforest in the world, with an estimated 390 billion individual trees divided into 16,000 species.",
+      "answers": [
+        {
+          "answer_start": 844,
+          "text": "over half"
+        },
+        {
+          "answer_start": 844,
+          "text": "over half"
+        },
+        {
+          "answer_start": 844,
+          "text": "over half"
+        }
+      ]
+    },
+    {
+      "id": "56de4c324396321400ee27ac",
+      "question": "What is Norman art's most well known piece?",
+      "context": "By far the most famous work of Norman art is the Bayeux Tapestry, which is not a tapestry but a work of embroidery. It was commissioned by Odo, the Bishop of Bayeux and first Earl of Kent, employing natives from Kent who were learned in the Nordic traditions imported in the previous half century by the Danish Vikings.",
+      "answers": [
+        {
+          "answer_start": 49,
+          "text": "Bayeux Tapestry"
+        },
+        {
+          "answer_start": 45,
+          "text": "the Bayeux Tapestry"
+        },
+        {
+          "answer_start": 45,
+          "text": "the Bayeux Tapestry"
+        }
+      ]
+    },
+    {
+      "id": "5706155352bb891400689895",
+      "question": "At which level of education is this sport becoming more popular?",
+      "context": "Rugby is also a growing sport in southern California, particularly at the high school level, with increasing numbers of schools adding rugby as an official school sport.",
+      "answers": [
+        {
+          "answer_start": 74,
+          "text": "high school"
+        },
+        {
+          "answer_start": 74,
+          "text": "high school"
+        },
+        {
+          "answer_start": 74,
+          "text": "high school"
+        }
+      ]
+    },
+    {
+      "id": "56d7282f0d65d2140019840c",
+      "question": "Who recovered Ward's fumble?",
+      "context": "The Panthers seemed primed to score on their opening drive of the second half when Newton completed a 45-yard pass to Ted Ginn Jr. on the Denver 35-yard line on their second offensive play. But the Broncos defense halted the drive on the 26-yard line, and it ended with no points when Graham Gano hit the uprights on a 44-yard field goal attempt. After the miss, Manning completed a pair of passes to Emmanuel Sanders for gains of 25 and 22 yards, setting up McManus' 33-yard field goal that gave the Broncos a 16\u20137 lead. Carolina got off to another strong start after the kickoff, with Newton completing a 42-yard pass to Corey Brown. But once again they came up empty, this time as a result of a Newton pass that bounced off the hands of Ginn and was intercepted by safety T. J. Ward. Ward fumbled the ball during the return, but Trevathan recovered it to enable Denver to keep possession.",
+      "answers": [
+        {
+          "answer_start": 832,
+          "text": "Trevathan"
+        },
+        {
+          "answer_start": 832,
+          "text": "Trevathan"
+        },
+        {
+          "answer_start": 832,
+          "text": "Trevathan"
+        }
+      ]
+    },
+    {
+      "id": "5726a46cdd62a815002e8bd1",
+      "question": "Which member state declined to sign the Social Charter?",
+      "context": "The Social Charter was subsequently adopted in 1989 by 11 of the then 12 member states. The UK refused to sign the Social Charter and was exempt from the legislation covering Social Charter issues unless it agreed to be bound by the legislation. The UK subsequently was the only member state to veto the Social Charter being included as the \"Social Chapter\" of the 1992 Maastricht Treaty - instead, an Agreement on Social Policy was added as a protocol. Again, the UK was exempt from legislation arising from the protocol, unless it agreed to be bound by it. The protocol was to become known as \"Social Chapter\", despite not actually being a chapter of the Maastricht Treaty. To achieve aims of the Agreement on Social Policy the European Union was to \"support and complement\" the policies of member states. The aims of the Agreement on Social Policy are:",
+      "answers": [
+        {
+          "answer_start": 88,
+          "text": "The UK"
+        },
+        {
+          "answer_start": 92,
+          "text": "UK"
+        },
+        {
+          "answer_start": 92,
+          "text": "UK"
+        }
+      ]
+    },
+    {
+      "id": "56d601e41c85041400946ed2",
+      "question": "What position does Von Miller play?",
+      "context": "The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's defense, which sacked him seven times and forced him into three turnovers, including a fumble which they recovered for a touchdown. Denver linebacker Von Miller was named Super Bowl MVP, recording five solo tackles, 2\u00bd sacks, and two forced fumbles.",
+      "answers": [
+        {
+          "answer_start": 237,
+          "text": "linebacker"
+        },
+        {
+          "answer_start": 237,
+          "text": "linebacker"
+        },
+        {
+          "answer_start": 237,
+          "text": "linebacker"
+        }
+      ]
+    },
+    {
+      "id": "57277bfc708984140094deda",
+      "question": "What is the biggest ABC subchannel affiliate by the size of markets?",
+      "context": "The Sinclair Broadcast Group is the largest operator of ABC stations by numerical total, owning or providing services to 28 ABC affiliates and two additional subchannel-only affiliates; Sinclair owns the largest ABC subchannel affiliate by market size, WABM-DT2/WDBB-DT2 in the Birmingham market, which serve as repeaters of WBMA-LD (the largest low-power \"Big Four\" affiliate by market size, which itself is also simulcast on a subchannel of former WBMA satellite WGWW, owned by Sinclair partner company Howard Stirk Holdings). The E. W. Scripps Company is the largest operator of ABC stations in terms of overall market reach, owning 15 ABC-affiliated stations (including affiliates in larger markets such as Cleveland, Phoenix, Detroit and Denver), and through its ownership of Phoenix affiliate KNXV, Las Vegas affiliate KTNV-TV and Tucson affiliate KGUN-TV, the only provider of ABC programming for the majority of Arizona (outside of the Yuma-El Centro market) and Southern Nevada.",
+      "answers": [
+        {
+          "answer_start": 253,
+          "text": "WABM-DT2/WDBB-DT2 in the Birmingham market"
+        },
+        {
+          "answer_start": 253,
+          "text": "WABM-DT2/WDBB-DT2"
+        },
+        {
+          "answer_start": 186,
+          "text": "Sinclair"
+        }
+      ]
+    },
+    {
+      "id": "572909406aef0514001549dd",
+      "question": "What did mlolongo system lead to?",
+      "context": "The election held in 1988 saw the advent of the mlolongo (queuing) system, where voters were supposed to line up behind their favoured candidates instead of a secret ballot. This was seen as the climax of a very undemocratic regime and it led to widespread agitation for constitutional reform. Several contentious clauses, including one that allowed for only one political party were changed in the following years. In democratic, multiparty elections in 1992 and 1997, Daniel arap Moi won re-election.",
+      "answers": [
+        {
+          "answer_start": 257,
+          "text": "agitation for constitutional reform"
+        },
+        {
+          "answer_start": 246,
+          "text": "widespread agitation for constitutional reform"
+        },
+        {
+          "answer_start": 246,
+          "text": "widespread agitation for constitutional reform"
+        }
+      ]
+    },
+    {
+      "id": "57286ead2ca10214002da348",
+      "question": "When did Zhenjin die?",
+      "context": "Following the conquest of Dali in 1253, the former ruling Duan dynasty were appointed as governors-general, recognized as imperial officials by the Yuan, Ming, and Qing-era governments, principally in the province of Yunnan. Succession for the Yuan dynasty, however, was an intractable problem, later causing much strife and internal struggle. This emerged as early as the end of Kublai's reign. Kublai originally named his eldest son, Zhenjin, as the Crown Prince, but he died before Kublai in 1285. Thus, Zhenjin's third son, with the support of his mother K\u00f6kejin and the minister Bayan, succeeded the throne and ruled as Tem\u00fcr Khan, or Emperor Chengzong, from 1294 to 1307. Tem\u00fcr Khan decided to maintain and continue much of the work begun by his grandfather. He also made peace with the western Mongol khanates as well as neighboring countries such as Vietnam, which recognized his nominal suzerainty and paid tributes for a few decades. However, the corruption in the Yuan dynasty began during the reign of Tem\u00fcr Khan.",
+      "answers": [
+        {
+          "answer_start": 478,
+          "text": "before Kublai in 1285"
+        },
+        {
+          "answer_start": 495,
+          "text": "1285"
+        },
+        {
+          "answer_start": 495,
+          "text": "1285"
+        }
+      ]
+    },
+    {
+      "id": "57332a734776f41900660729",
+      "question": "When did Warsaw become the center of the Congress Poland?",
+      "context": "Warsaw remained the capital of the Polish\u2013Lithuanian Commonwealth until 1796, when it was annexed by the Kingdom of Prussia to become the capital of the province of South Prussia. Liberated by Napoleon's army in 1806, Warsaw was made the capital of the newly created Duchy of Warsaw. Following the Congress of Vienna of 1815, Warsaw became the centre of the Congress Poland, a constitutional monarchy under a personal union with Imperial Russia. The Royal University of Warsaw was established in 1816.",
+      "answers": [
+        {
+          "answer_start": 320,
+          "text": "1815"
+        },
+        {
+          "answer_start": 320,
+          "text": "1815"
+        },
+        {
+          "answer_start": 320,
+          "text": "1815"
+        }
+      ]
+    },
+    {
+      "id": "5727cd0f4b864d1900163d72",
+      "question": "How much more land does the school own in Allston than Cambridge?",
+      "context": "Harvard has purchased tracts of land in Allston, a walk across the Charles River from Cambridge, with the intent of major expansion southward. The university now owns approximately fifty percent more land in Allston than in Cambridge. Proposals to connect the Cambridge campus with the new Allston campus include new and enlarged bridges, a shuttle service and/or a tram. Plans also call for sinking part of Storrow Drive (at Harvard's expense) for replacement with park land and pedestrian access to the Charles River, as well as the construction of bike paths, and buildings throughout the Allston campus. The institution asserts that such expansion will benefit not only the school, but surrounding community, pointing to such features as the enhanced transit infrastructure, possible shuttles open to the public, and park space which will also be publicly accessible.",
+      "answers": [
+        {
+          "answer_start": 167,
+          "text": "approximately fifty percent"
+        },
+        {
+          "answer_start": 181,
+          "text": "fifty percent"
+        },
+        {
+          "answer_start": 181,
+          "text": "fifty percent more"
+        }
+      ]
+    },
+    {
+      "id": "5726e65e708984140094d53e",
+      "question": "What does the immune system protect against?",
+      "context": "The immune system is a system of many biological structures and processes within an organism that protects against disease. To function properly, an immune system must detect a wide variety of agents, known as pathogens, from viruses to parasitic worms, and distinguish them from the organism's own healthy tissue. In many species, the immune system can be classified into subsystems, such as the innate immune system versus the adaptive immune system, or humoral immunity versus cell-mediated immunity. In humans, the blood\u2013brain barrier, blood\u2013cerebrospinal fluid barrier, and similar fluid\u2013brain barriers separate the peripheral immune system from the neuroimmune system which protects the brain.",
+      "answers": [
+        {
+          "answer_start": 175,
+          "text": "a wide variety of agents, known as pathogens, from viruses to parasitic worms"
+        },
+        {
+          "answer_start": 115,
+          "text": "disease"
+        },
+        {
+          "answer_start": 115,
+          "text": "disease"
+        },
+        {
+          "answer_start": 107,
+          "text": "against disease"
+        }
+      ]
+    },
+    {
+      "id": "572801823acd2414000df1fe",
+      "question": "Which episode in 2008 was over an hour long?",
+      "context": "The serial format changed for the 2005 revival, with each series usually consisting of 13 45-minute, self-contained episodes (60 minutes with adverts, on overseas commercial channels), and an extended episode broadcast on Christmas Day. Each series includes several standalone and multi-part stories, linked with a loose story arc that resolves in the series finale. As in the early \"classic\" era, each episode, whether standalone or part of a larger story, has its own title. Occasionally, regular-series episodes will exceed the 45-minute run time; notably, the episodes \"Journey's End\" from 2008 and \"The Eleventh Hour\" from 2010 exceeded an hour in length.",
+      "answers": [
+        {
+          "answer_start": 574,
+          "text": "Journey's End"
+        },
+        {
+          "answer_start": 574,
+          "text": "Journey's End"
+        },
+        {
+          "answer_start": 574,
+          "text": "Journey's End"
+        }
+      ]
+    },
+    {
+      "id": "5729544c3f37b3190047825a",
+      "question": "What was the ancestor of chloroplasts?",
+      "context": "Chloroplasts are highly dynamic\u2014they circulate and are moved around within plant cells, and occasionally pinch in two to reproduce. Their behavior is strongly influenced by environmental factors like light color and intensity. Chloroplasts, like mitochondria, contain their own DNA, which is thought to be inherited from their ancestor\u2014a photosynthetic cyanobacterium that was engulfed by an early eukaryotic cell. Chloroplasts cannot be made by the plant cell and must be inherited by each daughter cell during cell division.",
+      "answers": [
+        {
+          "answer_start": 336,
+          "text": "a photosynthetic cyanobacterium that was engulfed by an early eukaryotic cell"
+        },
+        {
+          "answer_start": 336,
+          "text": "a photosynthetic cyanobacterium"
+        },
+        {
+          "answer_start": 338,
+          "text": "photosynthetic cyanobacterium that was engulfed by an early eukaryotic cell"
+        }
+      ]
+    },
+    {
+      "id": "57265526708984140094c2c0",
+      "question": "When did the Shah kingdom start to collapse?",
+      "context": "The USSR's invasion of Afghanistan was only one sign of insecurity in the region, also marked by increased American weapons sales, technology, and outright military presence. Saudi Arabia and Iran became increasingly dependent on American security assurances to manage both external and internal threats, including increased military competition between them over increased oil revenues. Both states were competing for preeminence in the Persian Gulf and using increased revenues to fund expanded militaries. By 1979, Saudi arms purchases from the US exceeded five times Israel's. Another motive for the large scale purchase of arms from the US by Saudi Arabia was the failure of the Shah during January 1979 to maintain control of Iran, a non-Arabic but largely Shiite Muslim nation, which fell to a theocratic Islamist government under the Ayatollah Ruhollah Khomeini in the wake of the 1979 Iranian Revolution. Saudi Arabia, on the other hand, is an Arab, largely Sunni Muslim nation headed by a near absolutist monarchy. In the wake of the Iranian revolution the Saudis were forced to deal with the prospect of internal destabilization via the radicalism of Islamism, a reality which would quickly be revealed in the seizure of the Grand Mosque in Mecca by Wahhabi extremists during November 1979 and a Shiite revolt in the oil rich Al-Hasa region of Saudi Arabia in December of the same year. In November 2010, Wikileaks leaked confidential diplomatic cables pertaining to the United States and its allies which revealed that the late Saudi King Abdullah urged the United States to attack Iran in order to destroy its potential nuclear weapons program, describing Iran as \"a snake whose head should be cut off without any procrastination.\"",
+      "answers": [
+        {
+          "answer_start": 696,
+          "text": "January 1979"
+        },
+        {
+          "answer_start": 1296,
+          "text": "1979"
+        },
+        {
+          "answer_start": 704,
+          "text": "1979"
+        },
+        {
+          "answer_start": 704,
+          "text": "1979"
+        },
+        {
+          "answer_start": 696,
+          "text": "January 1979"
+        }
+      ]
+    },
+    {
+      "id": "5726e985dd62a815002e94de",
+      "question": "What entities are included in the federal health care system?",
+      "context": "In the U.S. federal health care system (including the VA, the Indian Health Service, and NIH) ambulatory care pharmacists are given full independent prescribing authority. In some states such North Carolina and New Mexico these pharmacist clinicians are given collaborative prescriptive and diagnostic authority. In 2011 the board of Pharmaceutical Specialties approved ambulatory care pharmacy practice as a separate board certification. The official designation for pharmacists who pass the ambulatory care pharmacy specialty certification exam will be Board Certified Ambulatory Care Pharmacist and these pharmacists will carry the initials BCACP.",
+      "answers": [
+        {
+          "answer_start": 50,
+          "text": "the VA, the Indian Health Service, and NIH"
+        },
+        {
+          "answer_start": 50,
+          "text": "the VA, the Indian Health Service, and NIH"
+        },
+        {
+          "answer_start": 54,
+          "text": "VA, the Indian Health Service, and NIH"
+        }
+      ]
+    },
+    {
+      "id": "5737477bc3c5551400e51ea3",
+      "question": "What doesn't change from being at rest to movement at a constant velocity?",
+      "context": "For instance, while traveling in a moving vehicle at a constant velocity, the laws of physics do not change from being at rest. A person can throw a ball straight up in the air and catch it as it falls down without worrying about applying a force in the direction the vehicle is moving. This is true even though another person who is observing the moving vehicle pass by also observes the ball follow a curving parabolic path in the same direction as the motion of the vehicle. It is the inertia of the ball associated with its constant velocity in the direction of the vehicle's motion that ensures the ball continues to move forward even as it is thrown up and falls back down. From the perspective of the person in the car, the vehicle and everything inside of it is at rest: It is the outside world that is moving with a constant speed in the opposite direction. Since there is no experiment that can distinguish whether it is the vehicle that is at rest or the outside world that is at rest, the two situations are considered to be physically indistinguishable. Inertia therefore applies equally well to constant velocity motion as it does to rest.",
+      "answers": [
+        {
+          "answer_start": 78,
+          "text": "laws of physics"
+        },
+        {
+          "answer_start": 74,
+          "text": "the laws of physics"
+        },
+        {
+          "answer_start": 74,
+          "text": "the laws of physics"
+        },
+        {
+          "answer_start": 74,
+          "text": "the laws of physics"
+        },
+        {
+          "answer_start": 74,
+          "text": "the laws of physics"
+        }
+      ]
+    },
+    {
+      "id": "5730a40f396df91900096235",
+      "question": "When was the British East India Company established?",
+      "context": "Britain's imperialist ambitions can be seen as early as the sixteenth century. In 1599 the British East India Company was established and was chartered by Queen Elizabeth in the following year. With the establishment of trading posts in India, the British were able to maintain strength relative to others empires such as the Portuguese who already had set up trading posts in India. In 1767 political activity caused exploitation of the East India Company causing the plundering of the local economy, almost bringing the company into bankruptcy.",
+      "answers": [
+        {
+          "answer_start": 82,
+          "text": "1599"
+        },
+        {
+          "answer_start": 82,
+          "text": "1599"
+        },
+        {
+          "answer_start": 82,
+          "text": "1599"
+        },
+        {
+          "answer_start": 82,
+          "text": "1599"
+        },
+        {
+          "answer_start": 82,
+          "text": "1599"
+        }
+      ]
+    },
+    {
+      "id": "5725c41eec44d21400f3d50d",
+      "question": "What are some of scientists arguments? ",
+      "context": "There is evidence that there have been significant changes in Amazon rainforest vegetation over the last 21,000 years through the Last Glacial Maximum (LGM) and subsequent deglaciation. Analyses of sediment deposits from Amazon basin paleolakes and from the Amazon Fan indicate that rainfall in the basin during the LGM was lower than for the present, and this was almost certainly associated with reduced moist tropical vegetation cover in the basin. There is debate, however, over how extensive this reduction was. Some scientists argue that the rainforest was reduced to small, isolated refugia separated by open forest and grassland; other scientists argue that the rainforest remained largely intact but extended less far to the north, south, and east than is seen today. This debate has proved difficult to resolve because the practical limitations of working in the rainforest mean that data sampling is biased away from the center of the Amazon basin, and both explanations are reasonably well supported by the available data.",
+      "answers": [
+        {
+          "answer_start": 544,
+          "text": "the rainforest was reduced to small, isolated refugia separated by open forest and grassland"
+        },
+        {
+          "answer_start": 544,
+          "text": "the rainforest was reduced to small, isolated refugia separated by open forest and grassland"
+        },
+        {
+          "answer_start": 548,
+          "text": "rainforest was reduced"
+        }
+      ]
+    },
+    {
+      "id": "56ddde6b9a695914005b9629",
+      "question": "When were the Normans in Normandy?",
+      "context": "The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse (\"Norman\" comes from \"Norseman\") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.",
+      "answers": [
+        {
+          "answer_start": 94,
+          "text": "10th and 11th centuries"
+        },
+        {
+          "answer_start": 87,
+          "text": "in the 10th and 11th centuries"
+        },
+        {
+          "answer_start": 94,
+          "text": "10th and 11th centuries"
+        },
+        {
+          "answer_start": 94,
+          "text": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "id": "5730126ba23a5019007fcd09",
+      "question": "Who took up the path of violence?",
+      "context": "The path of violence and military struggle was then taken up by the Egyptian Islamic Jihad organization responsible for the assassination of Anwar Sadat in 1981. Unlike earlier anti-colonial movements the extremist group directed its attacks against what it believed were \"apostate\" leaders of Muslim states, leaders who held secular leanings or who had introduced or promoted Western/foreign ideas and practices into Islamic societies. Its views were outlined in a pamphlet written by Muhammad Abd al-Salaam Farag, in which he states:",
+      "answers": [
+        {
+          "answer_start": 68,
+          "text": "Egyptian Islamic Jihad organization"
+        },
+        {
+          "answer_start": 64,
+          "text": "the Egyptian Islamic Jihad organization"
+        },
+        {
+          "answer_start": 68,
+          "text": "Egyptian Islamic Jihad"
+        }
+      ]
+    },
+    {
+      "id": "57266783f1498d1400e8de87",
+      "question": "What was the cartel of Newcastle burgesses known as?",
+      "context": "From 1530 a royal act restricted all shipments of coal from Tyneside to Newcastle Quayside, giving a monopoly in the coal trade to a cartel of Newcastle burgesses known as the Hostmen. This monopoly, which lasted for a considerable time, helped Newcastle prosper and develop into a major town. The phrase taking coals to Newcastle was first recorded contextually in 1538. The phrase itself means a pointless pursuit. In the 18th century American Timothy Dexter, an entrepreneur, widely regarded as an eccentric, defied this idiom. He was persuaded to sail a shipment of coal to Newcastle by merchants plotting to ruin him; however his shipment arrived on the Tyne during a strike that had crippled local production; unexpectedly he made a considerable profit.",
+      "answers": [
+        {
+          "answer_start": 172,
+          "text": "the Hostmen"
+        },
+        {
+          "answer_start": 172,
+          "text": "the Hostmen"
+        },
+        {
+          "answer_start": 172,
+          "text": "the Hostmen"
+        }
+      ]
+    },
+    {
+      "id": "572fc6f204bcaa1900d76cf9",
+      "question": "Where might committees meet outside of Parliament?",
+      "context": "Much of the work of the Scottish Parliament is done in committee. The role of committees is stronger in the Scottish Parliament than in other parliamentary systems, partly as a means of strengthening the role of backbenchers in their scrutiny of the government and partly to compensate for the fact that there is no revising chamber. The principal role of committees in the Scottish Parliament is to take evidence from witnesses, conduct inquiries and scrutinise legislation. Committee meetings take place on Tuesday, Wednesday and Thursday morning when Parliament is sitting. Committees can also meet at other locations throughout Scotland.",
+      "answers": [
+        {
+          "answer_start": 605,
+          "text": "other locations throughout Scotland"
+        },
+        {
+          "answer_start": 605,
+          "text": "other locations throughout Scotland"
+        },
+        {
+          "answer_start": 605,
+          "text": "other locations throughout Scotland"
+        }
+      ]
+    },
+    {
+      "id": "56f7eddca6d7ea1400e172db",
+      "question": "What did Martin's father view his entering the cloister as a waste of?",
+      "context": "He later attributed his decision to an event: on 2 July 1505, he was returning to university on horseback after a trip home. During a thunderstorm, a lightning bolt struck near him. Later telling his father he was terrified of death and divine judgment, he cried out, \"Help! Saint Anna, I will become a monk!\" He came to view his cry for help as a vow he could never break. He left law school, sold his books, and entered a closed Augustinian cloister in Erfurt on 17 July 1505. One friend blamed the decision on Luther's sadness over the deaths of two friends. Luther himself seemed saddened by the move. Those who attended a farewell supper walked him to the door of the Black Cloister. \"This day you see me, and then, not ever again,\" he said. His father was furious over what he saw as a waste of Luther's education.",
+      "answers": [
+        {
+          "answer_start": 801,
+          "text": "Luther's education"
+        },
+        {
+          "answer_start": 801,
+          "text": "Luther's education"
+        },
+        {
+          "answer_start": 810,
+          "text": "education"
+        }
+      ]
+    },
+    {
+      "id": "57268739708984140094c8ef",
+      "question": "What network was known for dramas such as Sherlock Holmes?",
+      "context": "ABC became an aggressive competitor to NBC and CBS when, continuing NBC Blue's traditions of public service, it aired symphony performances conducted by Paul Whiteman, performances from the Metropolitan Opera, and jazz concerts aired as part of its broadcast of The Chamber Music Society of Lower Basin Street announced by Milton Cross. The network also became known for such suspenseful dramas as Sherlock Holmes, Gang Busters and Counterspy, as well as several mid-afternoon youth-oriented programs. However, ABC made a name for itself by utilizing the practice of counterprogramming, with which it often placed shows of its own against the offerings of NBC and CBS, adopting the use of the Magnetophon tape recorder, brought to the U.S. from Nazi Germany after its conquest, to pre-record its programming. With the help of the Magnetophon, ABC was able to provide its stars with greater freedom in terms of time, and also attract several big names, such as Bing Crosby at a time when NBC and CBS did not allow pre-taped shows.",
+      "answers": [
+        {
+          "answer_start": 0,
+          "text": "ABC"
+        },
+        {
+          "answer_start": 0,
+          "text": "ABC"
+        },
+        {
+          "answer_start": 68,
+          "text": "NBC Blue"
+        }
+      ]
+    },
+    {
+      "id": "57281bbc2ca10214002d9dfb",
+      "question": "Who performed a benefit concert for the charity Children in Need?",
+      "context": "All the incidental music for the 2005 revived series has been composed by Murray Gold and Ben Foster and has been performed by the BBC National Orchestra of Wales from the 2005 Christmas episode \"The Christmas Invasion\" onwards. A concert featuring the orchestra performing music from the first two series took place on 19 November 2006 to raise money for Children in Need. David Tennant hosted the event, introducing the different sections of the concert. Murray Gold and Russell T Davies answered questions during the interval and Daleks and Cybermen appeared whilst music from their stories was played. The concert aired on BBCi on Christmas Day 2006. A Doctor Who Prom was celebrated on 27 July 2008 in the Royal Albert Hall as part of the annual BBC Proms. The BBC Philharmonic and the London Philharmonic Choir performed Murray Gold's compositions for the series, conducted by Ben Foster, as well as a selection of classics based on the theme of space and time. The event was presented by Freema Agyeman and guest-presented by various other stars of the show with numerous monsters participating in the proceedings. It also featured the specially filmed mini-episode \"Music of the Spheres\", written by Russell T Davies and starring David Tennant.",
+      "answers": [
+        {
+          "answer_start": 127,
+          "text": "the BBC National Orchestra of Wales"
+        },
+        {
+          "answer_start": 131,
+          "text": "BBC National Orchestra of Wales"
+        },
+        {
+          "answer_start": 127,
+          "text": "the BBC National Orchestra of Wales"
+        }
+      ]
+    },
+    {
+      "id": "571ccfbadd7acb1400e4c168",
+      "question": "What other catalysts can be used to produce oxygen?",
+      "context": "Oxygen gas can also be produced through electrolysis of water into molecular oxygen and hydrogen. DC electricity must be used: if AC is used, the gases in each limb consist of hydrogen and oxygen in the explosive ratio 2:1. Contrary to popular belief, the 2:1 ratio observed in the DC electrolysis of acidified water does not prove that the empirical formula of water is H2O unless certain assumptions are made about the molecular formulae of hydrogen and oxygen themselves. A similar method is the electrocatalytic O\n2 evolution from oxides and oxoacids. Chemical catalysts can be used as well, such as in chemical oxygen generators or oxygen candles that are used as part of the life-support equipment on submarines, and are still part of standard equipment on commercial airliners in case of depressurization emergencies. Another air separation technology involves forcing air to dissolve through ceramic membranes based on zirconium dioxide by either high pressure or an electric current, to produce nearly pure O\n2 gas.",
+      "answers": [
+        {
+          "answer_start": 556,
+          "text": "Chemical"
+        },
+        {
+          "answer_start": 556,
+          "text": "Chemical"
+        },
+        {
+          "answer_start": 556,
+          "text": "Chemical"
+        },
+        {
+          "answer_start": 607,
+          "text": "chemical oxygen generators or oxygen candles"
+        },
+        {
+          "answer_start": 556,
+          "text": "Chemical"
+        }
+      ]
+    },
+    {
+      "id": "56beb4e43aeaaa14008c9265",
+      "question": "Who is the head coach of the Broncos?",
+      "context": "Following their loss in the divisional round of the previous season's playoffs, the Denver Broncos underwent numerous coaching changes, including a mutual parting with head coach John Fox (who had won four divisional championships in his four years as Broncos head coach), and the hiring of Gary Kubiak as the new head coach. Under Kubiak, the Broncos planned to install a run-oriented offense with zone blocking to blend in with quarterback Peyton Manning's shotgun passing skills, but struggled with numerous changes and injuries to the offensive line, as well as Manning having his worst statistical season since his rookie year with the Indianapolis Colts in 1998, due to a plantar fasciitis injury in his heel that he had suffered since the summer, and the simple fact that Manning was getting old, as he turned 39 in the 2015 off-season. Although the team had a 7\u20130 start, Manning led the NFL in interceptions. In week 10, Manning suffered a partial tear of the plantar fasciitis in his left foot. He set the NFL's all-time record for career passing yards in this game, but was benched after throwing four interceptions in favor of backup quarterback Brock Osweiler, who took over as the starter for most of the remainder of the regular season. Osweiler was injured, however, leading to Manning's return during the Week 17 regular season finale, where the Broncos were losing 13\u20137 against the 4\u201311 San Diego Chargers, resulting in Manning re-claiming the starting quarterback position for the playoffs by leading the team to a key 27\u201320 win that enabled the team to clinch the number one overall AFC seed. Under defensive coordinator Wade Phillips, the Broncos' defense ranked number one in total yards allowed, passing yards allowed and sacks, and like the previous three seasons, the team has continued to set numerous individual, league and franchise records. With the defense carrying the team despite the issues with the offense, the Broncos finished the regular season with a 12\u20134 record and earned home-field advantage throughout the AFC playoffs.",
+      "answers": [
+        {
+          "answer_start": 291,
+          "text": "Gary Kubiak"
+        },
+        {
+          "answer_start": 291,
+          "text": "Gary Kubiak"
+        },
+        {
+          "answer_start": 332,
+          "text": "Kubiak"
+        }
+      ]
+    },
+    {
+      "id": "57270541dd62a815002e97c8",
+      "question": "What is the oldest surviving European tapestry in the V&A collection?",
+      "context": "The tapestry collection includes a fragment of the Cloth of St Gereon, the oldest known surviving European tapestry. A highlight of the collection is the four Devonshire Hunting Tapestries, very rare 15th-century tapestries, woven in the Netherlands, depicting the hunting of various animals; not just their age but their size make these unique. Both of the major English centres of tapestry weaving of the 16th and 17th centuries respectively, Sheldon & Mortlake are represented in the collection by several examples. Also included are tapestries from John Vanderbank's workshop which was the leading English tapestry manufactory in the late 17th century and early 18th century. Some of the finest tapestries are examples from the Gobelins workshop, including a set of 'Jason and the Argonauts' dating from the 1750s. Other continental centres of tapestry weaving with work in the collection include Brussels, Tournai, Beauvais, Strasbourg and Florence.",
+      "answers": [
+        {
+          "answer_start": 51,
+          "text": "Cloth of St Gereon"
+        },
+        {
+          "answer_start": 51,
+          "text": "Cloth of St Gereon"
+        },
+        {
+          "answer_start": 33,
+          "text": "a fragment of the Cloth of St Gereon"
+        }
+      ]
+    },
+    {
+      "id": "57275a505951b619008f889f",
+      "question": "What two comedies were featured on ABC's new Wednesday comedy lineup?",
+      "context": "Among the few bright spots during this season were the midseason crime dramedy Castle as well as the success of two family sitcoms that anchored the network's revamped Wednesday comedy lineup, The Middle and Modern Family, the latter of which was both a critical and commercial success. Shark Tank (based on the Dragon's Den reality format) also became a midseason sleeper hit on Sundays in the spring of 2010; the following season, it became the tentpole of the network's Friday night schedule, gradually helping make ABC a strong competitor (after being paired with 20/20 and beginning with the 2012\u201313 season, the Tim Allen sitcom Last Man Standing) against CBS' long-dominant drama/reality lineup on that night for the first time since the \"TGIF\" lineup ended in 2000.",
+      "answers": [
+        {
+          "answer_start": 193,
+          "text": "The Middle and Modern Family"
+        },
+        {
+          "answer_start": 193,
+          "text": "The Middle and Modern Family"
+        },
+        {
+          "answer_start": 193,
+          "text": "The Middle and Modern Family"
+        }
+      ]
+    },
+    {
+      "id": "57281940ff5b5019007d9d45",
+      "question": "What type of movies were produced in Jacksonville's 30 studios?",
+      "context": "In the 1910s, New York\u2013based filmmakers were attracted to Jacksonville's warm climate, exotic locations, excellent rail access, and cheap labor. Over the course of the decade, more than 30 silent film studios were established, earning Jacksonville the title of \"Winter Film Capital of the World\". However, the emergence of Hollywood as a major film production center ended the city's film industry. One converted movie studio site, Norman Studios, remains in Arlington; It has been converted to the Jacksonville Silent Film Museum at Norman Studios.",
+      "answers": [
+        {
+          "answer_start": 189,
+          "text": "silent film"
+        },
+        {
+          "answer_start": 189,
+          "text": "silent film"
+        },
+        {
+          "answer_start": 189,
+          "text": "silent"
+        }
+      ]
+    },
+    {
+      "id": "570d2af0fed7b91900d45c95",
+      "question": "How populous is Victoria compared to other Australian states?",
+      "context": "Victoria (abbreviated as Vic) is a state in the south-east of Australia. Victoria is Australia's most densely populated state and its second-most populous state overall. Most of its population is concentrated in the area surrounding Port Phillip Bay, which includes the metropolitan area of its capital and largest city, Melbourne, which is Australia's second-largest city. Geographically the smallest state on the Australian mainland, Victoria is bordered by Bass Strait and Tasmania to the south,[note 1] New South Wales to the north, the Tasman Sea to the east, and South Australia to the west.",
+      "answers": [
+        {
+          "answer_start": 134,
+          "text": "second"
+        },
+        {
+          "answer_start": 134,
+          "text": "second-most"
+        },
+        {
+          "answer_start": 134,
+          "text": "second-most populous"
+        }
+      ]
+    },
+    {
+      "id": "572804522ca10214002d9b95",
+      "question": "Who made early colour videos of the show?",
+      "context": "Some episodes have been returned to the BBC from the archives of other countries who bought prints for broadcast, or by private individuals who acquired them by various means. Early colour videotape recordings made off-air by fans have also been retrieved, as well as excerpts filmed from the television screen onto 8 mm cine film and clips that were shown on other programmes. Audio versions of all of the lost episodes exist from home viewers who made tape recordings of the show. Short clips from every story with the exception of Marco Polo, \"Mission to the Unknown\" and The Massacre of St Bartholomew's Eve also exist.",
+      "answers": [
+        {
+          "answer_start": 226,
+          "text": "fans"
+        },
+        {
+          "answer_start": 226,
+          "text": "fans"
+        },
+        {
+          "answer_start": 226,
+          "text": "fans"
+        }
+      ]
+    },
+    {
+      "id": "5727500f708984140094dc01",
+      "question": "Along with English and mathematics, what subject replaced values education for fourth year students?",
+      "context": "In the Philippines, the private sector has been a major provider of educational services, accounting for about 7.5% of primary enrollment, 32% of secondary enrollment and about 80% of tertiary enrollment. Private schools have proven to be efficient in resource utilization. Per unit costs in private schools are generally lower when compared to public schools. This situation is more evident at the tertiary level. Government regulations have given private education more flexibility and autonomy in recent years, notably by lifting the moratorium on applications for new courses, new schools and conversions, by liberalizing tuition fee policy for private schools, by replacing values education for third and fourth years with English, mathematics and natural science at the option of the school, and by issuing the revised Manual of Regulations for Private Schools in August 1992.",
+      "answers": [
+        {
+          "answer_start": 753,
+          "text": "natural science"
+        },
+        {
+          "answer_start": 753,
+          "text": "natural science"
+        },
+        {
+          "answer_start": 728,
+          "text": "English, mathematics and natural science"
+        }
+      ]
+    },
+    {
+      "id": "5725fe63ec44d21400f3d7df",
+      "question": "Which State Route has been in discussion to upgrade to interstate standards?",
+      "context": "Fresno is the largest U.S. city not directly linked to an Interstate highway. When the Interstate Highway System was created in the 1950s, the decision was made to build what is now Interstate 5 on the west side of the Central Valley, and thus bypass many of the population centers in the region, instead of upgrading what is now State Route 99. Due to rapidly raising population and traffic in cities along SR 99, as well as the desirability of Federal funding, much discussion has been made to upgrade it to interstate standards and eventually incorporate it into the interstate system, most likely as Interstate 9. Major improvements to signage, lane width, median separation, vertical clearance, and other concerns are currently underway.",
+      "answers": [
+        {
+          "answer_start": 411,
+          "text": "99"
+        },
+        {
+          "answer_start": 330,
+          "text": "State Route 99"
+        },
+        {
+          "answer_start": 330,
+          "text": "State Route 99"
+        }
+      ]
+    },
+    {
+      "id": "5726dd71f1498d1400e8edd8",
+      "question": "Which three famous British potters are represented the the V&A ceramics collection?",
+      "context": "Many famous potters, such as Josiah Wedgwood, William De Morgan and Bernard Leach as well as Mintons & Royal Doulton are represented in the collection. There is an extensive collection of Delftware produced in both Britain and Holland, which includes a circa 1695 flower pyramid over a metre in height. Bernard Palissy has several examples of his work in the collection including dishes, jugs and candlesticks. The largest objects in the collection are a series of elaborately ornamented ceramic stoves from the 16th and 17th centuries, made in Germany and Switzerland. There is an unrivalled collection of Italian maiolica and lustreware from Spain. The collection of Iznik pottery from Turkey is the largest in the world.",
+      "answers": [
+        {
+          "answer_start": 29,
+          "text": "Josiah Wedgwood, William De Morgan and Bernard Leach"
+        },
+        {
+          "answer_start": 29,
+          "text": "Josiah Wedgwood, William De Morgan and Bernard Leach"
+        },
+        {
+          "answer_start": 29,
+          "text": "Josiah Wedgwood, William De Morgan and Bernard Leach"
+        }
+      ]
+    },
+    {
+      "id": "5728fb6a1d04691400778ef7",
+      "question": "What is one main reason that civil disobedience is not recognized?",
+      "context": "One theory is that, while disobedience may be helpful, any great amount of it would undermine the law by encouraging general disobedience which is neither conscientious nor of social benefit. Therefore, conscientious lawbreakers must be punished. Michael Bayles argues that if a person violates a law in order to create a test case as to the constitutionality of a law, and then wins his case, then that act did not constitute civil disobedience. It has also been argued that breaking the law for self-gratification, as in the case of a homosexual or cannabis user who does not direct his act at securing the repeal of amendment of the law, is not civil disobedience. Likewise, a protestor who attempts to escape punishment by committing the crime covertly and avoiding attribution, or by denying having committed the crime, or by fleeing the jurisdiction, is generally viewed as not being a civil disobedient.",
+      "answers": [
+        {
+          "answer_start": 476,
+          "text": "breaking the law for self-gratification"
+        },
+        {
+          "answer_start": 476,
+          "text": "breaking the law for self-gratification"
+        },
+        {
+          "answer_start": 75,
+          "text": "it would undermine the law by encouraging general disobedience"
+        },
+        {
+          "answer_start": 476,
+          "text": "breaking the law for self-gratification"
+        }
+      ]
+    },
+    {
+      "id": "57265aaf5951b619008f706f",
+      "question": "What do lobates feed on?",
+      "context": "The Lobata have a pair of lobes, which are muscular, cuplike extensions of the body that project beyond the mouth. Their inconspicuous tentacles originate from the corners of the mouth, running in convoluted grooves and spreading out over the inner surface of the lobes (rather than trailing far behind, as in the Cydippida). Between the lobes on either side of the mouth, many species of lobates have four auricles, gelatinous projections edged with cilia that produce water currents that help direct microscopic prey toward the mouth. This combination of structures enables lobates to feed continuously on suspended planktonic prey.",
+      "answers": [
+        {
+          "answer_start": 608,
+          "text": "suspended planktonic prey"
+        },
+        {
+          "answer_start": 608,
+          "text": "suspended planktonic prey"
+        },
+        {
+          "answer_start": 618,
+          "text": "planktonic prey"
+        }
+      ]
+    },
+    {
+      "id": "572a1a5c6aef051400155284",
+      "question": "What needs to be made to ensure poorer members of society can participate in economic growth?",
+      "context": "While acknowledging the central role economic growth can potentially play in human development, poverty reduction and the achievement of the Millennium Development Goals, it is becoming widely understood amongst the development community that special efforts must be made to ensure poorer sections of society are able to participate in economic growth. The effect of economic growth on poverty reduction \u2013 the growth elasticity of poverty \u2013 can depend on the existing level of inequality. For instance, with low inequality a country with a growth rate of 2% per head and 40% of its population living in poverty, can halve poverty in ten years, but a country with high inequality would take nearly 60 years to achieve the same reduction. In the words of the Secretary General of the United Nations Ban Ki-Moon: \"While economic growth is necessary, it is not sufficient for progress on reducing poverty.\"",
+      "answers": [
+        {
+          "answer_start": 243,
+          "text": "special efforts"
+        },
+        {
+          "answer_start": 243,
+          "text": "special efforts"
+        },
+        {
+          "answer_start": 243,
+          "text": "special efforts"
+        }
+      ]
+    },
+    {
+      "id": "570966e0200fba1400367f50",
+      "question": "Sky Movies and Sky Box office also include what optional soundtracks?",
+      "context": "BSkyB's standard definition broadcasts are in DVB-compliant MPEG-2, with the Sky Movies and Sky Box Office channels including optional Dolby Digital soundtracks for recent films, although these are only accessible with a Sky+ box. Sky+ HD material is broadcast using MPEG-4 and most of the HD material uses the DVB-S2 standard. Interactive services and 7-day EPG use the proprietary OpenTV system, with set-top boxes including modems for a return path. Sky News, amongst other channels, provides a pseudo-video on demand interactive service by broadcasting looping video streams.",
+      "answers": [
+        {
+          "answer_start": 135,
+          "text": "Dolby Digital"
+        },
+        {
+          "answer_start": 135,
+          "text": "Dolby Digital"
+        },
+        {
+          "answer_start": 135,
+          "text": "Dolby Digital"
+        }
+      ]
+    },
+    {
+      "id": "572756265951b619008f8871",
+      "question": "What is the upper range of annual fees for non-boarding students in British public schools?",
+      "context": "Private schools generally prefer to be called independent schools, because of their freedom to operate outside of government and local government control. Some of these are also known as public schools. Preparatory schools in the UK prepare pupils aged up to 13 years old to enter public schools. The name \"public school\" is based on the fact that the schools were open to pupils from anywhere, and not merely to those from a certain locality, and of any religion or occupation. According to The Good Schools Guide approximately 9 per cent of children being educated in the UK are doing so at fee-paying schools at GSCE level and 13 per cent at A-level.[citation needed] Many independent schools are single-sex (though this is becoming less common). Fees range from under \u00a33,000 to \u00a321,000 and above per year for day pupils, rising to \u00a327,000+ per year for boarders. For details in Scotland, see \"Meeting the Cost\".",
+      "answers": [
+        {
+          "answer_start": 782,
+          "text": "\u00a321,000"
+        },
+        {
+          "answer_start": 782,
+          "text": "\u00a321,000"
+        },
+        {
+          "answer_start": 782,
+          "text": "\u00a321,000"
+        }
+      ]
+    },
+    {
+      "id": "56e0d9e0231d4119001ac43c",
+      "question": "When did Tesla make the induction motor?",
+      "context": "One of the things Tesla developed at that laboratory in 1887 was an induction motor that ran on alternating current, a power system format that was starting to be built in Europe and the United States because of its advantages in long-distance, high-voltage transmission. The motor used polyphase current which generated a rotating magnetic field to turn the motor (a principle Tesla claimed to have conceived in 1882). This innovative electric motor, patented in May 1888, was a simple self-starting design that did not need a commutator, thus avoiding sparking and the high maintenance of constantly servicing and replacing mechanical brushes.",
+      "answers": [
+        {
+          "answer_start": 56,
+          "text": "1887"
+        },
+        {
+          "answer_start": 56,
+          "text": "1887"
+        },
+        {
+          "answer_start": 56,
+          "text": "1887"
+        }
+      ]
+    },
+    {
+      "id": "5730b4282461fd1900a9cfc8",
+      "question": "Who was the leader of Russia in the 1960's?",
+      "context": "Trotsky, and others, believed that the revolution could only succeed in Russia as part of a world revolution. Lenin wrote extensively on the matter and famously declared that Imperialism was the highest stage of capitalism. However, after Lenin's death, Joseph Stalin established 'socialism in one country' for the Soviet Union, creating the model for subsequent inward looking Stalinist states and purging the early Internationalist elements. The internationalist tendencies of the early revolution would be abandoned until they returned in the framework of a client state in competition with the Americans during the Cold War. With the beginning of the new era, the after Stalin period called the \"thaw\", in the late 1950s, the new political leader Nikita Khrushchev put even more pressure on the Soviet-American relations starting a new wave of anti-imperialist propaganda. In his speech on the UN conference in 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist fa\u00e7ade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism.",
+      "answers": [
+        {
+          "answer_start": 751,
+          "text": "Nikita Khrushchev"
+        },
+        {
+          "answer_start": 751,
+          "text": "Nikita Khrushchev"
+        },
+        {
+          "answer_start": 751,
+          "text": "Nikita Khrushchev"
+        },
+        {
+          "answer_start": 751,
+          "text": "Nikita Khrushchev"
+        },
+        {
+          "answer_start": 758,
+          "text": "Khrushchev"
+        }
+      ]
+    },
+    {
+      "id": "57285841ff5b5019007da19e",
+      "question": "Where is the Apache Point Observatory located?",
+      "context": "The university operates 12 research institutes and 113 research centers on campus. Among these are the Oriental Institute\u2014a museum and research center for Near Eastern studies owned and operated by the university\u2014and a number of National Resource Centers, including the Center for Middle Eastern Studies. Chicago also operates or is affiliated with a number of research institutions apart from the university proper. The university partially manages Argonne National Laboratory, part of the United States Department of Energy's national laboratory system, and has a joint stake in Fermilab, a nearby particle physics laboratory, as well as a stake in the Apache Point Observatory in Sunspot, New Mexico. Faculty and students at the adjacent Toyota Technological Institute at Chicago collaborate with the university, In 2013, the university announced that it was affiliating the formerly independent Marine Biological Laboratory in Woods Hole, Mass. Although formally unrelated, the National Opinion Research Center is located on Chicago's campus.",
+      "answers": [
+        {
+          "answer_start": 683,
+          "text": "Sunspot, New Mexico"
+        },
+        {
+          "answer_start": 683,
+          "text": "Sunspot, New Mexico"
+        },
+        {
+          "answer_start": 683,
+          "text": "Sunspot, New Mexico"
+        }
+      ]
+    },
+    {
+      "id": "57269526dd62a815002e8a4f",
+      "question": "How many of the schools in Newcastle are independent? ",
+      "context": "There are eleven LEA-funded 11 to 18 schools and seven independent schools with sixth forms in Newcastle. There are a number of successful state schools, including Walker Technology College, Gosforth High School, Heaton Manor School, St Cuthbert's High School, St. Mary's Catholic Comprehensive School, Kenton School, George Stephenson High School, Sacred Heart and Benfield School. The largest co-ed independent school is the Royal Grammar School. The largest girls' independent school is Newcastle High School for Girls. Both schools are located on the same street in Jesmond. Newcastle School for Boys is the only independent boys' only school in the city and is situated in Gosforth. Newcastle College is the largest general further education college in the North East and is a beacon status college; there are two smaller colleges in the Newcastle area. St Cuthbert's High School and Sacred Heart are the two primary state-Catholic run high schools, and are both achieving results on par with the independent schools in Newcastle.",
+      "answers": [
+        {
+          "answer_start": 49,
+          "text": "seven"
+        },
+        {
+          "answer_start": 49,
+          "text": "seven"
+        },
+        {
+          "answer_start": 49,
+          "text": "seven"
+        }
+      ]
+    },
+    {
+      "id": "57373d0cc3c5551400e51e89",
+      "question": "What did Aristotle refer to forced motion as?",
+      "context": "Aristotle provided a philosophical discussion of the concept of a force as an integral part of Aristotelian cosmology. In Aristotle's view, the terrestrial sphere contained four elements that come to rest at different \"natural places\" therein. Aristotle believed that motionless objects on Earth, those composed mostly of the elements earth and water, to be in their natural place on the ground and that they will stay that way if left alone. He distinguished between the innate tendency of objects to find their \"natural place\" (e.g., for heavy bodies to fall), which led to \"natural motion\", and unnatural or forced motion, which required continued application of a force. This theory, based on the everyday experience of how objects move, such as the constant application of a force needed to keep a cart moving, had conceptual trouble accounting for the behavior of projectiles, such as the flight of arrows. The place where the archer moves the projectile was at the start of the flight, and while the projectile sailed through the air, no discernible efficient cause acts on it. Aristotle was aware of this problem and proposed that the air displaced through the projectile's path carries the projectile to its target. This explanation demands a continuum like air for change of place in general.",
+      "answers": [
+        {
+          "answer_start": 598,
+          "text": "unnatural"
+        },
+        {
+          "answer_start": 598,
+          "text": "unnatural"
+        },
+        {
+          "answer_start": 577,
+          "text": "natural motion"
+        },
+        {
+          "answer_start": 598,
+          "text": "unnatural"
+        },
+        {
+          "answer_start": 641,
+          "text": "continued application of a force"
+        },
+        {
+          "answer_start": 598,
+          "text": "unnatural"
+        }
+      ]
+    },
+    {
+      "id": "56e11a16cd28a01900c675b5",
+      "question": "At what time did Tesla get dinner?",
+      "context": "Tesla worked every day from 9:00 a.m. until 6:00 p.m. or later, with dinner from exactly 8:10 p.m., at Delmonico's restaurant and later the Waldorf-Astoria Hotel. Tesla would telephone his dinner order to the headwaiter, who also could be the only one to serve him. \"The meal was required to be ready at eight o'clock ... He dined alone, except on the rare occasions when he would give a dinner to a group to meet his social obligations. Tesla would then resume his work, often until 3:00 a.m.\":283, 286",
+      "answers": [
+        {
+          "answer_start": 89,
+          "text": "8:10 p.m"
+        },
+        {
+          "answer_start": 89,
+          "text": "8:10 p.m"
+        },
+        {
+          "answer_start": 81,
+          "text": "exactly 8:10 p.m.,"
+        }
+      ]
+    },
+    {
+      "id": "5728231fff5b5019007d9dd4",
+      "question": "What station did the 20th anniversary special show before being shown on BBC?",
+      "context": "Only four episodes have ever had their premiere showings on channels other than BBC One. The 1983 20th anniversary special The Five Doctors had its d\u00e9but on 23 November (the actual date of the anniversary) on a number of PBS stations two days prior to its BBC One broadcast. The 1988 story Silver Nemesis was broadcast with all three episodes airing back to back on TVNZ in New Zealand in November, after the first episode had been shown in the UK but before the final two instalments had aired there. Finally, the 1996 television film premi\u00e8red on 12 May 1996 on CITV in Edmonton, Canada, 15 days before the BBC One showing, and two days before it aired on Fox in the United States.[citation needed]",
+      "answers": [
+        {
+          "answer_start": 221,
+          "text": "PBS"
+        },
+        {
+          "answer_start": 221,
+          "text": "PBS"
+        },
+        {
+          "answer_start": 221,
+          "text": "PBS"
+        }
+      ]
+    },
+    {
+      "id": "56d9cb47dc89441400fdb834",
+      "question": "What is the last name of the player who finally recovered the ball Newton lost in the fourth quarter?",
+      "context": "With 4:51 left in regulation, Carolina got the ball on their own 24-yard line with a chance to mount a game-winning drive, and soon faced 3rd-and-9. On the next play, Miller stripped the ball away from Newton, and after several players dove for it, it took a long bounce backwards and was recovered by Ward, who returned it five yards to the Panthers 4-yard line. Although several players dove into the pile to attempt to recover it, Newton did not and his lack of aggression later earned him heavy criticism. Meanwhile, Denver's offense was kept out of the end zone for three plays, but a holding penalty on cornerback Josh Norman gave the Broncos a new set of downs. Then Anderson scored on a 2-yard touchdown run and Manning completed a pass to Bennie Fowler for a 2-point conversion, giving Denver a 24\u201310 lead with 3:08 left and essentially putting the game away. Carolina had two more drives, but failed to get a first down on each one.",
+      "answers": [
+        {
+          "answer_start": 275,
+          "text": "wards"
+        },
+        {
+          "answer_start": 302,
+          "text": "Ward"
+        },
+        {
+          "answer_start": 302,
+          "text": "Ward"
+        }
+      ]
+    },
+    {
+      "id": "5725d51589a1e219009abf6e",
+      "question": "From what project groups were the Apollo astronauts selected?",
+      "context": "The Apollo astronauts were chosen from the Project Mercury and Gemini veterans, plus from two later astronaut groups. All missions were commanded by Gemini or Mercury veterans. Crews on all development flights (except the Earth orbit CSM development flights) through the first two landings on Apollo 11 and Apollo 12, included at least two (sometimes three) Gemini veterans. Dr. Harrison Schmitt, a geologist, was the first NASA scientist astronaut to fly in space, and landed on the Moon on the last mission, Apollo 17. Schmitt participated in the lunar geology training of all of the Apollo landing crews.",
+      "answers": [
+        {
+          "answer_start": 51,
+          "text": "Mercury and Gemini"
+        },
+        {
+          "answer_start": 51,
+          "text": "Mercury"
+        },
+        {
+          "answer_start": 51,
+          "text": "Mercury and Gemini"
+        },
+        {
+          "answer_start": 43,
+          "text": "Project Mercury and Gemini"
+        },
+        {
+          "answer_start": 51,
+          "text": "Mercury and Gemini"
+        }
+      ]
+    },
+    {
+      "id": "572679c35951b619008f73db",
+      "question": "The population of Newcastle was 189,863 according to what year's census?",
+      "context": "According to the UK Government's returned 2001 census information, the city of Newcastle had a population of 189,863, whereas the metropolitan borough of Newcastle had a population of around 259,000. Newcastle has a population of 282,442 according to the Office for National Statistics. The metropolitan boroughs of North Tyneside (population circa 201,000), South Tyneside (population circa 148,000) and Gateshead (population circa 201,000) are, along with Newcastle, all part of the Tyneside conurbation (population circa 880,000). The metropolitan county of Tyne and Wear, which consists of the four aforementioned boroughs as well as the City of Sunderland (population circa 275,000), had a population of around 1,076,000 and the Tyne and Wear City Region which also includes North Durham, South East Northumberland and the Tyne Valley has a population of 1,650,000. Newcastle is also home to a large student population with Newcastle and Northumbria Universities in the local area. Areas with predominant student populations include Jesmond and Heaton.",
+      "answers": [
+        {
+          "answer_start": 42,
+          "text": "2001"
+        },
+        {
+          "answer_start": 42,
+          "text": "2001"
+        },
+        {
+          "answer_start": 42,
+          "text": "2001"
+        }
+      ]
+    },
+    {
+      "id": "57332a734776f41900660727",
+      "question": "What kingdom annexed Warsaw in 1796?",
+      "context": "Warsaw remained the capital of the Polish\u2013Lithuanian Commonwealth until 1796, when it was annexed by the Kingdom of Prussia to become the capital of the province of South Prussia. Liberated by Napoleon's army in 1806, Warsaw was made the capital of the newly created Duchy of Warsaw. Following the Congress of Vienna of 1815, Warsaw became the centre of the Congress Poland, a constitutional monarchy under a personal union with Imperial Russia. The Royal University of Warsaw was established in 1816.",
+      "answers": [
+        {
+          "answer_start": 116,
+          "text": "Prussia"
+        },
+        {
+          "answer_start": 105,
+          "text": "Kingdom of Prussia"
+        },
+        {
+          "answer_start": 116,
+          "text": "Prussia"
+        }
+      ]
+    },
+    {
+      "id": "570d418dfed7b91900d45dc1",
+      "question": "Who is the current Governor of Victoria?",
+      "context": "Politically, Victoria has 37 seats in the Australian House of Representatives and 12 seats in the Australian Senate. At state level, the Parliament of Victoria consists of the Legislative Assembly (the lower house) and the Legislative Council (the upper house). Victoria is currently governed by the Labor Party, with Daniel Andrews the current Premier. The personal representative of the Queen of Australia in the state is the Governor of Victoria, currently Linda Dessau. Local government is concentrated in 79 municipal districts, including 33 cities, although a number of unincorporated areas still exist, which are administered directly by the state.",
+      "answers": [
+        {
+          "answer_start": 460,
+          "text": "Linda Dessau"
+        },
+        {
+          "answer_start": 460,
+          "text": "Linda Dessau"
+        },
+        {
+          "answer_start": 460,
+          "text": "Linda Dessau"
+        }
+      ]
+    },
+    {
+      "id": "570967c4ed30961900e840bc",
+      "question": "What satellite enabled Sky Digital to launch an all new digital service?",
+      "context": "When Sky Digital was launched in 1998 the new service used the Astra 2A satellite which was located at the 28.5\u00b0E orbital position, unlike the analogue service which was broadcast from 19.2\u00b0E. This was subsequently followed by more Astra satellites as well as Eutelsat's Eurobird 1 (now Eutelsat 33C) at 28.5\u00b0E), enabled the company to launch a new all-digital service, Sky, with the potential to carry hundreds of television and radio channels. The old position was shared with broadcasters from several European countries, while the new position at 28.5\u00b0E came to be used almost exclusively for channels that broadcast to the United Kingdom.",
+      "answers": [
+        {
+          "answer_start": 260,
+          "text": "Eutelsat's Eurobird 1"
+        },
+        {
+          "answer_start": 260,
+          "text": "Eutelsat's Eurobird 1"
+        },
+        {
+          "answer_start": 260,
+          "text": "Eutelsat's Eurobird 1"
+        }
+      ]
+    },
+    {
+      "id": "5728dafe3acd2414000e005e",
+      "question": "Who is to blame for acting unjustly?",
+      "context": "However, this definition is disputed by Thoreau's political philosophy pitching the conscience vs. the collective. The individual is the final judge of right and wrong. More than this, since only individuals act, only individuals can act unjustly. When the government knocks on the door, it is an individual in the form of a postman or tax collector whose hand hits the wood. Before Thoreau\u2019s imprisonment, when a confused taxman had wondered aloud about how to handle his refusal to pay, Thoreau had advised, \u201cResign.\u201d If a man chose to be an agent of injustice, then Thoreau insisted on confronting him with the fact that he was making a choice. But if government is \u201cthe voice of the people,\u201d as it is often called, shouldn\u2019t that voice be heeded? Thoreau admits that government may express the will of the majority but it may also express nothing more than the will of elite politicians. Even a good form of government is \u201cliable to be abused and perverted before the people can act through it.\u201d Moreover, even if a government did express the voice of the people, this fact would not compel the obedience of individuals who disagree with what is being said. The majority may be powerful but it is not necessarily right. What, then, is the proper relationship between the individual and the government?",
+      "answers": [
+        {
+          "answer_start": 218,
+          "text": "individuals"
+        },
+        {
+          "answer_start": 1112,
+          "text": "individuals"
+        },
+        {
+          "answer_start": 294,
+          "text": "an individual"
+        },
+        {
+          "answer_start": 218,
+          "text": "individuals"
+        },
+        {
+          "answer_start": 218,
+          "text": "individuals"
+        }
+      ]
+    },
+    {
+      "id": "5730b10b8ab72b1400f9c69e",
+      "question": "Is the UMC pro-life or pro-choice?",
+      "context": "The United Methodist Church upholds the sanctity of human life both of the child and the mother. As a result, the church is \"reluctant to affirm abortion as an acceptable practice,\" and condemns the use of late-term or partial birth abortion except as a medical necessity. The denomination as a whole is committed to \"assist[ing] the ministry of crisis pregnancy centers and pregnancy resource centers that compassionately help women find feasible alternatives to abortion.\" Still, the denomination is pro-choice and also \"was a founding member of the Religious Coalition for Reproductive Choice...[and] 2008 General Conference [went] on record in support of the work of the Religious Coalition for Reproductive Choice\".",
+      "answers": [
+        {
+          "answer_start": 502,
+          "text": "pro-choice"
+        },
+        {
+          "answer_start": 502,
+          "text": "pro-choice"
+        },
+        {
+          "answer_start": 502,
+          "text": "pro-choice"
+        }
+      ]
+    },
+    {
+      "id": "57339902d058e614000b5e74",
+      "question": "How much area does the University Library garden cover?",
+      "context": "Another important library \u2013 the University Library, founded in 1816, is home to over two million items. The building was designed by architects Marek Budzy\u0144ski and Zbigniew Badowski and opened on 15 December 1999. It is surrounded by green. The University Library garden, designed by Irena Bajerska, was opened on 12 June 2002. It is one of the largest and most beautiful roof gardens in Europe with an area of more than 10,000 m2 (107,639.10 sq ft), and plants covering 5,111 m2 (55,014.35 sq ft). As the university garden it is open to the public every day.",
+      "answers": [
+        {
+          "answer_start": 421,
+          "text": "10,000 m2"
+        },
+        {
+          "answer_start": 411,
+          "text": "more than 10,000 m2"
+        },
+        {
+          "answer_start": 421,
+          "text": "10,000 m2"
+        }
+      ]
+    },
+    {
+      "id": "57281d494b864d19001644c1",
+      "question": "What spurred increased support for government reform?",
+      "context": "In the mid-1960s, corruption scandals began to arise among many of the city's officials, who were mainly elected through the traditional old boy network. After a grand jury was convened to investigate, 11 officials were indicted and more were forced to resign. Jacksonville Consolidation, led by J. J. Daniel and Claude Yates, began to win more support during this period, from both inner city blacks, who wanted more involvement in government, and whites in the suburbs, who wanted more services and more control over the central city. In 1964 all 15 of Duval County's public high schools lost their accreditation. This added momentum to proposals for government reform. Lower taxes, increased economic development, unification of the community, better public spending and effective administration by a more central authority were all cited as reasons for a new consolidated government.",
+      "answers": [
+        {
+          "answer_start": 570,
+          "text": "public high schools lost their accreditation"
+        },
+        {
+          "answer_start": 577,
+          "text": "high schools lost their accreditation"
+        },
+        {
+          "answer_start": 570,
+          "text": "public high schools lost their accreditation"
+        }
+      ]
+    },
+    {
+      "id": "5726642f5951b619008f715b",
+      "question": "What's the regional nickname for Newcastle and its surrounding area?",
+      "context": "Newcastle upon Tyne (RP: i/\u02ccnju\u02d0k\u0251\u02d0s\u0259l \u0259\u02ccp\u0252n \u02c8ta\u026an/; Locally: i/nju\u02d0\u02cck\u00e6s\u0259l \u0259\u02ccp\u0259n \u02c8ta\u026an/), commonly known as Newcastle, is a city in Tyne and Wear, North East England, 103 miles (166 km) south of Edinburgh and 277 miles (446 km) north of London on the northern bank of the River Tyne, 8.5 mi (13.7 km) from the North Sea. Newcastle is the most populous city in the North East and Tyneside the eighth most populous conurbation in the United Kingdom. Newcastle is a member of the English Core Cities Group and is a member of the Eurocities network of European cities. Newcastle was part of the county of Northumberland until 1400, when it became a county itself, a status it retained until becoming part of Tyne and Wear in 1974.[not in citation given] The regional nickname and dialect for people from Newcastle and the surrounding area is Geordie.",
+      "answers": [
+        {
+          "answer_start": 838,
+          "text": "Geordie"
+        },
+        {
+          "answer_start": 838,
+          "text": "Geordie"
+        },
+        {
+          "answer_start": 838,
+          "text": "Geordie"
+        }
+      ]
+    },
+    {
+      "id": "56e1066be3433e1400422ae7",
+      "question": "What was Maxwell's job?",
+      "context": "Tesla theorized that the application of electricity to the brain enhanced intelligence. In 1912, he crafted \"a plan to make dull students bright by saturating them unconsciously with electricity,\" wiring the walls of a schoolroom and, \"saturating [the schoolroom] with infinitesimal electric waves vibrating at high frequency. The whole room will thus, Mr. Tesla claims, be converted into a health-giving and stimulating electromagnetic field or 'bath.'\" The plan was, at least provisionally approved by then superintendent of New York City schools, William H. Maxwell.",
+      "answers": [
+        {
+          "answer_start": 509,
+          "text": "superintendent of New York City schools"
+        },
+        {
+          "answer_start": 509,
+          "text": "superintendent of New York City schools"
+        },
+        {
+          "answer_start": 509,
+          "text": "superintendent of New York City schools"
+        }
+      ]
+    },
+    {
+      "id": "5727d3843acd2414000ded6a",
+      "question": "Post 2008 undergraduate students are required to complete how many general education classes towards degree?",
+      "context": "The four-year, full-time undergraduate program comprises a minority of enrollments at the university and emphasizes instruction with an \"arts and sciences focus\". Between 1978 and 2008, entering students were required to complete a core curriculum of seven classes outside of their concentration. Since 2008, undergraduate students have been required to complete courses in eight General Education categories: Aesthetic and Interpretive Understanding, Culture and Belief, Empirical and Mathematical Reasoning, Ethical Reasoning, Science of Living Systems, Science of the Physical Universe, Societies of the World, and United States in the World. Harvard offers a comprehensive doctoral graduate program and there is a high level of coexistence between graduate and undergraduate degrees. The Carnegie Foundation for the Advancement of Teaching, The New York Times, and some students have criticized Harvard for its reliance on teaching fellows for some aspects of undergraduate education; they consider this to adversely affect the quality of education.",
+      "answers": [
+        {
+          "answer_start": 374,
+          "text": "eight General Education categories"
+        },
+        {
+          "answer_start": 374,
+          "text": "eight"
+        },
+        {
+          "answer_start": 374,
+          "text": "eight"
+        }
+      ]
+    },
+    {
+      "id": "5737a4511c456719005744e1",
+      "question": "To calculate instant angular acceleration of a rigid body what would you use?",
+      "context": "Torque is the rotation equivalent of force in the same way that angle is the rotational equivalent for position, angular velocity for velocity, and angular momentum for momentum. As a consequence of Newton's First Law of Motion, there exists rotational inertia that ensures that all bodies maintain their angular momentum unless acted upon by an unbalanced torque. Likewise, Newton's Second Law of Motion can be used to derive an analogous equation for the instantaneous angular acceleration of the rigid body:",
+      "answers": [
+        {
+          "answer_start": 375,
+          "text": "Newton's Second Law of Motion"
+        },
+        {
+          "answer_start": 375,
+          "text": "Newton's Second Law of Motion"
+        },
+        {
+          "answer_start": 375,
+          "text": "Newton's Second Law of Motion"
+        },
+        {
+          "answer_start": 375,
+          "text": "Newton's Second Law of Motion"
+        }
+      ]
+    },
+    {
+      "id": "57268066708984140094c825",
+      "question": "Stratigraphers try to locate areas for what types of extraction? ",
+      "context": "In the laboratory, stratigraphers analyze samples of stratigraphic sections that can be returned from the field, such as those from drill cores. Stratigraphers also analyze data from geophysical surveys that show the locations of stratigraphic units in the subsurface. Geophysical data and well logs can be combined to produce a better view of the subsurface, and stratigraphers often use computer programs to do this in three dimensions. Stratigraphers can then use these data to reconstruct ancient processes occurring on the surface of the Earth, interpret past environments, and locate areas for water, coal, and hydrocarbon extraction.",
+      "answers": [
+        {
+          "answer_start": 600,
+          "text": "water, coal, and hydrocarbon extraction"
+        },
+        {
+          "answer_start": 617,
+          "text": "hydrocarbon"
+        },
+        {
+          "answer_start": 617,
+          "text": "hydrocarbon"
+        }
+      ]
+    },
+    {
+      "id": "5710f4b8b654c5140001fa47",
+      "question": "What industry did the nobleman establish with this settlement?",
+      "context": "Prince Louis de Cond\u00e9, along with his sons Daniel and Osias,[citation needed] arranged with Count Ludwig von Nassau-Saarbr\u00fccken to establish a Huguenot community in present-day Saarland in 1604. The Count supported mercantilism and welcomed technically skilled immigrants into his lands, regardless of their religion. The Cond\u00e9s established a thriving glass-making works, which provided wealth to the principality for many years. Other founding families created enterprises based on textiles and such traditional Huguenot occupations in France. The community and its congregation remain active to this day, with descendants of many of the founding families still living in the region. Some members of this community emigrated to the United States in the 1890s.",
+      "answers": [
+        {
+          "answer_start": 352,
+          "text": "glass-making"
+        },
+        {
+          "answer_start": 352,
+          "text": "glass-making"
+        },
+        {
+          "answer_start": 352,
+          "text": "glass-making"
+        }
+      ]
+    },
+    {
+      "id": "56e7770037bdd419002c3fe0",
+      "question": "How much does a Probationer earn, initially?",
+      "context": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.) Promotion to Principal Teacher positions attracts a salary of between \u00a334,566 and \u00a344,616; Deputy Head, and Head teachers earn from \u00a340,290 to \u00a378,642. Teachers in Scotland can be registered members of trade unions with the main ones being the Educational Institute of Scotland and the Scottish Secondary Teachers' Association.",
+      "answers": [
+        {
+          "answer_start": 87,
+          "text": "20,427"
+        },
+        {
+          "answer_start": 86,
+          "text": "\u00a320,427"
+        },
+        {
+          "answer_start": 87,
+          "text": "20,427"
+        }
+      ]
+    },
+    {
+      "id": "571cc8815efbb31900334def",
+      "question": "At what temperatures is O2 more soluble?",
+      "context": "Free oxygen also occurs in solution in the world's water bodies. The increased solubility of O\n2 at lower temperatures (see Physical properties) has important implications for ocean life, as polar oceans support a much higher density of life due to their higher oxygen content. Water polluted with plant nutrients such as nitrates or phosphates may stimulate growth of algae by a process called eutrophication and the decay of these organisms and other biomaterials may reduce amounts of O\n2 in eutrophic water bodies. Scientists assess this aspect of water quality by measuring the water's biochemical oxygen demand, or the amount of O\n2 needed to restore it to a normal concentration.",
+      "answers": [
+        {
+          "answer_start": 100,
+          "text": "lower"
+        },
+        {
+          "answer_start": 100,
+          "text": "lower"
+        },
+        {
+          "answer_start": 100,
+          "text": "lower"
+        },
+        {
+          "answer_start": 100,
+          "text": "lower"
+        },
+        {
+          "answer_start": 100,
+          "text": "lower temperatures"
+        }
+      ]
+    },
+    {
+      "id": "57283b91ff5b5019007d9fa8",
+      "question": "What rank does Doctor Who hold in a list of the 100 Greatest Kids' TV Shows?",
+      "context": "In 1975, Season 11 of the series won a Writers' Guild of Great Britain award for Best Writing in a Children's Serial. In 1996, BBC television held the \"Auntie Awards\" as the culmination of their \"TV60\" series, celebrating 60 years of BBC television broadcasting, where Doctor Who was voted as the \"Best Popular Drama\" the corporation had ever produced, ahead of such ratings heavyweights as EastEnders and Casualty. In 2000, Doctor Who was ranked third in a list of the 100 Greatest British Television Programmes of the 20th century, produced by the British Film Institute and voted on by industry professionals. In 2005, the series came first in a survey by SFX magazine of \"The Greatest UK Science Fiction and Fantasy Television Series Ever\". Also, in the 100 Greatest Kids' TV shows (a Channel 4 countdown in 2001), the 1963\u20131989 run was placed at number eight.",
+      "answers": [
+        {
+          "answer_start": 858,
+          "text": "eight"
+        },
+        {
+          "answer_start": 858,
+          "text": "eight"
+        },
+        {
+          "answer_start": 858,
+          "text": "eight"
+        }
+      ]
+    },
+    {
+      "id": "56e7714a00c9c71400d77137",
+      "question": "What does teaching on an island result in?",
+      "context": "Salaries for primary teachers in Ireland depend mainly on seniority (i.e. holding the position of principal, deputy principal or assistant principal), experience and qualifications. Extra pay is also given for teaching through the Irish language, in a Gaeltacht area or on an island. The basic pay for a starting teacher is \u20ac27,814 p.a., rising incrementally to \u20ac53,423 for a teacher with 25 years service. A principal of a large school with many years experience and several qualifications (M.A., H.Dip., etc.) could earn over \u20ac90,000.",
+      "answers": [
+        {
+          "answer_start": 182,
+          "text": "Extra pay"
+        },
+        {
+          "answer_start": 182,
+          "text": "Extra pay"
+        },
+        {
+          "answer_start": 182,
+          "text": "Extra pay"
+        }
+      ]
+    },
+    {
+      "id": "57266193dd62a815002e832e",
+      "question": "Recently a more detailed model of the Earth was developed. Seismologists were able to create this using images of what from the interior of the Earth? ",
+      "context": "Seismologists can use the arrival times of seismic waves in reverse to image the interior of the Earth. Early advances in this field showed the existence of a liquid outer core (where shear waves were not able to propagate) and a dense solid inner core. These advances led to the development of a layered model of the Earth, with a crust and lithosphere on top, the mantle below (separated within itself by seismic discontinuities at 410 and 660 kilometers), and the outer core and inner core below that. More recently, seismologists have been able to create detailed images of wave speeds inside the earth in the same way a doctor images a body in a CT scan. These images have led to a much more detailed view of the interior of the Earth, and have replaced the simplified layered model with a much more dynamic model.",
+      "answers": [
+        {
+          "answer_start": 578,
+          "text": "wave speeds"
+        },
+        {
+          "answer_start": 578,
+          "text": "wave speeds"
+        },
+        {
+          "answer_start": 578,
+          "text": "wave speeds"
+        }
+      ]
+    }
+  ]
+}

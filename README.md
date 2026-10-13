@@ -8,7 +8,7 @@ RTX 3070 (8 GiB), Windows, single-machine controlled experiment. Work in progres
 - Primary metric: monotonic wall-clock elapsed time from immediately before local HTTP request submission to the first **nonempty generated text** SSE delta. Headers, role-only deltas and keepalives do not count. First generated token and first visible text may differ; both are recorded where available.
 - Same engine, greedy decoding, fixed seed, disabled prompt/KV prefix reuse, fixed output budget, paired sample IDs, fixed CPU threads and fixed context budget. Preserve failed/missing requests in the denominator.
 - Separate one-factor comparisons for model, quantization, input length/dataset, modality/resolution/video frames, GPU contention, and concurrent users. One loaded model serves multiple users; weights need not be replicated.
-- Choose the fastest **observed eligible configuration** using pilot data; confirm it with independent measured requests. An observed minimum is not a proof of the global optimum.
+- Use disjoint pilot data for functional checks, select the fastest **observed eligible configuration** in the 48-request model comparison, and remeasure it in an independent staircase. An observed minimum is not a proof of the global optimum.
 - Present measured means, median/p95, sample spread and bootstrap confidence intervals. A staircase is an empirical, cumulative scenario; never discard a nonmonotonic result or conflate sorting with causality.
 - GPU competition is a resource-contention proxy, **not another physical GPU or a guaranteed percentage of GPU compute**. Keep existing GPU power/clock settings unchanged. Log telemetry.
 - Server prompt-processing timings are distinct from client TTFT. Any remainder includes queueing, preprocessing, scheduling, transport and streaming; it is not a direct measurement of queue time.
@@ -33,18 +33,22 @@ Text: seeded selection from the public [SQuAD 1.1 development set](https://rajpu
 
 Pinned runtime: [llama.cpp b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577), CUDA 12.4 Windows build. See [server API documentation](https://github.com/ggml-org/llama.cpp/blob/b11577/tools/server/README.md). Revisions and SHA-256 hashes will be in `data/artifacts.json` after downloads complete.
 
+When PyTorch 2.6.0+cu124 is already installed, preparation reuses its CUDA 12.4 DLLs and hashes each dependency. Otherwise it downloads the matching llama.cpp CUDA dependency archive. The CUDA GEMM competition experiment requires a CUDA-enabled PyTorch installation (this machine uses 2.6.0+cu124).
+
 ```powershell
 python -m pip install -r requirements.txt
 python scripts/prepare.py
-# Measurement and report commands will be committed with the runnable harness.
+python scripts/capture_environment.py
+python scripts/test_measurement.py
+python scripts/calibrate_compute.py
+python scripts/benchmark.py --stage all --publish
+# Or measure one stage: --stage models|inputs|compute|load|vision|staircase
+python scripts/report.py
 ```
 
 ## Progress
 
-1. Hardware inspected; model/runtime downloads started.
-2. Measurement harness and pilot pending.
-3. Controlled-factor measurements pending.
-4. Cumulative staircase and final validation pending.
+Hardware, SSE timing and CUDA inference functional checks passed. Model downloads and digest checks are in progress. Measurement stage completion is shown in the generated tables below once available.
 
 This public repository is updated after each completed measurement stage. Raw per-request records remain available alongside summaries, including negative results and limitations.
 

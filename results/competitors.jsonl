@@ -1,0 +1,4 @@
+{"tag": "calibration-0", "ready": {"duty": 0.0, "matrix": 2048, "dtype": "float16", "allocated_bytes": 33685504}, "output": ["{\"cycles\": 153, \"active_wall_fraction\": 4.173148456797526e-05, \"requested_duty\": 0.0}"]}
+{"tag": "calibration-0.25", "ready": {"duty": 0.25, "matrix": 2048, "dtype": "float16", "allocated_bytes": 33685504}, "output": ["{\"cycles\": 150, \"active_wall_fraction\": 0.2550239068994876, \"requested_duty\": 0.25}"]}
+{"tag": "calibration-0.5", "ready": {"duty": 0.5, "matrix": 2048, "dtype": "float16", "allocated_bytes": 33685504}, "output": ["{\"cycles\": 151, \"active_wall_fraction\": 0.5013426414666655, \"requested_duty\": 0.5}"]}
+{"tag": "calibration-0.75", "ready": {"duty": 0.75, "matrix": 2048, "dtype": "float16", "allocated_bytes": 33685504}, "output": ["{\"cycles\": 150, \"active_wall_fraction\": 0.7484312391511656, \"requested_duty\": 0.75}"]}
