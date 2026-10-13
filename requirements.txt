@@ -1,0 +1,5 @@
+requests>=2.32
+numpy>=2.0
+Pillow>=11.0
+matplotlib>=3.9
+# Optional CUDA competition workload: torch with a matching CUDA wheel.
